@@ -13,10 +13,10 @@ const blogSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
-    validate: {
-      validator: wordCountValidator(50, 250),
-      message: props => `${props.value} must have between 50 and 250 words`
-    }
+    // validate: {
+    //   validator: wordCountValidator(50, 250),
+    //   message: props => `${props.value} must have between 50 and 250 words`
+    // }
   },
   city: {
     type: String,

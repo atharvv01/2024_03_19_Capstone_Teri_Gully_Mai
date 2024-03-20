@@ -17,10 +17,12 @@ app.use(cors())
 app.use(bodyParser.json());
 
 // Define routes
-const userRoutes = require("./routes/user_routes");
+const userRoutes = require("./routes/user_routes")
+const blogRoutes =  require("./routes/blog_routes")
 
 //using routes in app 
-app.use("/users", userRoutes);
+app.use("/users", userRoutes)
+app.use("/blogs", blogRoutes)
 
 
 
