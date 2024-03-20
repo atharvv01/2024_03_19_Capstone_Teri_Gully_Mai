@@ -3,7 +3,7 @@ const Place = require('../schema/place_schema');
 const { verifyToken } = require("../middleware/auth");
 
 // Controller to create a new blog
-const createBlog = ( verifyToken ,async (req, res) => {
+const createBlog = async (req, res) => {
   try {
 
     const userData = req.decoded; // Decoded user information from the token
@@ -21,10 +21,10 @@ const createBlog = ( verifyToken ,async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-});
+};
 
 // Controller to add a place to a blog
-const addPlaceToBlog = (verifyToken ,async (req, res) => {
+const addPlaceToBlog = async (req, res) => {
   try {
     const { placeName, img, googleMapLink, description, price, timings, where, ratings } = req.body;
     const blogId = req.query.blogId;
@@ -44,14 +44,15 @@ const addPlaceToBlog = (verifyToken ,async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-});
+};
 
 // controller to delete a place while creating a blog
-const placeToDelete = (verifyToken, async (req, res) => {
+const placeToDelete =  async (req, res) => {
     try {
-        const placeId = req.params.placeId;
+        const placeId = req.query.placeId;
         
         // Delete the place by ID
+        console.log(placeId + " is deleted");
         await Place.findByIdAndDelete(placeId);
         
         // Update blog documents to remove the deleted place ID from the `places` array
@@ -61,10 +62,8 @@ const placeToDelete = (verifyToken, async (req, res) => {
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
-  });
+  };
   
-
-
 
 // Controller to fetch blog details by city ..here it also fetchs places inside to the blog
 const getBlogByCity = async (req, res) => {
