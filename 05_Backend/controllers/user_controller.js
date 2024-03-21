@@ -334,6 +334,54 @@ const reset_password = async (req, res) => {
     }
 };
 
+/**
+ * custom api demanded by @puran 
+ * this api function randomly selects the user from user datbase 
+ * and also selectes random blogs from a blogs database and then saves it 
+ * this is asked to be build to populate the number of saves 
+ */
+const saveRandomBlogsForRandomUser = async (req, res) => {
+    try {
+        // Step 1: Select a random user
+        const randomUser = await User.aggregate([{ $sample: { size: 1 } }]);
+        console.log(randomUser[0]._id);
+        const userId = randomUser[0]._id;
+
+        // Step 2: Fetch available blogs
+        const availableBlogs = await blog.find();
+
+        // Step 3: Randomly select blogs (let's say 2 for example)
+        const numberOfBlogsToSave = 2;
+        const randomlySelectedBlogs = sample(availableBlogs, numberOfBlogsToSave);
+
+        // Step 4: Save selected blogs for the random user and increment likes
+        const savedBlogs = [];
+        for (const selectBlog of randomlySelectedBlogs) {
+            const savedBlog = new Savedblogs ({
+                user:userId,
+                blog:selectBlog._id
+            });
+            await savedBlog.save();  
+            savedBlogs.push(savedBlog); 
+            // Increment the like count for the blog
+            await blog.findByIdAndUpdate(selectBlog._id, { $inc: { likes: 1 } });
+        }
+
+        // Step 5: Respond with success message and saved blogs details
+        res.status(200).json({
+            success: true,
+            message: "Random blogs saved successfully for a random user",
+            savedBlogs: savedBlogs
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error",
+        });
+    }
+};
+
 // Function to check if the token is expired
 const isTokenExpired = (timestamp) => {
     const expirationTime = 86400000;
@@ -341,6 +389,21 @@ const isTokenExpired = (timestamp) => {
     return (currentTime - timestamp) > expirationTime;
 };
 
+//function to genrate sample 
+function sample(array, size) {
+    const shuffled = array.slice(0);
+    let i = array.length;
+    const min = i - size;
+    let temp;
+    let index;
+    while (i-- > min) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(min);
+}
 
 module.exports = {
     signup,
@@ -349,5 +412,6 @@ module.exports = {
     reset_password,
     saveBlog,
     unsaveBlog,
-    getSavedBlogs
+    getSavedBlogs,
+    saveRandomBlogsForRandomUser
 };

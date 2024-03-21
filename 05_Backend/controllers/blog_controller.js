@@ -64,7 +64,6 @@ const placeToDelete =  async (req, res) => {
       }
   };
   
-
 // Controller to fetch blog details by city ..here it also fetchs places inside to the blog
 const getBlogByCity = async (req, res) => {
     try {
@@ -77,10 +76,27 @@ const getBlogByCity = async (req, res) => {
       }
   };
 
+// Controller to fetch blog details by ID
+const getBlogById = async (req, res) => {
+  try {
+      const blogId = req.query.blogId;
+      // Find the blog with the specified ID
+      const blog = await Blog.findById(blogId);
+      if (!blog) {
+          return res.status(404).json({ success: false, message: "Blog not found" });
+      }
+      res.status(200).json(blog);
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+};
+
 // Export the controller functions
 module.exports = {
   createBlog,
   addPlaceToBlog,
   getBlogByCity,
+  getBlogById,
   placeToDelete
 };
