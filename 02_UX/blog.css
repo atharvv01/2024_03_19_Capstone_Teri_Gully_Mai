@@ -1,0 +1,1766 @@
+.blog-child {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  margin: 0 !important;
+  top: -223px;
+  right: 464px;
+  border-radius: 50%;
+  background-color: var(--color-indianred);
+  filter: blur(500px);
+}
+.teri-galli-mai4 {
+  position: relative;
+  white-space: nowrap;
+}
+.teri-galli-mai-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-13xl) 0 0;
+}
+.home4 {
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 41px;
+  z-index: 1;
+}
+.city-guides4,
+.view-saves4,
+.write-a-blog4 {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1;
+}
+.city-guides4 {
+  font-weight: 800;
+  color: var(--st);
+  min-width: 80px;
+}
+.view-saves4,
+.write-a-blog4 {
+  font-weight: 600;
+  min-width: 77px;
+}
+.write-a-blog4 {
+  min-width: 81px;
+}
+.home-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.frame-wrapper25,
+.login4 {
+  font-size: var(--semibold-type14-size);
+  font-family: var(--medium-type18);
+}
+.frame-wrapper25 {
+  width: 447px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.login4 {
+  width: 38px;
+  position: relative;
+  font-weight: 600;
+  color: var(--black);
+  text-align: center;
+  display: inline-block;
+  min-width: 38px;
+}
+.login-wrapper1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-base) var(--padding-22xl);
+  background-color: var(--w-background);
+  border-radius: var(--br-11xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.login-wrapper1:hover {
+  background-color: var(--color-gainsboro-100);
+}
+.sign-up4 {
+  width: 52px;
+  position: relative;
+  font-size: var(--semibold-type14-size);
+  font-weight: 600;
+  font-family: var(--medium-type18);
+  color: var(--w-background);
+  text-align: center;
+  display: inline-block;
+  min-width: 52px;
+}
+.frame-parent39,
+.frame-parent40,
+.sign-up-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sign-up-wrapper1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-base) var(--padding-15xl);
+  background-color: var(--st);
+  border-radius: var(--br-11xl);
+  white-space: nowrap;
+}
+.sign-up-wrapper1:hover {
+  background-color: var(--color-blueviolet-100);
+}
+.frame-parent39,
+.frame-parent40 {
+  gap: var(--gap-5xs);
+}
+.frame-parent39 {
+  align-self: stretch;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--bold-type24-size);
+  color: var(--black);
+  font-family: var(--font-playfair-display-sc);
+}
+.similar-guides {
+  flex: 1;
+  position: relative;
+  font-size: var(--semibold-type14-size);
+  font-family: var(--medium-type18);
+  color: var(--color-black);
+  text-align: center;
+}
+.similar-guides-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-silver-200);
+  padding: var(--padding-mid-5) var(--padding-2xs);
+  background-color: transparent;
+  width: 133px;
+  border-radius: var(--br-31xl);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  z-index: 1;
+}
+.food-restaurants-wrapper:hover,
+.outdoor-seating-wrapper:hover,
+.restaurants-bars-wrapper:hover,
+.similar-guides-wrapper:hover {
+  background-color: var(--color-gray-400);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+}
+.food-restaurants {
+  width: 130px;
+  position: relative;
+  font-size: var(--semibold-type14-size);
+  font-family: var(--medium-type18);
+  color: var(--color-black);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.food-restaurants-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-silver-200);
+  padding: var(--padding-mid-5) var(--padding-2xs);
+  background-color: transparent;
+  border-radius: var(--br-31xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  z-index: 1;
+}
+.outdoor-seating {
+  width: 112px;
+  position: relative;
+  font-size: var(--semibold-type14-size);
+  font-family: var(--medium-type18);
+  color: var(--color-black);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 112px;
+}
+.outdoor-seating-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-silver-200);
+  padding: var(--padding-mid-5) var(--padding-2xs);
+  background-color: transparent;
+  border-radius: var(--br-31xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  z-index: 1;
+}
+.restaurants-bars {
+  width: 124px;
+  position: relative;
+  font-size: var(--semibold-type14-size);
+  font-family: var(--medium-type18);
+  color: var(--color-black);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 124px;
+}
+.restaurants-bars-wrapper {
+  cursor: pointer;
+  border: 1px solid var(--color-silver-200);
+  padding: var(--padding-mid-5) var(--padding-xl);
+  background-color: transparent;
+  border-radius: var(--br-31xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  z-index: 1;
+}
+.frame-parent42,
+.frame-wrapper27 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+}
+.frame-parent42 {
+  gap: var(--gap-11xl);
+}
+.frame-wrapper27 {
+  align-self: stretch;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+}
+.best-outdoor-restaurants {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  font-weight: 800;
+  font-family: inherit;
+}
+.frame-parent41 {
+  width: 1146px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 51.5px;
+  max-width: 100%;
+}
+.frame-parent38,
+.frame-wrapper26 {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.frame-wrapper26 {
+  width: 1330px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  max-width: 100%;
+}
+.frame-parent38 {
+  width: 1382px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+  gap: 91.5px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.frame-child19 {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  margin: 0 !important;
+  top: 24px;
+  left: calc(50% - 250px);
+  border-radius: 50%;
+  background-color: var(--color-blueviolet-400);
+  filter: blur(500px);
+}
+.mask-group-icon {
+  height: 70px;
+  width: 70px;
+  position: relative;
+}
+.by-riya {
+  position: relative;
+  font-weight: 600;
+  white-space: pre-wrap;
+  display: inline-block;
+  min-width: 69px;
+}
+.by-riya-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+}
+.frame-wrapper28,
+.mask-group-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mask-group-parent {
+  height: 70px;
+  gap: var(--gap-4xl);
+}
+.frame-wrapper28 {
+  height: 100px;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  font-size: var(--medium-type18-size);
+}
+.despina-galani-q8irmopsgm-uns-icon {
+  height: 638px;
+  width: 642px;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.span {
+  font-size: var(--bold-type24-size);
+}
+.cafe-name,
+.see-on-map {
+  position: relative;
+}
+.see-on-map {
+  font-size: var(--semibold-type14-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-blueviolet-300);
+  text-align: left;
+  min-width: 85px;
+}
+.see-on-map-wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-base);
+  background-color: var(--color-lavender-200);
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.see-on-map-wrapper:hover {
+  background-color: var(--color-thistle-100);
+}
+.cafe-name-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+  gap: var(--gap-xs);
+  font-size: var(--font-size-13xl);
+}
+.book-table {
+  position: relative;
+  font-size: var(--medium-type18-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-lavender-100);
+  text-align: left;
+  min-width: 115px;
+}
+.book-table-wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-7xl);
+  background-color: var(--color-blueviolet-300);
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.book-table-wrapper:hover {
+  background-color: var(--color-blueviolet-200);
+}
+.winter-days-are {
+  height: 182px;
+  flex: 1;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  max-width: 100%;
+}
+.winter-days-are-perfect-if-you-wrapper {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-5xs) var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rs {
+  font-weight: 500;
+}
+.price-100-container {
+  width: 196px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.pancakes-dosa-from {
+  font-weight: 500;
+}
+.must-try-container {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.span1 {
+  font-weight: 500;
+}
+.zomato-rating-container {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.price-100-200-rs-parent {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-xl) 0 var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.ellipse-parent,
+.frame-parent44 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent44 {
+  width: 650px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 21px 312px;
+  min-height: 1154px;
+  z-index: 1;
+}
+.ellipse-parent {
+  align-items: flex-start;
+  position: relative;
+}
+.mask-group-icon1 {
+  height: 70px;
+  width: 70px;
+  position: relative;
+}
+.by-riya1 {
+  position: relative;
+  font-weight: 600;
+  white-space: pre-wrap;
+  display: inline-block;
+  min-width: 69px;
+}
+.by-riya-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+}
+.frame-wrapper29,
+.mask-group-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mask-group-group {
+  height: 70px;
+  gap: var(--gap-4xl);
+}
+.frame-wrapper29 {
+  height: 100px;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  font-size: var(--medium-type18-size);
+}
+.despina-galani-q8irmopsgm-uns-icon1 {
+  height: 638px;
+  width: 642px;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.span2 {
+  font-size: var(--bold-type24-size);
+}
+.cafe-name1,
+.see-on-map1 {
+  position: relative;
+}
+.see-on-map1 {
+  font-size: var(--semibold-type14-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-blueviolet-300);
+  text-align: left;
+  min-width: 85px;
+}
+.see-on-map-container {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-base);
+  background-color: var(--color-lavender-200);
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.see-on-map-container:hover {
+  background-color: var(--color-thistle-100);
+}
+.cafe-name-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+  gap: var(--gap-xs);
+  font-size: var(--font-size-13xl);
+}
+.book-table1 {
+  position: relative;
+  font-size: var(--medium-type18-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-lavender-100);
+  text-align: left;
+  min-width: 115px;
+}
+.book-table-container {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-7xl);
+  background-color: var(--color-blueviolet-300);
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.book-table-container:hover {
+  background-color: var(--color-blueviolet-200);
+}
+.winter-days-are1 {
+  height: 182px;
+  flex: 1;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  max-width: 100%;
+}
+.winter-days-are-perfect-if-you-container {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-5xs) var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rs1 {
+  font-weight: 500;
+}
+.price-100-container1 {
+  width: 196px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.pancakes-dosa-from1 {
+  font-weight: 500;
+}
+.must-try-container1 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.span3 {
+  font-weight: 500;
+}
+.zomato-rating-container1 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.price-100-200-rs-group {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-xl) 0 var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-parent45 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 21px 312px;
+  min-height: 1154px;
+  max-width: 100%;
+}
+.mask-group-icon2 {
+  height: 70px;
+  width: 70px;
+  position: relative;
+}
+.by-riya2 {
+  position: relative;
+  font-weight: 600;
+  white-space: pre-wrap;
+  display: inline-block;
+  min-width: 69px;
+}
+.by-riya-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+}
+.frame-wrapper30,
+.mask-group-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mask-group-container {
+  height: 70px;
+  gap: var(--gap-4xl);
+}
+.frame-wrapper30 {
+  height: 100px;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  font-size: var(--medium-type18-size);
+}
+.despina-galani-q8irmopsgm-uns-icon2 {
+  height: 638px;
+  width: 642px;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.span4 {
+  font-size: var(--bold-type24-size);
+}
+.cafe-name2,
+.see-on-map2 {
+  position: relative;
+}
+.see-on-map2 {
+  font-size: var(--semibold-type14-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-blueviolet-300);
+  text-align: left;
+  min-width: 85px;
+}
+.see-on-map-frame {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-base);
+  background-color: var(--color-lavender-200);
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.see-on-map-frame:hover {
+  background-color: var(--color-thistle-100);
+}
+.cafe-name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+  gap: var(--gap-xs);
+  font-size: var(--font-size-13xl);
+}
+.book-table2 {
+  position: relative;
+  font-size: var(--medium-type18-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-lavender-100);
+  text-align: left;
+  min-width: 115px;
+}
+.book-table-frame {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-7xl);
+  background-color: var(--color-blueviolet-300);
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.book-table-frame:hover {
+  background-color: var(--color-blueviolet-200);
+}
+.winter-days-are2 {
+  height: 182px;
+  flex: 1;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  max-width: 100%;
+}
+.winter-days-are-perfect-if-you-frame {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-5xs) var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rs2 {
+  font-weight: 500;
+}
+.price-100-container2 {
+  width: 196px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.pancakes-dosa-from2 {
+  font-weight: 500;
+}
+.must-try-container2 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.span5 {
+  font-weight: 500;
+}
+.zomato-rating-container2 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.price-100-200-rs-container {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-xl) 0 var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-parent46 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 21px 312px;
+  min-height: 1154px;
+  max-width: 100%;
+}
+.frame-child20 {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -85px;
+  left: calc(50% - 250px);
+  border-radius: 50%;
+  background-color: var(--color-darkgoldenrod);
+  filter: blur(500px);
+}
+.mask-group-icon3 {
+  height: 70px;
+  width: 70px;
+  position: relative;
+}
+.by-riya3 {
+  position: relative;
+  font-weight: 600;
+  white-space: pre-wrap;
+  display: inline-block;
+  min-width: 69px;
+}
+.by-riya-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+}
+.frame-wrapper31,
+.mask-group-parent1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mask-group-parent1 {
+  height: 70px;
+  gap: var(--gap-4xl);
+}
+.frame-wrapper31 {
+  height: 100px;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  font-size: var(--medium-type18-size);
+}
+.despina-galani-q8irmopsgm-uns-icon3 {
+  height: 638px;
+  width: 642px;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.span6 {
+  font-size: var(--bold-type24-size);
+}
+.cafe-name3,
+.see-on-map3 {
+  position: relative;
+}
+.see-on-map3 {
+  font-size: var(--semibold-type14-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-blueviolet-300);
+  text-align: left;
+  min-width: 85px;
+}
+.see-on-map-wrapper1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-base);
+  background-color: var(--color-lavender-200);
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.see-on-map-wrapper1:hover {
+  background-color: var(--color-thistle-100);
+}
+.cafe-name-parent1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+  gap: var(--gap-xs);
+  font-size: var(--font-size-13xl);
+}
+.book-table3 {
+  position: relative;
+  font-size: var(--medium-type18-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-lavender-100);
+  text-align: left;
+  min-width: 115px;
+}
+.book-table-wrapper1 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-7xl);
+  background-color: var(--color-blueviolet-300);
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.book-table-wrapper1:hover {
+  background-color: var(--color-blueviolet-200);
+}
+.winter-days-are3 {
+  height: 182px;
+  flex: 1;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  max-width: 100%;
+}
+.winter-days-are-perfect-if-you-wrapper1 {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-5xs) var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rs3 {
+  font-weight: 500;
+}
+.price-100-container3 {
+  width: 196px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.pancakes-dosa-from3 {
+  font-weight: 500;
+}
+.must-try-container3 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.span7 {
+  font-weight: 500;
+}
+.zomato-rating-container3 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.price-100-200-rs-parent1 {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-xl) 0 var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.ellipse-group,
+.frame-parent47 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent47 {
+  width: 650px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 21px 312px;
+  min-height: 1154px;
+  z-index: 1;
+}
+.ellipse-group {
+  align-items: flex-start;
+  position: relative;
+}
+.mask-group-icon4 {
+  height: 70px;
+  width: 70px;
+  position: relative;
+}
+.by-riya4 {
+  position: relative;
+  font-weight: 600;
+  white-space: pre-wrap;
+  display: inline-block;
+  min-width: 69px;
+}
+.by-riya-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+}
+.frame-wrapper32,
+.mask-group-parent2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mask-group-parent2 {
+  height: 70px;
+  gap: var(--gap-4xl);
+}
+.frame-wrapper32 {
+  height: 100px;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  font-size: var(--medium-type18-size);
+}
+.despina-galani-q8irmopsgm-uns-icon4 {
+  height: 638px;
+  width: 642px;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.span8 {
+  font-size: var(--bold-type24-size);
+}
+.cafe-name4,
+.see-on-map4 {
+  position: relative;
+}
+.see-on-map4 {
+  font-size: var(--semibold-type14-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-blueviolet-300);
+  text-align: left;
+  min-width: 85px;
+}
+.see-on-map-wrapper2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-base);
+  background-color: var(--color-lavender-200);
+  border-radius: var(--br-3xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.see-on-map-wrapper2:hover {
+  background-color: var(--color-thistle-100);
+}
+.cafe-name-parent2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0;
+  gap: var(--gap-xs);
+  font-size: var(--font-size-13xl);
+}
+.book-table4 {
+  position: relative;
+  font-size: var(--medium-type18-size);
+  display: inline-block;
+  font-family: var(--medium-type18);
+  color: var(--color-lavender-100);
+  text-align: left;
+  min-width: 115px;
+}
+.book-table-wrapper2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-7xl);
+  background-color: var(--color-blueviolet-300);
+  border-radius: var(--br-31xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.book-table-wrapper2:hover {
+  background-color: var(--color-blueviolet-200);
+}
+.winter-days-are4 {
+  height: 182px;
+  flex: 1;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  max-width: 100%;
+}
+.winter-days-are-perfect-if-you-wrapper2 {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-5xs) var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rs4 {
+  font-weight: 500;
+}
+.price-100-container4 {
+  width: 196px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.pancakes-dosa-from4 {
+  font-weight: 500;
+}
+.must-try-container4 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.span9 {
+  font-weight: 500;
+}
+.zomato-rating-container4 {
+  width: 669px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.price-100-200-rs-parent2 {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-xl) 0 var(--padding-xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-parent48 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 21px 312px;
+  min-height: 1154px;
+  max-width: 100%;
+}
+.blog-inner,
+.frame-parent43 {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.frame-parent43 {
+  width: 650px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 120px;
+  debug_commit: f6aba90;
+  text-align: left;
+  font-size: var(--font-size-2xl);
+  color: var(--color-black);
+  font-family: var(--medium-type18);
+}
+.blog-inner {
+  width: 1394px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 120px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.vector-icon8 {
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+.travelo {
+  height: 30px;
+  flex: 1;
+  position: relative;
+  display: inline-block;
+}
+.vector-parent {
+  width: 138px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+}
+.travelo-is-southeast {
+  align-self: stretch;
+  height: 150px;
+  position: relative;
+  font-weight: 500;
+  color: var(--color-darkgray);
+  display: flex;
+  align-items: center;
+}
+.frame-parent52 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-41xl);
+  flex-shrink: 0;
+}
+.download-app {
+  width: 173px;
+  height: 30px;
+  position: relative;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.vector-icon10,
+.vector-icon9 {
+  height: 44.6px;
+  width: 155px;
+  position: relative;
+  object-fit: cover;
+  min-height: 45px;
+}
+.download-app-parent,
+.frame-parent51,
+.vector-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vector-group {
+  flex-direction: row;
+  gap: 15px;
+}
+.download-app-parent,
+.frame-parent51 {
+  flex-direction: column;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.frame-parent51 {
+  width: 368px;
+  padding: 0 0 2.8421709430404014e-14px;
+  box-sizing: border-box;
+  gap: var(--gap-21xl);
+  min-width: 368px;
+}
+.about1 {
+  width: 73px;
+  height: 30px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+}
+.carreer,
+.contact-us,
+.help-center,
+.how-to-book {
+  height: 30px;
+  position: relative;
+  line-height: 30px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.how-to-book {
+  align-self: stretch;
+}
+.carreer,
+.contact-us,
+.help-center {
+  width: 97px;
+}
+.carreer,
+.help-center {
+  width: 104px;
+}
+.carreer {
+  width: 66px;
+}
+.about-parent,
+.how-to-book-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.how-to-book-parent {
+  align-self: stretch;
+  gap: var(--gap-11xl);
+  font-size: var(--medium-type18-size);
+  color: var(--color-darkgray);
+}
+.about-parent {
+  width: 111px;
+  gap: var(--gap-41xl);
+}
+.products {
+  align-self: stretch;
+  height: 30px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+}
+.flights,
+.hotels,
+.trains,
+.villas {
+  height: 30px;
+  position: relative;
+  line-height: 30px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.flights,
+.hotels {
+  align-self: stretch;
+}
+.trains,
+.villas {
+  width: 49px;
+}
+.villas {
+  width: 45px;
+}
+.flights-parent,
+.products-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.flights-parent {
+  width: 58px;
+  gap: var(--gap-11xl);
+  font-size: var(--medium-type18-size);
+  color: var(--color-darkgray);
+}
+.products-parent {
+  width: 107px;
+  gap: var(--gap-41xl);
+}
+.other {
+  width: 69px;
+  height: 30px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+}
+.blog2,
+.privacy-notice {
+  height: 30px;
+  position: relative;
+  line-height: 30px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.blog2 {
+  width: 41px;
+}
+.privacy-notice {
+  align-self: stretch;
+}
+.blog-parent,
+.other-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.blog-parent {
+  align-self: stretch;
+  gap: var(--gap-11xl);
+  font-size: var(--medium-type18-size);
+  color: var(--color-darkgray);
+}
+.other-parent {
+  width: 124px;
+  gap: var(--gap-41xl);
+}
+.frame-parent50,
+.frame-parent53 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frame-parent53 {
+  justify-content: flex-start;
+  gap: 69px;
+  min-width: 480px;
+}
+.frame-parent50 {
+  align-self: stretch;
+  justify-content: space-between;
+  padding: 0 165px;
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+}
+.frame-child21,
+.group-icon1 {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  min-height: 30px;
+}
+.union-icon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+.union-wrapper {
+  height: 30px;
+  width: 30px;
+  border-radius: var(--br-81xl);
+  background-color: var(--st);
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-8xs);
+  box-sizing: border-box;
+}
+.frame-footer,
+.frame-parent54,
+.union-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.frame-parent54 {
+  height: 30px;
+  width: 154px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.frame-footer {
+  align-self: stretch;
+  background-color: #f3f3f3;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xl) 976px var(--padding-xl) var(--padding-xl);
+}
+.blog1,
+.frame-parent49 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frame-parent49 {
+  margin-right: -23px;
+  width: 1440px;
+  align-items: flex-start;
+  gap: 90px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+  font-size: var(--bold-type24-size);
+  color: var(--black);
+}
+.blog1 {
+  width: 100%;
+  height: 6989px;
+  position: relative;
+  background-color: var(--w-background);
+  overflow: hidden;
+  align-items: flex-end;
+  padding: var(--padding-12xl) 17px var(--padding-54xl) var(--padding-7xs);
+  box-sizing: border-box;
+  gap: 125px;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--bold-type70-size);
+  color: var(--color-black);
+  font-family: var(--medium-type18);
+}
+@media screen and (max-width: 1225px) {
+  .frame-parent44,
+  .frame-parent45,
+  .frame-parent46,
+  .frame-parent47,
+  .frame-parent48 {
+    gap: 21px 156px;
+  }
+  .blog-inner {
+    padding-bottom: 33px;
+    box-sizing: border-box;
+  }
+  .frame-parent51,
+  .frame-parent53 {
+    flex: 1;
+  }
+  .frame-parent50 {
+    flex-wrap: wrap;
+  }
+  .frame-footer {
+    padding-right: 488px;
+    box-sizing: border-box;
+  }
+  .blog1 {
+    gap: 62px 125px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .home-container {
+    display: none;
+  }
+  .frame-wrapper25 {
+    width: 0;
+  }
+  .blog-inner {
+    padding-bottom: 21px;
+    box-sizing: border-box;
+  }
+  .frame-parent53 {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .frame-parent42 {
+    flex-wrap: wrap;
+  }
+  .best-outdoor-restaurants {
+    font-size: var(--font-size-37xl);
+  }
+  .frame-parent41 {
+    gap: 26px 51.5px;
+  }
+  .frame-parent38 {
+    gap: 46px 91.5px;
+  }
+  .frame-parent44,
+  .frame-parent45,
+  .frame-parent46,
+  .frame-parent47,
+  .frame-parent48 {
+    gap: 21px 78px;
+  }
+  .frame-parent43 {
+    gap: 60px 120px;
+  }
+  .frame-parent51 {
+    min-width: 100%;
+  }
+  .frame-parent53 {
+    flex-wrap: wrap;
+    gap: 69px 34px;
+  }
+  .frame-parent50 {
+    padding-left: var(--padding-63xl);
+    padding-right: var(--padding-63xl);
+    box-sizing: border-box;
+  }
+  .frame-footer {
+    padding-right: 244px;
+    box-sizing: border-box;
+  }
+  .frame-parent49 {
+    gap: 45px 90px;
+  }
+  .blog1 {
+    height: auto;
+    gap: 31px 125px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .frame-parent40 {
+    display: none;
+  }
+  .best-outdoor-restaurants {
+    font-size: var(--font-size-23xl);
+  }
+  .frame-parent38 {
+    gap: 23px 91.5px;
+  }
+  .cafe-name {
+    font-size: var(--font-size-lgi);
+  }
+  .must-try-container,
+  .price-100-container,
+  .winter-days-are,
+  .zomato-rating-container {
+    font-size: var(--font-size-mid);
+  }
+  .frame-parent44 {
+    gap: 21px 39px;
+  }
+  .cafe-name1 {
+    font-size: var(--font-size-lgi);
+  }
+  .must-try-container1,
+  .price-100-container1,
+  .winter-days-are1,
+  .zomato-rating-container1 {
+    font-size: var(--font-size-mid);
+  }
+  .frame-parent45 {
+    gap: 21px 39px;
+  }
+  .cafe-name2 {
+    font-size: var(--font-size-lgi);
+  }
+  .must-try-container2,
+  .price-100-container2,
+  .winter-days-are2,
+  .zomato-rating-container2 {
+    font-size: var(--font-size-mid);
+  }
+  .frame-parent46 {
+    gap: 21px 39px;
+  }
+  .cafe-name3 {
+    font-size: var(--font-size-lgi);
+  }
+  .must-try-container3,
+  .price-100-container3,
+  .winter-days-are3,
+  .zomato-rating-container3 {
+    font-size: var(--font-size-mid);
+  }
+  .frame-parent47 {
+    gap: 21px 39px;
+  }
+  .cafe-name4 {
+    font-size: var(--font-size-lgi);
+  }
+  .must-try-container4,
+  .price-100-container4,
+  .winter-days-are4,
+  .zomato-rating-container4 {
+    font-size: var(--font-size-mid);
+  }
+  .frame-parent48 {
+    gap: 21px 39px;
+  }
+  .frame-parent43 {
+    gap: 30px 120px;
+  }
+  .blog-inner {
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .travelo,
+  .travelo-is-southeast {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-parent52 {
+    gap: 30px 60px;
+  }
+  .download-app {
+    font-size: var(--font-size-lgi);
+  }
+  .vector-group {
+    flex-wrap: wrap;
+  }
+  .frame-parent51 {
+    gap: 20px 40px;
+  }
+  .about1,
+  .other,
+  .products {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-parent50 {
+    padding-left: var(--padding-xl);
+  }
+  .frame-footer,
+  .frame-parent50 {
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .frame-parent49 {
+    gap: 22px 90px;
+  }
+  .blog1 {
+    gap: 16px 125px;
+  }
+}
