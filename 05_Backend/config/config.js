@@ -1,5 +1,5 @@
 const config = {
-    emailUser:'atharvazwork@gmail.com',
-    emailPassword:'amqw aoey kolu xspf'
+    emailUser:'atharvazanwar01@gmail.com',
+    emailPassword:'emqj umsi ljoj hizc'
 }
 module.exports = config;
