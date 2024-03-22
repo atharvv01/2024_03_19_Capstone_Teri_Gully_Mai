@@ -115,8 +115,14 @@ const getBlogById = async (req, res) => {
 // Controller to delete the blog 
 const deleteBlogAndPlaces = async (req, res) => {
   try {
-    
+    const userdata = req.decoded
     const blogId = req.query.blogId;
+
+    //Check if the user is authorized to delete the blog (e.g., user is the author of the blog)
+    const blog = await Blog.findOne({ _id: blogId, author: userdata.userId });
+    if (!blog) {
+      return res.status(403).json({ success: false, message: "You are not authorized to delete this blog" });
+    }
 
     // Delete the blog
     const deletedBlog = await Blog.findByIdAndDelete(blogId);
@@ -142,7 +148,7 @@ const deleteBlogAndPlaces = async (req, res) => {
 // Controller to modify the blog and places in it
 const modifyBlogAndPlaces = async (req, res) => {
   try {
-    const userdata = req.decoded // Assuming the authenticated user's ID is available in req.user
+    const userdata = req.decoded
     const blogId = req.query.blogId; // Assuming the blog ID is provided in the request parameters
     const { title, description, city, thumbnail, places } = req.body; // Assuming the updated blog and places details are provided in the request body
 

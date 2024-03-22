@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Teri_Gully_Mai",
-    "dateExported": "2024-03-21T16:11:18.454Z",
+    "dateExported": "2024-03-22T08:56:13.239Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -34,12 +34,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-03-19T18:44:38.496Z",
-            "modified": "2024-03-20T16:58:59.846Z",
+            "modified": "2024-03-22T07:49:37.920Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"username\":\"Aaditya\",\n  \"password\":\"aditya123\"\n}",
+                "raw": "{\n  \"username\":\"Atharva\",\n  \"password\":\"atharva123\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -54,7 +54,7 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-20T05:46:15.738Z",
-            "modified": "2024-03-21T11:36:04.199Z",
+            "modified": "2024-03-22T08:26:23.539Z",
             "headers": [
                 {
                     "name": "Authorization",
@@ -64,7 +64,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\":\"This is my fifth Blog\",\n  \"description\":\"top 10 turfs in hyderabad\",\n  \"city\": \"Hyderabad\",\n  \"thumbnail\":\"img.jpeg\"\n}",
+                "raw": "{\n  \"title\":\"This is my seventh Blog\",\n  \"description\":\"this is to be deleted and just implemented for that\",\n  \"city\": \"Hyderabad\",\n  \"thumbnail\":\"img.jpeg\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -75,11 +75,11 @@
             "colId": "2498a4d7-e4c7-4b2e-949b-0a6ab13851da",
             "containerId": "",
             "name": "add_places_to_a_blog",
-            "url": "http://localhost:3000/blogs/:blogId/places/add?blogId=65fc1b970eab845440b5d331",
+            "url": "http://localhost:3000/blogs/:blogId/places/add?blogId=65fd40afa352100b3c61faaa",
             "method": "POST",
             "sortNum": 40000,
             "created": "2024-03-20T06:01:59.298Z",
-            "modified": "2024-03-21T11:37:13.318Z",
+            "modified": "2024-03-22T08:27:36.233Z",
             "headers": [
                 {
                     "name": "Authorization",
@@ -89,13 +89,13 @@
             "params": [
                 {
                     "name": "blogId",
-                    "value": "65fc1b970eab845440b5d331",
+                    "value": "65fd40afa352100b3c61faaa",
                     "isPath": false
                 }
             ],
             "body": {
                 "type": "json",
-                "raw": "\n  {\n    \"placeName\": \"The burger Heaven\",\n    \"img\": [\"https://example.com/images/pizza-heaven-1.jpeg\", \"https://example.com/images/pizza-heaven-2.jpeg\"],\n    \"googleMapLink\": \"https://maps.google.com/?q=The+Pizza+Heaven\",\n    \"description\": \"A cozy place offering a wide variety of burger with an authentic taste. Perfect for family gatherings.\",\n    \"price\": 20,\n    \"timings\": \"10:00 AM - 11:00 PM\",\n    \"where\": \"Downtown\",\n    \"ratings\": 4.5\n  }\n",
+                "raw": "\n  {\n    \"placeName\": \"The burger Heaven\",\n    \"img\":\"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=2799&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n    \"googleMapLink\": \"https://maps.google.com/?q=The+Pizza+Heaven\",\n    \"description\": \"A cozy place offering a wide variety of burger with an authentic taste. Perfect for family gatherings.\",\n    \"price\": 20,\n    \"timings\": \"10:00 AM - 11:00 PM\",\n    \"where\": \"Downtown\",\n    \"ratings\": 4.5\n  }\n",
                 "form": []
             },
             "reqType": "post",
@@ -151,21 +151,21 @@
             "colId": "2498a4d7-e4c7-4b2e-949b-0a6ab13851da",
             "containerId": "",
             "name": "save_blog",
-            "url": "http://localhost:3000/users/save_blog?blogId=65fa82aca0ba67a760908d4d",
+            "url": "http://localhost:3000/users/save_blog?blogId=65fd40afa352100b3c61faaa",
             "method": "POST",
             "sortNum": 70000,
             "created": "2024-03-20T17:47:18.842Z",
-            "modified": "2024-03-20T18:24:46.758Z",
+            "modified": "2024-03-22T08:28:21.178Z",
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY5ZGNkZmE4YTljNmM3M2ExNDFlOTEiLCJ1c2VybmFtZSI6IkF0aGFydmEiLCJpYXQiOjE3MTA5MTM3MzIsImV4cCI6MTcxMDk5NjUzMn0.J1XeO32I-raLby3uKhysla3znHHvrzx799tBWvJWkBU"
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWZiMTU5YzI2MWJjMzA1YzkyNDg3ZjMiLCJ1c2VybmFtZSI6IkFhZGl0eWEiLCJpYXQiOjE3MTEwMTk0NzksImV4cCI6MTcxMTEwMjI3OX0._MofQpsdwAxUv1Dmn90_FiGTpRGuCEVd-ZC0ecxDhwM"
                 }
             ],
             "params": [
                 {
                     "name": "blogId",
-                    "value": "65fa82aca0ba67a760908d4d",
+                    "value": "65fd40afa352100b3c61faaa",
                     "isPath": false
                 }
             ],
@@ -240,11 +240,11 @@
             "colId": "2498a4d7-e4c7-4b2e-949b-0a6ab13851da",
             "containerId": "",
             "name": "get_blog_by_id",
-            "url": "http://localhost:3000/blogs/get_blog_by_id?blogId=65fc1b970eab845440b5d331",
+            "url": "http://localhost:3000/blogs/get_blog_by_id?authorId=65fb159c261bc305c92487f3",
             "method": "GET",
             "sortNum": 110000,
             "created": "2024-03-21T11:08:59.392Z",
-            "modified": "2024-03-21T11:38:05.466Z",
+            "modified": "2024-03-22T08:19:25.932Z",
             "headers": [
                 {
                     "name": "Authorization",
@@ -253,8 +253,8 @@
             ],
             "params": [
                 {
-                    "name": "blogId",
-                    "value": "65fc1b970eab845440b5d331",
+                    "name": "authorId",
+                    "value": "65fb159c261bc305c92487f3",
                     "isPath": false
                 }
             ],
@@ -273,6 +273,62 @@
             "modified": "2024-03-21T11:24:12.440Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c635fb37-4d2c-4911-8a38-0bf07de18551",
+            "colId": "2498a4d7-e4c7-4b2e-949b-0a6ab13851da",
+            "containerId": "",
+            "name": "delete_a_blog",
+            "url": "http://localhost:3000/blogs/deleteBlog?blogId=65fd40afa352100b3c61faaa",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2024-03-22T07:47:23.915Z",
+            "modified": "2024-03-22T08:29:08.089Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY5ZGNkZmE4YTljNmM3M2ExNDFlOTEiLCJ1c2VybmFtZSI6IkF0aGFydmEiLCJpYXQiOjE3MTEwOTM3NzcsImV4cCI6MTcxMTE3NjU3N30.FAjIQ9br8t2Cp2nzH5gWtoVTJiAG5UmQGw2sHHKi6dA"
+                }
+            ],
+            "params": [
+                {
+                    "name": "blogId",
+                    "value": "65fd40afa352100b3c61faaa",
+                    "isPath": false
+                }
+            ],
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "81ea6fc0-f1e9-4eb7-87bb-1a130ec8a639",
+            "colId": "2498a4d7-e4c7-4b2e-949b-0a6ab13851da",
+            "containerId": "",
+            "name": "modify_blog",
+            "url": "http://localhost:3000/blogs/update_blog?blogId=65fd45529077cc006009db13",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-03-22T08:45:30.859Z",
+            "modified": "2024-03-22T08:50:14.848Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWZiMTU5YzI2MWJjMzA1YzkyNDg3ZjMiLCJ1c2VybmFtZSI6IkFhZGl0eWEiLCJpYXQiOjE3MTEwMTk0NzksImV4cCI6MTcxMTEwMjI3OX0._MofQpsdwAxUv1Dmn90_FiGTpRGuCEVd-ZC0ecxDhwM"
+                }
+            ],
+            "params": [
+                {
+                    "name": "blogId",
+                    "value": "65fd45529077cc006009db13",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"This is my eighth Blog\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]
