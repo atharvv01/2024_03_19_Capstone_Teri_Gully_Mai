@@ -20,5 +20,9 @@ router.post('/:blogId/places/add',BlogController.addPlaceToBlog);
 router.delete('/deletePlace',BlogController.placeToDelete)
 // route to get blog by id
 router.get('/get_blog_by_id',BlogController.getBlogById)
+//route to delete a blog
+router.delete('/deleteBlog',BlogController.deleteBlogAndPlaces)
+//route to modify a blog
+router.put('/update_blog',BlogController.modifyBlogAndPlaces)
 
 module.exports = router;
