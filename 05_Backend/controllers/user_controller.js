@@ -210,7 +210,6 @@ const getSavedBlogs = async (req, res) => {
     }
 };
 
-
 // Function to initiate the password reset process
 const forget_password = async (req, res) => {
     try {

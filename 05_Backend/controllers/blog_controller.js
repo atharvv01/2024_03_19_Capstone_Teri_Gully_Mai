@@ -1,8 +1,8 @@
+//internal dependencies 
 const User = require("../schema/user_schema")
 const SavedBlog = require("../schema/saved_blogs")
 const Blog = require('../schema/blog_schema');
 const Place = require('../schema/place_schema');
-const { verifyToken } = require("../middleware/auth");
 
 // Controller to create a new blog
 const createBlog = async (req, res) => {

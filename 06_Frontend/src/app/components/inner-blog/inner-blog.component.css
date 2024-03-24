@@ -1,0 +1,289 @@
+.frame-parent43 {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 650px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 120px;
+    debug_commit: f6aba90;
+    text-align: left;
+    font-size: var(--font-size-2xl);
+    color: var(--color-black);
+    font-family: var(--medium-type18);
+}
+
+
+.blog-inner {
+    width: 1394px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 var(--padding-xl) 120px;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.ellipse-parent {
+    align-items: flex-start;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.frame-child19 {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    margin: 0 !important;
+    top: 24px;
+    left: calc(50% - 250px);
+    border-radius: 50%;
+    background-color: var(--color-blueviolet-400);
+    filter: blur(500px);
+}
+
+.frame-parent44 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 100%;
+    width: 650px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 21px 312px;
+    min-height: 1154px;
+    z-index: 1;
+}
+.frame-wrapper28 {
+    height: 100px;
+    padding: var(--padding-xl) 0;
+    box-sizing: border-box;
+    font-size: var(--medium-type18-size);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .mask-group-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    gap: var(--gap-4xl);
+  }
+  .mask-group-icon {
+    height: 70px;
+    width: 70px;
+    position: relative;
+  }
+  .by-riya-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-xl) 0;
+  }
+  .by-riya {
+    position: relative;
+    font-weight: 600;
+    white-space: pre-wrap;
+    display: inline-block;
+    min-width: 69px;
+  }
+  .despina-galani-q8irmopsgm-uns-icon {
+    height: 638px;
+    width: 642px;
+    position: relative;
+    object-fit: cover;
+    max-width: 100%;
+  }
+  .cafe-name-and-booking{
+    display: flex;
+  }
+  .cafe-name-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-xl) 0;
+    gap: var(--gap-xs);
+    font-size: var(--font-size-13xl);
+  }
+  .cafe-name{
+    position: relative;
+    width: 520px;
+  }
+
+  .span {
+    font-size: var(--bold-type24-size);
+  }
+  .see-on-map-wrapper {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-4xs) var(--padding-base);
+    background-color: var(--color-lavender-200);
+    border-radius: var(--br-3xs);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .see-on-map-wrapper:hover {
+    background-color: var(--color-thistle-100);
+  }
+  .see-on-map {
+    position: relative;
+    font-size: var(--semibold-type14-size);
+    display: inline-block;
+    font-family: var(--medium-type18);
+    color: var(--color-blueviolet-300);
+    text-align: left;
+    min-width: 85px;
+  }
+  .book-table-wrapper {
+    margin-top: 15px;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-lgi) var(--padding-7xl);
+    background-color: var(--color-blueviolet-300);
+    border-radius: var(--br-31xl);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+  }
+  .book-table-wrapper:hover {
+    background-color: var(--color-blueviolet-200);
+  }
+   
+ 
+ 
+  .book-table {
+    position: relative;
+    font-size: var(--medium-type18-size);
+    display: inline-block;
+    font-family: var(--medium-type18);
+    color: var(--color-lavender-100);
+    text-align: left;
+    min-width: 115px;
+  }
+  .winter-days-are-perfect-if-you-wrapper {
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding: var(--padding-xl) var(--padding-5xs) var(--padding-xl) 0; */
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .winter-days-are {
+    height: fit-content;
+    flex: 1;
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    max-width: 100%;
+    font-size: var(--font-size-mid);
+  }
+  .price-100-200-rs-parent {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* padding: var(--padding-xl) 0 var(--padding-xl) 0; */
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .price-100-container {
+    width: 196px;
+    height: 34px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .rs {
+    font-weight: 500;
+  }
+  .must-try-container {
+    width: 669px;
+    height: 34px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    max-width: 103%;
+  }
+  .pancakes-dosa-from {
+    font-weight: 500;
+  }
+  .zomato-rating-container {
+    width: 669px;
+    height: 34px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    max-width: 103%;
+  }
+  .span1 {
+    font-weight: 500;
+  }
+  
+@media screen and (max-width: 750px) {
+    .frame-parent43 {
+        gap: 60px 120px;
+    }
+    .frame-parent44{
+        gap: 21px 78px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cafe-name {
+        font-size: var(--font-size-lgi);
+    }
+    .frame-parent43 {
+        gap: 30px 120px;
+    }
+    .frame-parent44 {
+        gap: 21px 39px;
+      }
+      .price-100-container{
+        font-size: var(--font-size-mid);
+      }
+      .must-try-container,
+      .zomato-rating-container {
+        font-size: var(--font-size-mid);
+      }
+}
+
+@media screen and (max-width: 1225px) {
+    .blog-inner {
+        padding-bottom: 33px;
+        box-sizing: border-box;
+    }
+    .frame-parent44{
+        gap: 21px 156px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .blog-inner {
+        padding-bottom: 21px;
+        box-sizing: border-box;
+    }
+}
