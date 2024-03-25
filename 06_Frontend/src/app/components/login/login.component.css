@@ -31,7 +31,7 @@
     position: relative;
     min-width: 334.8000000000002px;
     flex-shrink: 0;
-    debug_commit: f6aba90;
+   
   }
   .headline3 {
     margin: 0;
@@ -76,7 +76,7 @@
     max-width: 100%;
   }
   .input-field10 {
-    width: 44px;
+    width:513px;;
     border: 0;
     outline: 0;
     font-weight: 500;
@@ -85,7 +85,7 @@
     background-color: transparent;
     height: 21px;
     position: relative;
-    color: var(--color-gray-300);
+    color: #333333;
     text-align: left;
     display: inline-block;
     padding: 0;
@@ -101,7 +101,7 @@
     padding: var(--padding-lgi-5) var(--padding-xl);
   }
   .input-field12 {
-    width: 80px;
+    width: 513px;
     border: 0;
     outline: 0;
     font-weight: 500;
@@ -110,11 +110,17 @@
     background-color: transparent;
     height: 21px;
     position: relative;
-    color: var(--color-gray-300);
+    color: #333333;
     text-align: left;
     display: inline-block;
     padding: 0;
   }
+
+  .error-message{
+    color: red;
+  }
+
+
   .input-field11 {
     align-self: stretch;
     border-radius: var(--br-3xs);
@@ -137,11 +143,13 @@
   .forgot-password1:hover{
     cursor: pointer;
   }
-  .button1 {
+  /* .button1 {
     display: inline-block;
-    min-width: 49px;
-  }
+    width: inherit;
+    height: inherit;
+  } */
   .text-button1 {
+    border: none;
     align-self: stretch;
     border-radius: var(--br-3xs);
     background-color: var(--st);
@@ -151,7 +159,49 @@
     justify-content: center;
     padding: var(--padding-lgi-5) var(--padding-xl);
     white-space: nowrap;
+    cursor: pointer;
   }
+
+
+
+  /* login.component.css */
+
+/* Existing styles... */
+
+/* Animation class */
+.login-button-clicked {
+  animation: clickAnimation 0.5s ease forwards;
+}
+
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+  .invalid-button {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+  .invalid-button:hover {
+    background-color: #999;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+
   .description-link-label {
     text-align: left;
     font-size: var(--font-size-mid);
@@ -244,7 +294,7 @@
     position: relative;
     gap: var(--gap-28xl);
     flex-shrink: 0;
-    debug_commit: f6aba90;
+   
     z-index: 1;
   }
   .frame-parent57,
@@ -266,7 +316,7 @@
     align-self: stretch;
     flex-direction: row;
     flex-shrink: 0;
-    debug_commit: f6aba90;
+   
     text-align: center;
     font-size: var(--font-size-smi);
     color: var(--color-black);
@@ -283,7 +333,7 @@
     background-color: var(--color-blueviolet-400);
     filter: blur(500px);
     flex-shrink: 0;
-    debug_commit: f6aba90;
+   
   }
   .signup-inner {
     margin-right: -957px;
@@ -301,7 +351,7 @@
     height: 483.2px;
     flex-shrink: 0;
     object-fit: contain;
-    debug_commit: f6aba90;
+   
   }
   .signup1 {
     width: 100%;
