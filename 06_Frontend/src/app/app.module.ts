@@ -9,11 +9,11 @@ import { SavedBlogComponent } from './components/saved-blog/saved-blog.component
 import { CityGuideComponent } from './components/city-guide/city-guide.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
+// import { SignupComponent } from './components/signup/signup.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { InnerBlogComponent } from './components/inner-blog/inner-blog.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,FormControl, Validators} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -26,7 +26,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CityGuideComponent,
     NavbarComponent,
     LoginComponent,
-    SignupComponent,
+    // SignupComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
     InnerBlogComponent
@@ -36,7 +36,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

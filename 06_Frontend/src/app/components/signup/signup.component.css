@@ -1,3 +1,12 @@
+.error-message{
+  color: red;
+  font-size: medium;
+  position: absolute;
+  right: 17px;
+}
+
+
+
 .frame-child22 {
     position: absolute;
     top: -219px;
@@ -31,7 +40,7 @@
     position: relative;
     min-width: 334.8000000000002px;
     flex-shrink: 0;
-    debug_commit: f6aba90;
+   
   }
   .headline1 {
     margin: 0;
@@ -69,7 +78,7 @@
     font-family: var(--medium-type18);
   }
   .input-field4 {
-    width: 83px;
+    width: 300px;
     border: 0;
     outline: 0;
     font-weight: 500;
@@ -78,7 +87,7 @@
     background-color: transparent;
     height: 21px;
     position: relative;
-    color: var(--color-gray-300);
+    color: #333333;
     text-align: left;
     display: inline-block;
     padding: 0;
@@ -101,7 +110,7 @@
     align-items: flex-start;
   }
   .input-field6 {
-    width: 44px;
+    width: 300px;
     border: 0;
     outline: 0;
     font-weight: 500;
@@ -110,7 +119,7 @@
     background-color: transparent;
     height: 21px;
     position: relative;
-    color: var(--color-gray-300);
+    color: #333333;
     text-align: left;
     display: inline-block;
     padding: 0;
@@ -126,7 +135,7 @@
     padding: var(--padding-lgi-5) var(--padding-xl);
   }
   .input-field8 {
-    width: 80px;
+    width: 300px;
     border: 0;
     outline: 0;
     font-weight: 500;
@@ -135,7 +144,7 @@
     background-color: transparent;
     height: 21px;
     position: relative;
-    color: var(--color-gray-300);
+    color: #333333;
     text-align: left;
     display: inline-block;
     padding: 0;
@@ -161,6 +170,7 @@
     min-width: 127px;
   }
   .text-button {
+    border: none;
     align-self: stretch;
     border-radius: var(--br-3xs);
     background-color: var(--st);
@@ -171,6 +181,41 @@
     padding: var(--padding-lgi-5) var(--padding-xl);
     white-space: nowrap;
   }
+  .signup-button-clicked {
+    animation: clickAnimation 0.5s ease forwards;
+  }
+  
+  @keyframes clickAnimation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(0.95);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  
+  
+    .invalid-button {
+      background-color: #999;
+      cursor: not-allowed;
+    }
+    
+    .invalid-button:hover {
+      background-color: #999;
+      cursor: not-allowed;
+      transform: none;
+    }
+  
+
+
+
   .frame7 {
     cursor: pointer;
     border: 0;
@@ -191,8 +236,10 @@
     gap: var(--gap-5xl);
   }
   .frame4 {
+    position: relative;
+    left: 203px;
+    width: 502px;
     gap: var(--gap-11xl);
-    max-width: 100%;
   }
   .description1 {
     position: relative;
@@ -213,6 +260,9 @@
     min-width: 37px;
     white-space: nowrap;
   }
+  .link:hover{
+    cursor: pointer;
+  }
   .description-link,
   .left-aligned-link-button {
     display: flex;
@@ -222,6 +272,8 @@
     color: var(--color-black);
   }
   .description-link {
+    position: relative;
+    left: 6px;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 0 var(--padding-base) 0 0;
@@ -279,7 +331,7 @@
     position: relative;
     gap: var(--gap-28xl);
     flex-shrink: 0;
-    debug_commit: f6aba90;
+   
     z-index: 1;
   }
   .frame-wrapper33 {
@@ -294,7 +346,7 @@
   .frame-parent55,
   .signup-child {
     flex-shrink: 0;
-    debug_commit: f6aba90;
+   
   }
   .frame-parent55 {
     align-self: stretch;
@@ -328,7 +380,7 @@
     height: 483.2px;
     flex-shrink: 0;
     object-fit: contain;
-    debug_commit: f6aba90;
+   
   }
   .signup {
     width: 100%;

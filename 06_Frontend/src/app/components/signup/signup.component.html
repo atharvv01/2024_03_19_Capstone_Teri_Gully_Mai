@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="../../../styles.css" />
-    <link rel="stylesheet" href="./signup.component.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair Display SC:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;600;700;800&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap"
-    />
-  </head>
-  <body>
-    <div class="signup">
-      <section class="frame-parent55">
-        <div class="ellipse-parent1">
-          <div class="frame-child22"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="../../../styles.css" />
+  <link rel="stylesheet" href="./signup.component.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display SC:wght@700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
+</head>
+
+<body>
+  <div class="signup">
+    <section class="frame-parent55">
+      <div class="ellipse-parent1">
+        <!-- <div class="frame-child22"></div>
           <img class="vector-icon11" alt="" src="../../assets/public/vector.svg" />
 
           <img
@@ -35,56 +26,78 @@
             loading="lazy"
             alt=""
             src="../../assets/public/vector-12.svg"
-          />
-        </div>
-        <div class="frame-wrapper33">
-          <div class="frame-parent56">
-            <div class="frame4">
-              <div class="headline">
-                <h1 class="headline1">Join TGM</h1>
+          /> -->
+      </div>
+      <div class="frame-wrapper33">
+        <div class="frame-parent56">
+          <div class="frame4">
+            <div class="headline">
+              <h1 class="headline1">Join TGM</h1>
+            </div>
+            <div class="descrirtion-text">
+              <div class="description-text">
+                Let’s create your new account
               </div>
-              <div class="descrirtion-text">
-                <div class="description-text">
-                  Let’s create your new account
-                </div>
-              </div>
-              <form class="frame5">
-                <div class="frame6">
-                  <div class="input-field3">
-                    <input
-                      class="input-field4"
-                      placeholder="Username"
-                      type="text"
-                    />
+            </div>
+            <form class="frame5">
+              <div class="frame6">
+                <div class="input-field3">
+                  <input class="input-field4" type="text" placeholder="Username" [(ngModel)]="username" name="username"
+                    #usernameInput="ngModel" minlength="3" maxlength="20" required (blur)="usernameInputFocused = false"
+                    (focus)="usernameInputFocused = true" />
+                  <!-- Error messages for Username -->
+                  <div
+                    *ngIf="!usernameInputFocused && usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)"
+                    class="error-message">
+                    <div *ngIf="usernameInput.errors?.['required']">Username is required</div>
+                    <div *ngIf="usernameInput.errors?.['minlength']">Username must be at least 3 characters</div>
+                    <div *ngIf="usernameInput.errors?.['maxlength']">Username cannot exceed 20 characters</div>
                   </div>
                 </div>
-                <div class="input-field5">
-                  <input class="input-field6" placeholder="Email" type="text" />
+              </div>
+              <div class="input-field5">
+                <input class="input-field6" ype="email" placeholder="Email" [(ngModel)]="email" name="email"
+                  #emailInput="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  (blur)="emailInputFocused = false" (focus)="emailInputFocused = true" />
+                <!-- Error messages for Email -->
+                <div *ngIf="!emailInputFocused && emailInput.invalid && (emailInput.dirty || emailInput.touched)"
+                  class="error-message">
+                  <div *ngIf="emailInput.errors?.['required']">Email is required</div>
+                  <div *ngIf="emailInput.errors?.['pattern']">Invalid email format</div>
                 </div>
-                <div class="input-field7">
-                  <input
-                    class="input-field8"
-                    placeholder="Password"
-                    type="text"
-                  />
+              </div>
+              <div class="input-field7">
+                <input class="input-field8" type="password" placeholder="Password" [(ngModel)]="password"
+                  name="password" #passwordInput="ngModel" minlength="6" required (blur)="passwordInputFocused = false"
+                  (focus)="passwordInputFocused = true" />
+                <!-- Error messages for Password -->
+                <div
+                  *ngIf="!passwordInputFocused && passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)"
+                  class="error-message">
+                  <div *ngIf="passwordInput.errors?.['required']">Password is required</div>
+                  <div *ngIf="passwordInput.errors?.['minlength']">Password must be at least 6 characters</div>
                 </div>
-                <button class="frame7">
-                  <div class="text-button">
-                    <div class="button">Create account</div>
+              </div>
+              <!-- <button class="frame7"> -->
+                <button class="text-button" (click)="onSignupClick()"[disabled]="!usernameInput.valid || !passwordInput.valid"
+                [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}">
+                  <div class="button">
+                    Create account
                   </div>
                 </button>
-              </form>
+              <!-- </button> -->
+            </form>
+          </div>
+          <div class="description-link">
+            <div class="description">
+              <div class="description1">Already have an account?</div>
             </div>
-            <div class="description-link">
-              <div class="description">
-                <div class="description1">Already have an account?</div>
-              </div>
-              <div class="left-aligned-link-button">
-                <div class="link">Log in</div>
-              </div>
+            <div class="left-aligned-link-button">
+              <div class="link" (click)="goToLogin()">Log in</div>
             </div>
-            <div class="vector-parent1">
-              <img class="vector-icon13" alt="" src="../../assets/public/vector-21.svg" />
+          </div>
+          <div class="vector-parent1">
+            <!-- <img class="vector-icon13" alt="" src="../../assets/public/vector-21.svg" />
 
               <div class="circle-shape"></div>
               <img
@@ -92,14 +105,14 @@
                 loading="lazy"
                 alt=""
                 src="../../assets/public/vector-3.svg"
-              />
-            </div>
+              /> -->
           </div>
         </div>
-      </section>
-      <div class="signup-child"></div>
-      <img class="objects-icon3" alt="" src="../../assets/public/objects@2x.png" />
-    </div>
-  </body>
-</html>
+      </div>
+    </section>
+    <div class="signup-child"></div>
+    <img class="objects-icon3" alt="" src="../../assets/public/objects@2x.png" />
+  </div>
+</body>
 
+</html>
