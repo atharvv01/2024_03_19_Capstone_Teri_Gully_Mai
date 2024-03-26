@@ -54,7 +54,7 @@ export class SignupComponent {
       .subscribe({
         next: (response) => { // Success callback
           console.log('Response:', response);
-          this.router.navigate(['/login']); // Navigate to home page
+          this.router.navigate(['/login']); // Navigate to login page
         },
         error: (error) => { // Error callback
           console.error('Error:', error);

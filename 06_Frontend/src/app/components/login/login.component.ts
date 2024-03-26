@@ -5,6 +5,7 @@ import { Component } from '@angular/core'; // Component decorator for defining A
 import { FormsModule } from '@angular/forms'; // FormsModule for handling forms in Angular
 import { Router } from '@angular/router'; // Router module for navigation
 import { Output, EventEmitter } from '@angular/core'; // Output and EventEmitter for emitting events
+import { NgModel } from '@angular/forms';
 
 // Define an interface that represents the structure of your API response
 interface LoginResponse {
@@ -68,6 +69,8 @@ export class LoginComponent {
         next: (response) => { // Success callback
           console.log('Response:', response);
           localStorage.setItem('authToken', response.token); // Store auth token in local storage
+          console.log(localStorage.getItem('authToken'));
+          
           this.loginStateChange.emit(true); // Emit true on success
           this.router.navigate(['/']); // Navigate to home page
         },
