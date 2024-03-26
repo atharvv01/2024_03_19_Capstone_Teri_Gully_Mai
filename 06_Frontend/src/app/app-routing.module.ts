@@ -8,6 +8,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
+import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'blog',
     component:WriteBlogComponent
+  },
+  {
+    path: 'write_blog',
+    component:CreateABlogComponent
+  },
+  {
+    path: 'my_blog',
+    component:MyBlogsComponent
   }
 ];
 

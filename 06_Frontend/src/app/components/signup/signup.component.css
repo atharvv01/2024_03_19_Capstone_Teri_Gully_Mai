@@ -52,6 +52,8 @@
     display: inline-block;
   }
   .headline {
+    position: relative;
+    left: -5px;
     align-self: stretch;
     display: flex;
     flex-direction: row;
@@ -237,7 +239,7 @@
   }
   .frame4 {
     position: relative;
-    left: 203px;
+    left: 290px;
     width: 502px;
     gap: var(--gap-11xl);
   }
@@ -273,7 +275,7 @@
   }
   .description-link {
     position: relative;
-    left: 6px;
+    left: 16px;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 0 var(--padding-base) 0 0;

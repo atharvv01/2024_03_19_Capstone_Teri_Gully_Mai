@@ -16,6 +16,9 @@ import { InnerBlogComponent } from './components/inner-blog/inner-blog.component
 import { FormsModule,FormControl, Validators} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
+import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
+import { SmallerBlogComponent } from './components/smaller-blog/smaller-blog.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     // SignupComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
-    InnerBlogComponent
+    InnerBlogComponent,
+    CreateABlogComponent,
+    MyBlogsComponent,
+    SmallerBlogComponent
   ],
   imports: [
     BrowserModule,

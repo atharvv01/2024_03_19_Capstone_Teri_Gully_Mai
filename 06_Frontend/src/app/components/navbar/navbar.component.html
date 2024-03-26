@@ -5,17 +5,17 @@
     <div class="frame-container">
       <div class="frame-wrapper">
         <div class="home-parent">
-          <div class="home">Home</div>
-          <div class="city-guides">City Guides</div>
-          <div class="view-saves">View Saves</div>
-          <div class="write-a-blog">Write a blog</div>
+          <div class="home" (click)="navigateToHome()">Home</div>
+          <div class="city-guides"(click)="navigateToCityGuides()">City Guides</div>
+          <div class="view-saves"(click)="navigateToSaves()">View Saves</div>
+          <div class="write-a-blog"(click)="navigateToMyBlogs()">My Blogs</div>
         </div>
       </div>
       <div class="login-sign-up-title">
-        <button class="login-wrapper">
+        <button class="login-wrapper" (click)="navigateToLogin()">
           <div class="login">Login</div>
         </button>
-        <button class="sign-up-wrapper">
+        <button class="sign-up-wrapper" (click)="navigateToSignup()">
           <div class="sign-up">Sign Up</div>
         </button>
       </div>

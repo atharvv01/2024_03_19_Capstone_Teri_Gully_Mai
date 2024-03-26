@@ -1,5 +1,5 @@
 .frame-group {
-    width: 1296px;
+    width: 1447px;;
     justify-content: space-between;
     flex-shrink: 0;
     /* debug_commit: f6aba90; */
@@ -51,6 +51,8 @@
   }
 
   .home-parent {
+    position: relative;
+    left: -69px;
     display: flex;
     align-items: flex-start;
     align-self: stretch;
@@ -65,7 +67,11 @@
     display: inline-block;
     min-width: 41px;
   }
-
+  .home:hover{
+    cursor: pointer;
+    font-size: large;
+    color: blueviolet;
+  }
   .city-guides {
     font-weight: 600;
     /* color: var(--st); */
@@ -74,12 +80,22 @@
     display: inline-block;
     white-space: nowrap;
   }
+  .city-guides:hover{
+    cursor: pointer;
+    font-size: large;
+    color: blueviolet;
+  }
   .view-saves{
     position: relative;
     display: inline-block;
     white-space: nowrap;
     font-weight: 600;
     min-width: 77px;
+  }
+  .view-saves:hover{
+    cursor: pointer;
+    font-size: large;
+    color: blueviolet;
   }
   .write-a-blog {
     position: relative;
@@ -88,6 +104,11 @@
     font-weight: 600;
     min-width: 77px;
     min-width: 81px;
+  }
+  .write-a-blog:hover{
+    cursor: pointer;
+    font-size: large;
+    color: blueviolet;
   }
   
   .login-sign-up-title {

@@ -322,6 +322,8 @@
   gap: var(--gap-4xl);
 }
 .frame-wrapper1 {
+  position: relative;
+  left: 67px;
   width: 735.4px;
   justify-content: center;
   padding: 0 var(--padding-xl);
@@ -1339,6 +1341,8 @@
   flex-shrink: 0;
 }
 .frame-section {
+  position: relative;
+  right: 90px;
   flex: 1;
   flex-direction: column;
   padding: 0 0 689px;

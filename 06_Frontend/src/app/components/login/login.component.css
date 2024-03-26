@@ -304,6 +304,9 @@
     justify-content: flex-start;
   }
   .frame-wrapper34 {
+    position: relative;
+    left: 50px;
+    top: 80px;
     flex: 1;
     flex-direction: column;
     padding: var(--padding-87xl) 0 0;
