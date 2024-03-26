@@ -19,6 +19,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
 import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 import { SmallerBlogComponent } from './components/smaller-blog/smaller-blog.component';
+import { CreatePlacesComponent } from './components/create-places/create-places.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SmallerBlogComponent } from './components/smaller-blog/smaller-blog.com
     InnerBlogComponent,
     CreateABlogComponent,
     MyBlogsComponent,
-    SmallerBlogComponent
+    SmallerBlogComponent,
+    CreatePlacesComponent
   ],
   imports: [
     BrowserModule,
