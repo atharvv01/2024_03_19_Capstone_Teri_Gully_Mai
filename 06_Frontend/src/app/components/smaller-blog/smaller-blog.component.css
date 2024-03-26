@@ -29,7 +29,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+}
+
+.frame-parent30:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Scale up the element on hover */
+}
 
   .rectangle-parent2 {
     align-self: stretch;
@@ -97,20 +103,23 @@
   }
 
   .chole-paratha-group {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: var(--gap-xl);
+    padding: 20px;
   }
   .chole-paratha2,
   .k-saves9 {
     width: fit-content;
     margin: 0;
     position: relative;
-    font-size: inherit;
+    font-size: large;
     font-weight: 700;
     font-family: inherit;
+    white-space: normal;
   }
  
   .k-saves9 {

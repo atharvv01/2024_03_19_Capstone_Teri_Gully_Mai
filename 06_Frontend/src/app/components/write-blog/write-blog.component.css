@@ -1,3 +1,14 @@
+.placesOfBlog{
+    position: relative;
+    width: inherit;
+    left: 120px;
+}
+
+.header{
+    position: relative;
+    left: 26px;
+}
+
 .best-outdoor-restaurants {
     margin: 0;
     align-self: stretch;
@@ -25,7 +36,7 @@
 }
 
 .frame-wrapper26 {
-    width: 1330px;
+    width: inherit;
     flex-direction: row;
     justify-content: center;
     padding: 0 var(--padding-xl);
@@ -33,7 +44,7 @@
 }
 
 .frame-parent38 {
-    width: 1382px;
+    width: inherit;
     flex-direction: column;
     justify-content: flex-start;
     padding: 0 0 0 var(--padding-xl);

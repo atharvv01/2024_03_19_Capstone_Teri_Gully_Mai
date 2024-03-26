@@ -41,7 +41,7 @@ const routes: Routes = [
     component:ResetPasswordComponent
   },
   {
-    path: 'blog',
+    path: 'blog/:id',
     component:WriteBlogComponent
   },
   {
@@ -53,6 +53,7 @@ const routes: Routes = [
     component:MyBlogsComponent
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
