@@ -15,13 +15,13 @@ export class SmallerBlogComponent {
 
 
   constructor(private saveService: SaveCollectionService) { }
-  onClick(): void {
+  onClick(): void {    
     this.blogClicked.emit(this.blogId); // Emit the blog ID when clicked
   }
 
-  onSave(): void {
+  onSave(blogId : string): void {
     // Call the saveBlog method from the BlogService
-    this.saveService.saveBlog(this.blogId)
+    this.saveService.saveBlog(blogId)
       .then(response => {
         // Handle success
         console.log('Blog saved successfully', response);

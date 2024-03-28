@@ -1,4 +1,3 @@
-
 <div class="frame-parent29">
     <div class="frame-wrapper20">
         <div class="frame-parent30" (click)="onClick()">
@@ -7,16 +6,22 @@
 
                 <div class="frame-wrapper21">
                     <div class="frame-wrapper22">
-                        <img class="frame-child13" loading="lazy" alt=""
-                            src="../../assets/public/group-2661@2x.png" />
+                        <img class="frame-child13" loading="lazy" alt="" src="../../assets/public/group-2661@2x.png" />
                     </div>
                 </div>
             </div>
-            <div class="frame-wrapper23" >
+            <div class="frame-wrapper23">
                 <div class="chole-paratha-group">
-                    <h2 class="chole-paratha2">{{ title }}</h2>
-                    <h2 class="k-saves9">{{ likes }}  saves</h2>
+                    <h2 class="chole-paratha2">{{ title }} mada</h2>
+                    <h2 class="k-saves9">{{ likes }} saves</h2>
+                    
                 </div>
+                <div>
+                    <span class="material-symbols-outlined" (click)="onSave(blogId)" >
+                        bookmark
+                    </span>
+                </div>
+                
             </div>
         </div>
     </div>

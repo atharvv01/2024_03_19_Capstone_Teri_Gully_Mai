@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root",
 })
 export class SaveCollectionService {
-  private url = "http://localhost:8080/users";
+  private url = "http://localhost:3000/users";
   private token: string | null = null;
 
   constructor(
@@ -27,7 +27,7 @@ export class SaveCollectionService {
   }
 
   private getToken(): string | null {
-    return localStorage.getItem('Authorization');
+    return localStorage.getItem('authToken');
   }
 
   saveBlog(blogId: string): Promise<any> {
