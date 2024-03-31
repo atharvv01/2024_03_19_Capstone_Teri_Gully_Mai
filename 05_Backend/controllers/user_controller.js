@@ -18,46 +18,39 @@ const blog = require("../schema/blog_schema")
 
 const signup = async (req, res) => {
     try {
-        const userData = req.body;
-
-        // Validate user data
-        const validationError = validateInputs(userData);
-        if (validationError) {
-            return res.status(400).json({
-                success: false,
-                message: validationError,
-            });
+        const { username, email, password, profilePicture } = req.body;
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ success: false, message: "Invalid email format." });
         }
-
-        // Check if the user already exists with the provided email
-        const existingUser = await User.findOne({ email: userData.email });
-
+        if (password.length < 6) {
+            return res.status(400).json({ success: false, message: "Password must be at least 6 characters long." });
+        }
+        if (username.length < 3 || username.length > 30) {
+            return res.status(400).json({ success: false, message: "Username must be between 3 and 30 characters long." });
+        }
+        const existingUser = await User.findOne({ $or: [{ username }, { email }] });
         if (existingUser) {
-            return res.status(400).json({
-                success: false,
-                message: "An account already exists with the provided email.",
-            });
+            return res.status(400).json({ success: false, message: "Username or email already exists." });
         }
-
-        // Hash the password
-        const hashedPassword = await bcrypt.hash(userData.password, 10);
-        userData.password = hashedPassword;
-
-        // Create a new user
-        const newUser = new User(userData);
-        const savedUser = await newUser.save();
-
-        res.status(201).json({
-            success: true,
-            message: "User signed up successfully!",
-            user: savedUser,
+        const hashedPassword = await bcrypt.hash(password, 10);
+        if (!hashedPassword) {
+            return res.status(500).json({ success: false, message: "Error hashing password." });
+        }
+        const newUser = new User({
+            username,
+            email,
+            password: hashedPassword,
+            profilePicture
         });
+        const savedUser = await newUser.save();
+        if (!savedUser) {
+            return res.status(500).json({ success: false, message: "Error saving user to database." });
+        }
+        res.status(201).json({ success: true, message: "User signed up successfully!", user: savedUser });
     } catch (error) {
         console.error(error);
-        res.status(500).json({
-            success: false,
-            message: "Internal Server Error",
-        });
+        res.status(500).json({ success: false, message: "Internal Server Error" });
     }
 };
 

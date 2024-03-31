@@ -1,47 +1,81 @@
-const mongoose = require('mongoose');
-const { wordCountValidator } = require('../validators/schema_validators');
+const mongoose = require("mongoose");
 
 const blogSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    validate: {
-      validator: wordCountValidator(5, 15),
-      message: props => `${props.value} must have between 5 and 15 words`
-    }
   },
-  description: {
+  content: {
     type: String,
     required: true,
-    // validate: {
-    //   validator: wordCountValidator(50, 250),
-    //   message: props => `${props.value} must have between 50 and 250 words`
-    // }
+  },
+  author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
   },
   city: {
     type: String,
-    required: true
+    required: true,
   },
-  thumbnail: {
+  category: {
     type: String,
-    required: true
+    enum: ["explore", "things_to_do", "where_to_eat"],
+    required: true,
   },
-  places: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Place' }], // Referencing the Place model
-  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  likes: {
+  published: {
+    type: Boolean,
+    default: false,
+  },
+  views: {
     type: Number,
-    default: 0
+    default: 0,
   },
-  timestamp: {
+  likes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
+  trending: {
+    type: Boolean,
+    default: false,
+  },
+  promoted: {
+    type: Boolean,
+    default: false,
+  },
+  saves: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Save",
+    },
+  ],
+  flags: {
+    type: Number,
+    default: 0,
+  },
+  segments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Segment",
+    },
+  ],
+  coverPhoto: {
+    type: String,
+  },
+  createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
-blogSchema.pre('find', function(next) {
-  this.populate('places'); // Automatically populate the 'places' field
-  next();
-});
+const Blog = mongoose.model("Blog", blogSchema);
 
-
-module.exports = mongoose.model('Blog', blogSchema);
+module.exports = Blog;
