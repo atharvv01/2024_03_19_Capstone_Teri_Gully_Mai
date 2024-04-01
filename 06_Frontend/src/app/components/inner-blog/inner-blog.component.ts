@@ -1,23 +1,47 @@
-import { HttpClient } from '@angular/common/http';
-import { Component,OnInit } from '@angular/core';
+import { Component, Input , OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BlogService } from '../../services/blog.service';
+
+export interface Place {
+  description: string;
+  googleMapLink: string;
+  img: string[];
+  placeName: string;
+  price: number;
+  ratings: number;
+  timings: string;
+  where: string;
+}
 
 @Component({
   selector: 'app-inner-blog',
   templateUrl: './inner-blog.component.html',
-  styleUrl: './inner-blog.component.css'
+  styleUrls: ['./inner-blog.component.css']
 })
-export class InnerBlogComponent{
-  // posts: any[];
+export class InnerBlogComponent  implements OnInit {
 
-  // constructor(private http: HttpClient) { 
-  //   this.posts=[];
-  // }
+  @Input() places!: Place;
 
-  // ngOnInit(): void {
-  //   // Make HTTP GET request to fetch blog posts from backend
-  //   this.http.get<any[]>('http://localhost:3000/api/posts')
-  //     .subscribe(posts => {
-  //       this.posts = posts;
-  //     });
-  // }
+  blogPlaces: Place[] = [];
+
+  constructor(
+    private route: ActivatedRoute,
+    private blogService: BlogService
+  ) { }
+
+    ngOnInit(): void {
+    const blogId = this.route.snapshot.paramMap.get('blogId');
+    if (blogId) {
+      this.blogService.getAllPlaces(blogId).subscribe(
+        (places: Place[]) => {
+          this.blogPlaces = places;
+          console.log('Places:', this.blogPlaces);
+        },
+        (error) => {
+          console.error('Error fetching places:', error);
+        }
+      );
+    }
+  }
 }
+

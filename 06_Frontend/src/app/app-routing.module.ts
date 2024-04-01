@@ -42,7 +42,7 @@ const routes: Routes = [
     component:ResetPasswordComponent
   },
   {
-    path: 'blog/:id',
+    path: 'blog/:blogId',
     component:WriteBlogComponent
   },
   {
