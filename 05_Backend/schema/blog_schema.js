@@ -110,7 +110,12 @@ const blogSchema = new mongoose.Schema({
   flags: {
     type: Number,
     default: 0
-  },
+  }, 
+  type: {
+    type: String,
+    enum: ['Explore top Tourist attractions', 'Where to eat', 'Things to do'],
+    required: true
+  }
 });
 
 module.exports = mongoose.model('Blog', blogSchema);

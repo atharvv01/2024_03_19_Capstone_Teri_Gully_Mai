@@ -4,7 +4,8 @@ const Savedblogs = require("../schema/saved_blogs");
 const blog = require("../schema/blog_schema")
 
 
-//function for user to save blogs
+
+
 const saveBlog = async (req, res) => {
     try {
         const userData = req.decoded;
@@ -16,9 +17,17 @@ const saveBlog = async (req, res) => {
         if (!user) {
             return res.status(404).json({ success: false, message: "User not found" });
         }
+
+        // Check if the user has already saved this blog
         const savedBlogs = await Savedblogs.findOne({user:userData.userId,blog:blogId})
         if (savedBlogs) {
             return res.status(400).json({ success: false, message: "Blog already saved by the user" });
+        }
+
+        // Check the user's status and the number of blogs they have saved
+        const savedBlogsCount = await Savedblogs.countDocuments({user: userData.userId});
+        if (user.status === 'normal' && savedBlogsCount >= 5) {
+            return res.status(400).json({ success: false, message: "Take subscription to save more blogs" });
         }
 
         const addToSaved = new Savedblogs ({
