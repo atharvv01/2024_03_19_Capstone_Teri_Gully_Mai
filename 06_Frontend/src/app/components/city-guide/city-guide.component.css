@@ -1465,7 +1465,7 @@
   color: var(--color-black);
   font-family: var(--medium-type18);
 }
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
   .frame-wrapper4 {
     flex: 1;
     min-width: 100%;
@@ -1665,4 +1665,210 @@
   .city-guide-delhi {
     gap: 26px 105px;
   }
+} */ 
+
+@media screen and (max-width: 1400px) {
+  .frame-wrapper4 {
+    flex: 1;
+    min-width: 100%;
+  }
+  .ellipse-wrapper {
+    flex: 1;
+  }
+  .frame-parent8 {
+    flex-wrap: wrap;
+  }
+  .frame-parent13 {
+    gap: 31px 62px;
+  }
+  .frame-section {
+    padding-bottom: 291px;
+    box-sizing: border-box;
+  }
+  .graphic-element-container-parent {
+    flex-wrap: wrap;
+    gap: 793.1px 397px;
+    padding-bottom: 451px;
+    box-sizing: border-box;
+  }
 }
+
+@media screen and (max-width: 1200px) {
+  .where-to-eat-services {
+    display: none;
+  }
+  .india-gate-qutub-minar-humayun {
+    gap: 178px 89px;
+  }
+  .frame-parent6 {
+    flex-wrap: wrap;
+  }
+  .frame-parent16,
+  .frame-parent22,
+  .frame-parent9 {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(262px, 455px));
+  }
+  .frame-parent20 {
+    gap: 33px 67px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .frame-div {
+    display: none;
+  }
+  .india-gate-qutub-minar-humayun {
+    width: 625px;
+  }
+  .explore-delhi {
+    font-size: var(--font-size-37xl);
+  }
+  .login-sign-up {
+    gap: 32px 63.1px;
+  }
+  .login-sign-up-wrapper {
+    padding-left: var(--padding-17xl);
+    padding-right: var(--padding-16xl);
+    box-sizing: border-box;
+  }
+  .explore-top-tourist {
+    font-size: var(--font-size-23xl);
+  }
+  .frame-parent9 {
+    grid-template-columns: minmax(262px, 1fr);
+  }
+  .ellipse-wrapper {
+    min-width: 100%;
+  }
+  .frame-parent8 {
+    gap: 33px 16px;
+  }
+  .frame-parent5 {
+    gap: 43px 87px;
+  }
+  .where-to-eat {
+    font-size: var(--font-size-23xl);
+  }
+  .services-parent {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+  .frame-parent14 {
+    gap: 22px;
+  }
+  .frame-parent16 {
+    grid-template-columns: minmax(262px, 1fr);
+  }
+  .frame-parent13 {
+    gap: 15px 62px;
+  }
+  .frame-parent4 {
+    gap: 40px 80.5px;
+  }
+  .things-to-do {
+    font-size: 41px;
+  }
+  .things-to-do-parent {
+    flex-wrap: wrap;
+  }
+  .frame-parent22 {
+    grid-template-columns: minmax(262px, 1fr);
+  }
+  .frame-parent20 {
+    gap: 17px 67px;
+  }
+  .frame-section {
+    gap: 49px 98px;
+    padding-bottom: 189px;
+    box-sizing: border-box;
+  }
+  .graphic-element-container {
+    padding-top: var(--padding-273xl);
+    box-sizing: border-box;
+  }
+  .graphic-element-container-parent {
+    gap: 793.1px 198px;
+    padding-bottom: 293px;
+    box-sizing: border-box;
+  }
+  .city-guide-delhi {
+    height: auto;
+    gap: 52px 105px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .india-gate-qutub-minar-humayun {
+    gap: 178px 44px;
+  }
+  .explore-delhi {
+    font-size: var(--font-size-23xl);
+  }
+  .circle-agra-jaipur {
+    gap: 18px 36px;
+  }
+  .frame-parent1 {
+    gap: 21px 42px;
+  }
+  .login-sign-up {
+    gap: 16px 63.1px;
+  }
+  .latest,
+  .popular,
+  .sort-by {
+    font-size: var(--font-size-base);
+  }
+  .explore-top-tourist {
+    font-size: var(--font-size-12xl);
+  }
+  .humayuns-tomb,
+  .india-gate,
+  .k-saves,
+  .k-saves1,
+  .k-saves2,
+  .qutub-minar {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-wrapper7 {
+    gap: 18px 36px;
+  }
+  .frame-parent5 {
+    gap: 22px 87px;
+  }
+  .where-to-eat {
+    font-size: var(--font-size-12xl);
+  }
+  .butter-chicken,
+  .chole-paratha,
+  .k-saves3,
+  .k-saves4,
+  .k-saves5,
+  .momos {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-parent4 {
+    gap: 20px 80.5px;
+  }
+  .things-to-do {
+    font-size: var(--font-size-12xl);
+  }
+  .butter-chicken1,
+  .chole-paratha1,
+  .k-saves6,
+  .k-saves7,
+  .k-saves8,
+  .momos1 {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-section {
+    gap: 24px 98px;
+  }
+  .graphic-element-container-parent {
+    gap: 793.1px 99px;
+  }
+  .city-guide-delhi {
+    gap: 26px 105px;
+  }
+}
+
