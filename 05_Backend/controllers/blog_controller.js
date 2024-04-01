@@ -2,7 +2,15 @@
 const User = require("../schema/user_schema")
 const SavedBlog = require("../schema/saved_blogs")
 const Blog = require('../schema/blog_schema');
-const Place = require('../schema/place_schema');
+const Place = require('../schema/place_schema'); 
+const cloudinary = require('cloudinary').v2; 
+
+
+cloudinary.config({ 
+  cloud_name: 'dbjrfcbee', 
+  api_key: '227626296864211', 
+  api_secret: '***************************' 
+});
 
 // Controller to create a new blog
 const createBlog = async (req, res) => {
@@ -97,11 +105,27 @@ const getBlogByCity = async (req, res) => {
 };
 
 // Controller to fetch blog details by ID
-const getBlogById = async (req, res) => {
+const getBlogByAuthorId = async (req, res) => {
   try {
     const authorId = req.query.authorId;
     // Find the blog with the specified ID
     const blog = await Blog.find({ author: authorId});
+    if (!blog) {
+      return res.status(404).json({ success: false, message: "Blog not found" });
+    }
+    res.status(200).json(blog);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+// Controller to fetch blog details by ID
+const getBlogById = async (req, res) => {
+  try {
+    const blogId = req.query.blogId;
+    // Find the blog with the specified ID
+    const blog = await Blog.findById(blogId);
     if (!blog) {
       return res.status(404).json({ success: false, message: "Blog not found" });
     }
@@ -204,14 +228,37 @@ await blog.save();
   }
 };
 
+// Route to get all places of a blog by ID
+const getAllPlacesOfBlog = async (req, res) => {
+  try {
+    const blogId = req.query.blogId;
+    // console.log(blogId);
+    // Find the blog by ID and populate the 'places' field
+    const blog = await Blog.findById(blogId).populate('places');
+    // console.log(blog);
+    // console.log("hello");
+    if (!blog) {
+      return res.status(404).json({ error: 'Blog not found' });
+    }
+    
+    // Extract places from the blog and send them as response
+    const places = blog.places;
+    res.json(places);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+};
 
 // Export the controller functions
 module.exports = {
   createBlog,
   addPlaceToBlog,
   getBlogByCity,
+  getBlogByAuthorId,
   getBlogById,
   placeToDelete,
   deleteBlogAndPlaces,
-  modifyBlogAndPlaces
+  modifyBlogAndPlaces,
+  getAllPlacesOfBlog
 };

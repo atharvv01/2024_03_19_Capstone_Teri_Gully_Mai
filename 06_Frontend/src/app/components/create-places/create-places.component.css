@@ -364,56 +364,44 @@
     background-color: var(--color-blueviolet-400);
     filter: blur(500px);
     z-index: 1;
-}
+} 
 
-@media screen and (max-width: 450px) {
-    .places-parent {
-        flex-wrap: wrap;
-    }
 
-    .places {
-        font-size: var(--font-size-11xl);
-        font-size: var(--font-size-23xl);
-        line-height: 11px;
-    }
-
-    .add {
-        font-size: var(--font-size-xl);
-    }
-
-    .add-place-btn {
-        font-size: var(--font-size-23xl);
-        line-height: 11px;
-    }
-
-    .about {
-        font-size: var(--font-size-xl);
-        line-height: 14px;
-    }
-
-    .h11 {
-        font-size: 33px;
-        line-height: 11px;
-    }
-}
+/* Add your provided CSS styles here */
 
 @media screen and (max-width: 750px) {
+    .places-parent {
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    
     .frame-parent37 {
-        padding-top: var(--padding-xl);
-        padding-bottom: var(--padding-xl);
-        box-sizing: border-box;
+      padding: 20px;
     }
-}
+  }
+  
+  @media screen and (max-width: 450px) {
+    .name-of-place-parent {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .name-of-place,
+    .google-map-link1,
+    .images1,
+    .blog-desc {
+      width: 100%;
+      position: static;
+    }
+    
+    .google-map-link1 {
+      margin-top: 20px;
+    }
+    
+    .h11,
+    .frame-child18 {
+      display: none;
+    }
+  }
 
-@media screen and (max-width: 1050px) {
-    .add-place-btn {
-        font-size: var(--font-size-37xl);
-        font-size: var(--font-size-21xl);
-        line-height: 14px;
-    }
-
-    .h11 {
-        font-size: 44px;
-        line-height: 14px;
-    }
-}

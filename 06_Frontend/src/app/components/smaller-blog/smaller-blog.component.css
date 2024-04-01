@@ -98,8 +98,15 @@
     padding: 10px;
     align-self: stretch;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* flex-direction: column; */
     align-items: flex-start;
+  }
+
+  .material-symbols-outlined{
+    margin-left :auto;
+    margin-top : auto;
+    cursor :grab;
   }
 
   .chole-paratha-group {
