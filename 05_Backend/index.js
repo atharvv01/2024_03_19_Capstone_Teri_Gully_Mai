@@ -19,11 +19,12 @@ app.use(bodyParser.json());
 // Define routes
 const userRoutes = require("./routes/user_routes")
 const blogRoutes =  require("./routes/blog_routes")
+const savesRoutes = require("./routes/saves_routes")
 
 //using routes in app 
 app.use("/users", userRoutes)
 app.use("/blogs", blogRoutes)
-
+app.use("/saves", savesRoutes)
 
 
 // Connect to MongoDB asynchronously
