@@ -30,10 +30,10 @@
                             </div>
 
 
-                            <app-smaller-blog></app-smaller-blog>
-
-
-
+                            <ng-container *ngFor="let blog of savedBlogs">
+                                <app-smaller-blog [title]="blog.title" [likes]="blog.likes" [blogId]="blog._id"
+                                    (blogClicked)="onBlogClicked($event)"></app-smaller-blog>
+                            </ng-container>
 
 
                         </div>
@@ -42,21 +42,7 @@
                 </main>
             </div>
         </div>
-        <!-- <div class="background-layer">
-        <img class="background-icon1" alt="" src="../../assets/public/background@2x.png" />
 
-        <div class="objects-container">
-          <div class="graphic-elements-wrapper">
-            <img
-              class="graphic-elements-icon1"
-              alt=""
-              src="../../assets/public/graphic-elements.svg"
-            />
-          </div>
-          <div class="objects-container-child"></div>
-        </div>
-        <img class="objects-icon2" alt="" src="../../assets/public/objects@2x.png" />
-      </div> -->
     </div>
 </body>
 
