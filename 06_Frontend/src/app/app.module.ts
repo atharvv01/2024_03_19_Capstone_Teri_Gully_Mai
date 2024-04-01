@@ -1,7 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
@@ -21,6 +21,7 @@ import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.c
 import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 import { SmallerBlogComponent } from './components/smaller-blog/smaller-blog.component';
 import { CreatePlacesComponent } from './components/create-places/create-places.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CreatePlacesComponent } from './components/create-places/create-places.
     CreateABlogComponent,
     MyBlogsComponent,
     SmallerBlogComponent,
-    CreatePlacesComponent
+    CreatePlacesComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { CreatePlacesComponent } from './components/create-places/create-places.
     FormsModule,
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

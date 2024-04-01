@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 120px;
-    debug_commit: f6aba90;
+    /* debug_commit: f6aba90; */
     text-align: left;
     font-size: var(--font-size-2xl);
     color: var(--color-black);

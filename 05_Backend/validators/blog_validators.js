@@ -6,4 +6,4 @@ function wordCountValidator(minCount, maxCount) {
     };
   }
 
-module.exports = { wordCountValidator };
+module.exports = { wordCountValidator };

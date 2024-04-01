@@ -2,7 +2,15 @@
 const User = require("../schema/user_schema")
 const SavedBlog = require("../schema/saved_blogs")
 const Blog = require('../schema/blog_schema');
-const Place = require('../schema/place_schema');
+const Place = require('../schema/place_schema'); 
+const cloudinary = require('cloudinary').v2; 
+
+
+cloudinary.config({ 
+  cloud_name: 'dbjrfcbee', 
+  api_key: '227626296864211', 
+  api_secret: '***************************' 
+});
 
 // Controller to create a new blog
 const createBlog = async (req, res) => {
