@@ -172,20 +172,6 @@
     text-align: center;
     display: inline-block;
     min-width: 52px;
-  }
-  
+  } 
 
-  @media screen and (max-width: 750px) {
-    .frame-container {
-      width: 625px;
-    }
-    .login-sign-up-title {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 1125px) {
-    .home-parent {
-      display: none;
-    }
-  }
+ 
