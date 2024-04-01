@@ -1,8 +1,15 @@
 /**
  * New features added schema 
- */
+ */ 
 
-// Define schema for blog
+// Importing wordCountValidator from a separate file
+const { wordCountValidator } = require('../validators/blog_validators'); // Adjust the path as per your project structure
+
+
+
+
+// Define schema for blog 
+const mongoose = require('mongoose');
 const blogSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -15,10 +22,7 @@ const blogSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true, // Description of the blog post
-    // validate: {
-    //   validator: wordCountValidator(50, 250),
-    //   message: props => `${props.value} must have between 50 and 250 words`
-    // }
+    
   },
   // City associated with the blog post
   city:
@@ -109,11 +113,6 @@ const blogSchema = new mongoose.Schema({
   },
 });
 
-// blogSchema.pre('find', function (next) {
-//   this.populate('places'); // Automatically populate the 'places' field
-//   next();
-// });
-
 module.exports = mongoose.model('Blog', blogSchema);
 
 
@@ -129,61 +128,3 @@ module.exports = mongoose.model('Blog', blogSchema);
 
 
 
-
-
-
-
-
-
-/**
- * Intial schema
- * @author Atharva
- */
-
-// const mongoose = require('mongoose');
-// const { wordCountValidator } = require('../validators/schema_validators');
-
-// const blogSchema = new mongoose.Schema({
-//   title: {
-//     type: String,
-//     required: true,
-//     validate: {
-//       validator: wordCountValidator(5, 15),
-//       message: props => `${props.value} must have between 5 and 15 words`
-//     }
-//   },
-//   description: {
-//     type: String,
-//     required: true,
-//     // validate: {
-//     //   validator: wordCountValidator(50, 250),
-//     //   message: props => `${props.value} must have between 50 and 250 words`
-//     // }
-//   },
-//   city: {
-//     type: String,
-//     required: true
-//   },
-//   thumbnail: {
-//     type: String,
-//     required: true
-//   },
-//   places: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Place' }], // Referencing the Place model
-//   author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-//   likes: {
-//     type: Number,
-//     default: 0
-//   },
-//   timestamp: {
-//     type: Date,
-//     default: Date.now
-//   }
-// });
-
-// blogSchema.pre('find', function(next) {
-//   this.populate('places'); // Automatically populate the 'places' field
-//   next();
-// });
-
-
-// module.exports = mongoose.model('Blog', blogSchema);

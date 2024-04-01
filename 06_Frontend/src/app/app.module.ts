@@ -21,6 +21,7 @@ import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.c
 import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 import { SmallerBlogComponent } from './components/smaller-blog/smaller-blog.component';
 import { CreatePlacesComponent } from './components/create-places/create-places.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CreatePlacesComponent } from './components/create-places/create-places.
     CreateABlogComponent,
     MyBlogsComponent,
     SmallerBlogComponent,
-    CreatePlacesComponent
+    CreatePlacesComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

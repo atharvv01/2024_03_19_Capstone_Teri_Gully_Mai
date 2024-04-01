@@ -14,85 +14,52 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
 </head>
 
-<body>
-  <div class="signup1">
-    <section class="frame-parent57">
-      <div class="ellipse-parent2">
-        <div class="frame-child23"></div>
-        <!-- <img class="vector-icon14" alt="" src="../../assets/public/vector.svg" /> -->
-
-        <!-- <img
-            class="vector-icon15"
-            loading="lazy"
-            alt=""
-            src="../../assets/public/vector-12.svg"
-          /> -->
-      </div>
-      <div class="frame-wrapper34">
-        <div class="frame-parent58">
-          <div class="frame8">
-            <div class="headline2">
-              <h1 class="headline3">Welcome back</h1>
-            </div>
-            <div class="descrirtion-text1">
-              <div class="description-text1"></div>
-            </div>
-            <div class="forgot-password">
-              <div class="input-field9">
-                <input class="input-field10" type="text" placeholder="Username" [(ngModel)]="username" name="username"
-                  #usernameInput="ngModel" required (blur)="usernameInputFocused = false"
-                  (focus)="usernameInputFocused = true" />
-                <div
-                  *ngIf="!usernameInputFocused && usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)"
-                  class="error-message">
-                  Username is required
-                </div>
-              </div>
-              <div class="input-field11">
-                <input type="password" [(ngModel)]="password" #passwordInput="ngModel" required
-                  (blur)="passwordInputFocused = false" (focus)="passwordInputFocused = true" class="input-field12"
-                  placeholder="Password" />
-                <div
-                  *ngIf="!passwordInputFocused && passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)"
-                  class="error-message">
-                  Password is required
-                </div>
-              </div>
-              <div class="forgot-password1" (click)="navigateToForgotPassword()">Forgot password?</div>
-              <div class="description-link-label">
-                <!-- <button class="text-button1"[disabled]="!usernameInput.valid || !passwordInput.valid"
-                [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}" > -->
-                  <button class="text-button1" (click)="onloginClick()"[disabled]="!usernameInput.valid || !passwordInput.valid"
-                  [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}">Log In</button>
-                <!-- </button> -->
-              </div>
-            </div>
-          </div>
-          <div class="description-link1">
-            <div class="description2">
-              <div class="description3">Don't have an account?</div>
-            </div>
-            <div class="left-aligned-link-button1">
-              <div class="link1" (click)="navigateToSignup()">Sign In</div>
-            </div>
-          </div>
-          <div class="vector-parent2">
-            <!-- <img class="vector-icon16" alt="" src="../../assets/public/vector-21.svg" />
-
-              <img
-                class="vector-icon17"
-                loading="lazy"
-                alt=""
-                src="../../assets/public/vector-31.svg"
-              /> -->
-          </div>
+<body> 
+  <div class="welcome-back-container">
+    <div class="headline2">
+      <h1 class="headline3">Welcome back</h1>
+    </div>
+  <div class="login-container">
+    <div class="forgot-password">
+      <div class="input-field9">
+        <input class="input-field10" type="text" placeholder="Username" [(ngModel)]="username" name="username"
+          #usernameInput="ngModel" required (blur)="usernameInputFocused = false"
+          (focus)="usernameInputFocused = true" />
+        <div
+          *ngIf="!usernameInputFocused && usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)"
+          class="error-message">
+          Username is required
         </div>
       </div>
-    </section>
-    <div class="signup-item"></div>
-    <div class="signup-inner"></div>
-    <img class="objects-icon4" alt="" src="../../assets/public/objects@2x.png" />
+      <div class="input-field11">
+        <input type="password" [(ngModel)]="password" #passwordInput="ngModel" required
+          (blur)="passwordInputFocused = false" (focus)="passwordInputFocused = true" class="input-field12"
+          placeholder="Password" />
+        <div
+          *ngIf="!passwordInputFocused && passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)"
+          class="error-message">
+          Password is required
+        </div>
+      </div>
+      <div class="forgot-password1" (click)="navigateToForgotPassword()">Forgot password?</div>
+      <div class="description-link-label">
+        <button class="text-button1" (click)="onloginClick()"
+          [disabled]="!usernameInput.valid || !passwordInput.valid"
+          [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}">Log In</button>
+      </div>
+    </div>
+    <div class="description-link1">
+      <div class="description2">
+        <div class="description3">Don't have an account?</div>
+      </div>
+      <div class="left-aligned-link-button1">
+        <div class="link1" (click)="navigateToSignup()">Sign In</div>
+      </div>
+    </div>
+    <!-- <div class="vector-parent2"></div> -->
+  </div> 
   </div>
 </body>
+
 
 </html>
