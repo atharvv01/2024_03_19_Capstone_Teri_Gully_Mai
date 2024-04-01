@@ -8,10 +8,16 @@ const addComment = async (req, res) => {
     try {
         const { blogId, comment } = req.body;
         const userId = req.decoded.userId; // Assuming userId is available in the decoded token
-
+        console.log(userId);
         // Check if the user has already commented on the blog
-        // const existingComment = await Comment.findOne({ blog_id: blogId, "comments.user_id": userId });
+        const existingComment = await Comment.findOne({ blog_id: blogId, "comments.user_id": userId });
 
+        if (existingComment) {
+            return res.status(400).json({
+                success: false,
+                message: "You have already commented on this blog.",
+            });
+        }
         // Validate the comment
         if (!validateComment(comment)) {
             return res.status(400).json({
