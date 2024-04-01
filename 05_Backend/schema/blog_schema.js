@@ -2,15 +2,16 @@
  * New features added schema 
  */
 
+const mongoose = require("mongoose")
 // Define schema for blog
 const blogSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    validate: {
-      validator: wordCountValidator(5, 15),
-      message: props => `${props.value} must have between 5 and 15 words`
-    }
+    // validate: {
+    //   validator: wordCountValidator(5, 15),
+    //   message: props => `${props.value} must have between 5 and 15 words`
+    // }
   },
   description: {
     type: String,
