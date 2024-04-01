@@ -1,3 +1,13 @@
+.scrollable-container {
+    height: 800px; /* Set the desired height */
+    overflow: auto; /* Make it scrollable */
+  }
+  
+  /* Add your existing CSS styles here */
+  
+
+
+
 .places-parent {
     display: flex;
     flex-direction: row;
