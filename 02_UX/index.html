@@ -16,16 +16,28 @@
     />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
     />
   </head>
   <body>
     <div class="landing-page">
-      <div class="image"></div>
+      <div class="landing-page-child"></div>
       <img class="objects-icon" alt="" src="./public/objects@2x.png" />
 
       <div class="frame-parent">
@@ -33,8 +45,8 @@
           <div class="teri-galli-mai-wrapper">
             <h2 class="teri-galli-mai">Teri Galli Mai</h2>
           </div>
-          <div class="frame-container">
-            <div class="frame-wrapper">
+          <div class="home-city-guides-view">
+            <div class="home-city-guides-view-inner">
               <div class="home-parent">
                 <div class="home">Home</div>
                 <div class="city-guides">City Guides</div>
@@ -42,7 +54,7 @@
                 <div class="write-a-blog">Write a blog</div>
               </div>
             </div>
-            <div class="login-sign-up-title">
+            <div class="login-sign-up-label">
               <button class="login-wrapper">
                 <div class="login">Login</div>
               </button>
@@ -52,11 +64,11 @@
             </div>
           </div>
         </header>
-        <div class="image-container">
-          <main class="frame-main">
-            <section class="experience-create-and-explore-wrapper">
-              <div class="experience-create-and-explore">
-                <div class="create-blog-button">
+        <div class="content-container">
+          <main class="create-and-explore-label-parent">
+            <section class="create-and-explore-label">
+              <div class="create-blog-label">
+                <div class="experience-label">
                   <div class="content">
                     <h1 class="experience-create-and-container">
                       <span>Experience, Create and </span>
@@ -67,8 +79,8 @@
                       promos and create your blogs about your experience as
                       well.
                     </div>
-                    <button class="create-blog-container-wrapper">
-                      <div class="create-blog-container">
+                    <button class="create-blog-label-wrapper" id="frameButton2">
+                      <div class="create-blog-label1">
                         <b class="create-blog">Create Blog</b>
                         <img
                           class="vector-icon"
@@ -81,8 +93,8 @@
                 </div>
                 <div class="image-02">
                   <div class="vector">
-                    <div class="map-container">
-                      <div class="frame">
+                    <div class="frame">
+                      <div class="frame1">
                         <img
                           class="frame-icon"
                           alt=""
@@ -102,7 +114,7 @@
                         src="./public/frame-1.svg"
                       />
                     </div>
-                    <div class="frame1">
+                    <div class="frame2">
                       <div class="maps">
                         <img
                           class="vector-icon1"
@@ -113,34 +125,34 @@
                       </div>
                     </div>
                   </div>
-                  <div class="images-wrapper">
+                  <div class="images-container">
                     <div class="images">
-                      <div class="frame2">
-                        <div class="images-container">
+                      <div class="frame3">
+                        <div class="frame4">
                           <img
-                            class="images-container-child"
+                            class="frame-child"
                             loading="lazy"
                             alt=""
                             src="./public/rectangle-4@2x.png"
                           />
 
                           <img
-                            class="images-container-item"
+                            class="frame-item"
                             loading="lazy"
                             alt=""
                             src="./public/rectangle-3@2x.png"
                           />
                         </div>
                       </div>
-                      <div class="frame3">
+                      <div class="frame5">
                         <img
-                          class="frame-child"
+                          class="frame-inner"
                           alt=""
                           src="./public/rectangle-5@2x.png"
                         />
 
                         <img
-                          class="frame-item"
+                          class="rectangle-icon"
                           alt=""
                           src="./public/rectangle-2@2x.png"
                         />
@@ -150,10 +162,19 @@
                 </div>
               </div>
             </section>
-            <div class="tyuia"></div>
+            <div class="plane-image"></div>
           </main>
         </div>
       </div>
     </div>
+
+    <script>
+      var frameButton2 = document.getElementById("frameButton2");
+      if (frameButton2) {
+        frameButton2.addEventListener("click", function (e) {
+          window.location.href = "./create-a-blog.html";
+        });
+      }
+      </script>
   </body>
 </html>
