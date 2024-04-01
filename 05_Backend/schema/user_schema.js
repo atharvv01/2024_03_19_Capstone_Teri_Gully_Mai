@@ -33,6 +33,7 @@ const userSchema = new mongoose.Schema({
   },
   profile_pic: {
     type: String, // URL of the user's profile picture
+    require: true
   },
   points: {
     type: Number,

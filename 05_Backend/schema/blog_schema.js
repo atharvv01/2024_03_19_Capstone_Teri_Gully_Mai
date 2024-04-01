@@ -2,13 +2,6 @@
  * New features added schema 
  */
 
-// Define schema for comments
-const commentsSchema = new mongoose.Schema({
-  content: { type: String, required: true }, // Content of the comment
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Reference to the user who posted the comment
-  // Other fields as needed
-});
-
 // Define schema for blog
 const blogSchema = new mongoose.Schema({
   title: {
