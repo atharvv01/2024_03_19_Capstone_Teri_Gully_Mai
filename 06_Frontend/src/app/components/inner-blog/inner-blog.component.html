@@ -1,320 +1,55 @@
 <main class="blog-inner">
-    <section class="frame-parent43">
-      <div class="ellipse-parent">
-        <div class="frame-child19"></div>
-        <div class="frame-parent44">
-          <div class="frame-wrapper28">
-            <div class="mask-group-parent">
-              <img
-                class="mask-group-icon"
-                loading="lazy"
-                alt=""
-                src="../../assets/public/mask-group.svg"
-              />
-              <div class="by-riya-wrapper">
-                <div class="by-riya">By Riya</div>
-              </div>
+  <section class="frame-parent43">
+    <div class="ellipse-parent" *ngIf="blogPlaces && blogPlaces.length > 0">
+      <div class="frame-child19"></div>
+      <div class="frame-parent44" *ngFor="let place of blogPlaces">
+        <div class="frame-wrapper28">
+          <div class="mask-group-parent">
+            <img class="mask-group-icon" loading="lazy" alt="" src="../../assets/public/mask-group.svg" />
+            <div class="by-riya-wrapper">
+              <div class="by-riya">By Riya</div>
             </div>
           </div>
-          <img
-            class="despina-galani-q8irmopsgm-uns-icon"
-            loading="lazy"
-            alt=""
-            src="../../assets/public/despinagalani-q8irmopsgmunsplash-1@2x.png"
-          />
-          <div class="cafe-name-and-booking">
+        </div>
+        <img class="despina-galani-q8irmopsgm-uns-icon" loading="lazy" alt="" src="../../assets/public/despinagalani-q8irmopsgmunsplash-1@2x.png" />
+        <div class="cafe-name-and-booking">
           <div class="cafe-name-parent">
             <b class="cafe-name">
-              <span>Lorem ipsum, dolor sit amet eoiwfh kwebfwe kfwkef</span>
+              <span>{{ place.placeName }}</span>
             </b>
             <button class="see-on-map-wrapper">
-              <b class="see-on-map">SEE ON MAP</b>
+              <a [href]="place.googleMapLink" target="_blank">
+                <b class="see-on-map">SEE ON MAP</b>
+              </a>
             </button>
           </div>
           <button class="book-table-wrapper">
             <b class="book-table">BOOK TABLE</b>
           </button>
         </div>
-          <div class="winter-days-are-perfect-if-you-wrapper">
-            <div class="winter-days-are">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, vitae magni magnam id, omnis velit sint incidunt perspiciatis tempore et beatae est? Consectetur quos consequuntur iusto ipsum? Praesentium perspiciatis dolores consequatur reprehenderit facilis expedita quo quia temporibus, eius fugiat eum vero dicta voluptatem doloribus tempore autem molestias quam voluptates, pariatur distinctio odit fugit nihil? Ipsum animi vero voluptate quaerat blanditiis aliquam molestias dolorem eos a delectus error, exercitationem quis fugit dicta officia soluta dolorum praesentium, iusto qui voluptatibus! Deleniti a suscipit hic sed nemo, animi neque recusandae perspiciatis quae voluptate! Nobis perspiciatis iste, tenetur ipsam sunt soluta esse excepturi cum deserunt facilis cupiditate nihil debitis labore earum vitae provident ea libero! Praesentium dolorem rem exercitationem reiciendis possimus sed voluptas ab nesciunt amet delectus laudantium similique, non dolorum, quia, voluptates corrupti a consequuntur quo. Rerum soluta, animi in corporis libero consequuntur debitis nostrum, sint aut laboriosam eligendi beatae odit voluptate ea?
-            </div>
-          </div>
-          <div class="price-100-200-rs-parent">
-            <div class="price-100-container">
-              <b>Price : </b>
-              <span class="rs">100 -200 rs</span>
-            </div>
-            <div class="must-try-container">
-              <b>Must Try : </b>
-              <span class="pancakes-dosa-from"
-                >Pancakes, dosa from the live station, pasta and
-                pastries </span
-              >
-            </div>
-            <div class="zomato-rating-container">
-              <b>Zomato Rating : </b>
-              <span class="span1">3.8</span>
-            </div>
+        <div class="winter-days-are-perfect-if-you-wrapper">
+          <div class="winter-days-are">
+            {{ place.description }}
           </div>
         </div>
-      </div>
-<!--           
-      <div class="frame-parent45">
-        <div class="frame-wrapper29">
-          <div class="mask-group-group">
-            <img
-              class="mask-group-icon1"
-              loading="lazy"
-              alt=""
-              src="../../assets/public/mask-group.svg"
-            />
-
-            <div class="by-riya-container">
-              <div class="by-riya1">By Riya</div>
-            </div>
-          </div>
-        </div>
-        <img
-          class="despina-galani-q8irmopsgm-uns-icon1"
-          loading="lazy"
-          alt=""
-          src="../../assets/public/despinagalani-q8irmopsgmunsplash-1@2x.png"
-        />
-
-        <div class="cafe-name-group">
-          <b class="cafe-name1">
-            <span>cafe name</span>
-            <span class="span2"> </span>
-          </b>
-          <button class="see-on-map-container">
-            <b class="see-on-map1">SEE ON MAP</b>
-          </button>
-        </div>
-        <button class="book-table-container">
-          <b class="book-table1">BOOK TABLE</b>
-        </button>
-        <div class="winter-days-are-perfect-if-you-container">
-          <div class="winter-days-are1">
-            Winter days are perfect if you're someone who loves sitting out
-            in the open, soaking in the sun, enjoying a warm cuppa or a
-            cocktail or two with great food. The best part about restaurants
-            with outdoor seating is that they have the ability to make you
-            feel like you've made the most of your day when you spend time
-            brunching there! Here are the top restaurants you can check out
-            in Delhi NCR that offer the best outdoor seating. 
-          </div>
-        </div>
-        <div class="price-100-200-rs-group">
-          <div class="price-100-container1">
+        <div class="price-100-200-rs-parent">
+          <div class="price-100-container">
             <b>Price : </b>
-            <span class="rs1">100 -200 rs</span>
+            <span class="rs">{{ place.price }}</span>
           </div>
-          <div class="must-try-container1">
+          <div class="must-try-container">
             <b>Must Try : </b>
-            <span class="pancakes-dosa-from1"
-              >Pancakes, dosa from the live station, pasta and
-              pastries </span
-            >
+            <span class="pancakes-dosa-from">Pancakes, dosa from the live station, pasta and pastries </span>
           </div>
-          <div class="zomato-rating-container1">
+          <div class="zomato-rating-container">
             <b>Zomato Rating : </b>
-            <span class="span3">3.8</span>
+            <span class="span1">{{ place.ratings }}</span>
           </div>
         </div>
       </div>
-      <div class="frame-parent46">
-        <div class="frame-wrapper30">
-          <div class="mask-group-container">
-            <img
-              class="mask-group-icon2"
-              loading="lazy"
-              alt=""
-              src="../../assets/public/mask-group.svg"
-            />
-
-            <div class="by-riya-frame">
-              <div class="by-riya2">By Riya</div>
-            </div>
-          </div>
-        </div>
-        <img
-          class="despina-galani-q8irmopsgm-uns-icon2"
-          loading="lazy"
-          alt=""
-          src="../../assets/public/despinagalani-q8irmopsgmunsplash-1@2x.png"
-        />
-
-        <div class="cafe-name-container">
-          <b class="cafe-name2">
-            <span>cafe name</span>
-            <span class="span4"> </span>
-          </b>
-          <button class="see-on-map-frame">
-            <b class="see-on-map2">SEE ON MAP</b>
-          </button>
-        </div>
-        <button class="book-table-frame">
-          <b class="book-table2">BOOK TABLE</b>
-        </button>
-        <div class="winter-days-are-perfect-if-you-frame">
-          <div class="winter-days-are2">
-            Winter days are perfect if you're someone who loves sitting out
-            in the open, soaking in the sun, enjoying a warm cuppa or a
-            cocktail or two with great food. The best part about restaurants
-            with outdoor seating is that they have the ability to make you
-            feel like you've made the most of your day when you spend time
-            brunching there! Here are the top restaurants you can check out
-            in Delhi NCR that offer the best outdoor seating. 
-          </div>
-        </div>
-        <div class="price-100-200-rs-container">
-          <div class="price-100-container2">
-            <b>Price : </b>
-            <span class="rs2">100 -200 rs</span>
-          </div>
-          <div class="must-try-container2">
-            <b>Must Try : </b>
-            <span class="pancakes-dosa-from2"
-              >Pancakes, dosa from the live station, pasta and
-              pastries </span
-            >
-          </div>
-          <div class="zomato-rating-container2">
-            <b>Zomato Rating : </b>
-            <span class="span5">3.8</span>
-          </div>
-        </div>
-      </div>
-      <div class="ellipse-group">
-        <div class="frame-child20"></div>
-        <div class="frame-parent47">
-          <div class="frame-wrapper31">
-            <div class="mask-group-parent1">
-              <img
-                class="mask-group-icon3"
-                loading="lazy"
-                alt=""
-                src="../../assets/public/mask-group.svg"
-              />
-
-              <div class="by-riya-wrapper1">
-                <div class="by-riya3">By Riya</div>
-              </div>
-            </div>
-          </div>
-          <img
-            class="despina-galani-q8irmopsgm-uns-icon3"
-            loading="lazy"
-            alt=""
-            src="../../assets/public/despinagalani-q8irmopsgmunsplash-1@2x.png"
-          />
-
-          <div class="cafe-name-parent1">
-            <b class="cafe-name3">
-              <span>cafe name</span>
-              <span class="span6"> </span>
-            </b>
-            <button class="see-on-map-wrapper1">
-              <b class="see-on-map3">SEE ON MAP</b>
-            </button>
-          </div>
-          <button class="book-table-wrapper1">
-            <b class="book-table3">BOOK TABLE</b>
-          </button>
-          <div class="winter-days-are-perfect-if-you-wrapper1">
-            <div class="winter-days-are3">
-              Winter days are perfect if you're someone who loves sitting
-              out in the open, soaking in the sun, enjoying a warm cuppa or
-              a cocktail or two with great food. The best part about
-              restaurants with outdoor seating is that they have the ability
-              to make you feel like you've made the most of your day when
-              you spend time brunching there! Here are the top restaurants
-              you can check out in Delhi NCR that offer the best outdoor
-              seating. 
-            </div>
-          </div>
-          <div class="price-100-200-rs-parent1">
-            <div class="price-100-container3">
-              <b>Price : </b>
-              <span class="rs3">100 -200 rs</span>
-            </div>
-            <div class="must-try-container3">
-              <b>Must Try : </b>
-              <span class="pancakes-dosa-from3"
-                >Pancakes, dosa from the live station, pasta and
-                pastries </span
-              >
-            </div>
-            <div class="zomato-rating-container3">
-              <b>Zomato Rating : </b>
-              <span class="span7">3.8</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="frame-parent48">
-        <div class="frame-wrapper32">
-          <div class="mask-group-parent2">
-            <img
-              class="mask-group-icon4"
-              loading="lazy"
-              alt=""
-              src="../../assets/public/mask-group.svg"
-            />
-
-            <div class="by-riya-wrapper2">
-              <div class="by-riya4">By Riya</div>
-            </div>
-          </div>
-        </div>
-        <img
-          class="despina-galani-q8irmopsgm-uns-icon4"
-          loading="lazy"
-          alt=""
-          src="../../assets/public/despinagalani-q8irmopsgmunsplash-1@2x.png"
-        />
-
-        <div class="cafe-name-parent2">
-          <b class="cafe-name4">
-            <span>cafe name</span>
-            <span class="span8"> </span>
-          </b>
-          <button class="see-on-map-wrapper2">
-            <b class="see-on-map4">SEE ON MAP</b>
-          </button>
-        </div>
-        <button class="book-table-wrapper2">
-          <b class="book-table4">BOOK TABLE</b>
-        </button>
-        <div class="winter-days-are-perfect-if-you-wrapper2">
-          <div class="winter-days-are4">
-            Winter days are perfect if you're someone who loves sitting out
-            in the open, soaking in the sun, enjoying a warm cuppa or a
-            cocktail or two with great food. The best part about restaurants
-            with outdoor seating is that they have the ability to make you
-            feel like you've made the most of your day when you spend time
-            brunching there! Here are the top restaurants you can check out
-            in Delhi NCR that offer the best outdoor seating. 
-          </div>
-        </div>
-        <div class="price-100-200-rs-parent2">
-          <div class="price-100-container4">
-            <b>Price : </b>
-            <span class="rs4">100 -200 rs</span>
-          </div>
-          <div class="must-try-container4">
-            <b>Must Try : </b>
-            <span class="pancakes-dosa-from4"
-              >Pancakes, dosa from the live station, pasta and
-              pastries </span
-            >
-          </div>
-          <div class="zomato-rating-container4">
-            <b>Zomato Rating : </b>
-            <span class="span9">3.8</span>
-          </div>
-        </div>
-      </div> -->
-    </section>
-  </main>
+    </div>
+    <div *ngIf="!(blogPlaces && blogPlaces.length > 0)">
+      No places found for this blog.
+    </div>
+  </section>
+</main>

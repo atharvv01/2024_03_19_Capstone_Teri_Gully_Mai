@@ -1,0 +1,1587 @@
+.city-guide-delhi-sprint1-child,
+.city-guide-delhi-sprint1-item {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  margin: 0 !important;
+  border-radius: 50%;
+  background-color: var(--color-indianred);
+  filter: blur(500px);
+}
+.city-guide-delhi-sprint1-child {
+  top: -223px;
+  left: -356px;
+}
+.city-guide-delhi-sprint1-item {
+  bottom: 828px;
+  left: -268px;
+}
+.teri-galli-mai1 {
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+}
+.teri-galli-mai-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) 0 0;
+}
+.home1 {
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 41px;
+}
+.city-guides1,
+.view-saves1,
+.write-a-blog1 {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+.city-guides1 {
+  font-weight: 800;
+  color: var(--st);
+  min-width: 80px;
+}
+.view-saves1,
+.write-a-blog1 {
+  font-weight: 600;
+  min-width: 77px;
+}
+.write-a-blog1 {
+  min-width: 81px;
+}
+.top-tourist-attractions {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.sort-popular-latest {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.login1 {
+  width: 38px;
+  position: relative;
+  font-size: var(--semibold-type14-size);
+  font-weight: 600;
+  font-family: var(--medium-type18);
+  color: var(--black);
+  text-align: center;
+  display: inline-block;
+  min-width: 38px;
+}
+.login-container {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-base) var(--padding-22xl);
+  background-color: var(--w-background);
+  border-radius: var(--br-11xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.login-container:hover {
+  background-color: var(--color-gainsboro-100);
+}
+.sign-up1 {
+  width: 52px;
+  position: relative;
+  font-size: var(--semibold-type14-size);
+  font-weight: 600;
+  font-family: var(--medium-type18);
+  color: var(--w-background);
+  text-align: center;
+  display: inline-block;
+  min-width: 52px;
+}
+.sign-up-container {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-base) var(--padding-15xl);
+  background-color: var(--st);
+  border-radius: var(--br-11xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.sign-up-container:hover {
+  background-color: var(--color-blueviolet-100);
+}
+.frame-header,
+.india-gate-qutub-minar-humayun,
+.shopping-best-places {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.frame-header,
+.shopping-best-places {
+  width: 873px;
+  gap: var(--gap-159xl);
+  max-width: 100%;
+  font-size: var(--semibold-type14-size);
+  font-family: var(--medium-type18);
+}
+.frame-header {
+  width: 1316px;
+  justify-content: space-between;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--bold-type24-size);
+  color: var(--black);
+  font-family: var(--font-playfair-display-sc);
+}
+.rectangle-div {
+  height: 46.9px;
+  width: 100.3px;
+  position: relative;
+  border-radius: 56.99px;
+  border: 3.4px solid var(--color-thistle-200);
+  box-sizing: border-box;
+  display: none;
+}
+.delhi {
+  height: 26.4px;
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-sm-7);
+  font-family: var(--medium-type18);
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.frame-child1,
+.rectangle-parent {
+  width: 100.3px;
+  border-radius: 56.99px;
+  box-sizing: border-box;
+}
+.rectangle-parent {
+  cursor: pointer;
+  border: 3.4px solid var(--color-thistle-200);
+  padding: var(--padding-3xs-8) var(--padding-mini-2) var(--padding-2xs-7);
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.rectangle-parent:hover {
+  background-color: rgba(191, 168, 222, 0.09);
+  border: 3.4px solid #bfa8de;
+  box-sizing: border-box;
+}
+.frame-child1 {
+  height: 46.9px;
+  position: relative;
+  border: 1.1px solid var(--color-silver-200);
+  display: none;
+}
+.goa {
+  height: 26.4px;
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-sm-7);
+  font-family: var(--medium-type18);
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.frame-child2,
+.rectangle-group {
+  width: 100.3px;
+  border-radius: 56.99px;
+  border: 1.1px solid var(--color-silver-200);
+  box-sizing: border-box;
+}
+.rectangle-group {
+  cursor: pointer;
+  padding: var(--padding-3xs-8) var(--padding-mini-2) var(--padding-2xs-7);
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.group-button:hover,
+.rectangle-container:hover,
+.rectangle-group:hover {
+  background-color: var(--color-gray-300);
+  border: 1.1px solid var(--color-gray-100);
+  box-sizing: border-box;
+}
+.frame-child2 {
+  height: 46.9px;
+  position: relative;
+  display: none;
+}
+.pune {
+  height: 26.4px;
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-sm-7);
+  font-family: var(--medium-type18);
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.frame-child3,
+.rectangle-container {
+  border-radius: 56.99px;
+  border: 1.1px solid var(--color-silver-200);
+  box-sizing: border-box;
+}
+.rectangle-container {
+  cursor: pointer;
+  padding: var(--padding-3xs-8) var(--padding-mini-2) var(--padding-2xs-7);
+  background-color: transparent;
+  width: 100.3px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-child3 {
+  height: 46.7px;
+  width: 129.9px;
+  position: relative;
+  display: none;
+}
+.hyderabad {
+  height: 26.2px;
+  flex: 1;
+  position: relative;
+  font-size: var(--font-size-sm-7);
+  font-family: var(--medium-type18);
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82.1px;
+  z-index: 1;
+}
+.frame-parent1,
+.frame-wrapper1,
+.group-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.group-button {
+  cursor: pointer;
+  border: 1.1px solid var(--color-silver-200);
+  padding: 10.3px 23.9px 10.2px;
+  background-color: transparent;
+  flex: 1;
+  border-radius: 56.99px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  min-width: 82px;
+}
+.frame-parent1,
+.frame-wrapper1 {
+  max-width: 100%;
+}
+.frame-parent1 {
+  width: 499.8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--gap-4xl);
+}
+.frame-wrapper1 {
+  width: 1158.6px;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 27.8px;
+  box-sizing: border-box;
+}
+.delhi1 {
+  color: var(--st);
+}
+.explore-delhi {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.discover-a-complete {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--medium-type18-size);
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--color-darkgray-100);
+}
+.explore-delhi-parent,
+.frame-wrapper3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.explore-delhi-parent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-17xl);
+}
+.frame-wrapper3 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-8xs);
+  box-sizing: border-box;
+}
+.popular,
+.sort-by {
+  position: relative;
+  display: inline-block;
+}
+.sort-by {
+  height: 33px;
+  flex: 1;
+}
+.popular {
+  min-width: 76px;
+}
+.popular-wrapper {
+  flex: 0.7917;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl) 0 0;
+}
+.latest {
+  position: relative;
+  display: inline-block;
+  min-width: 60px;
+}
+.frame-parent2,
+.frame-wrapper2,
+.sort-by-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sort-by-parent {
+  width: 316px;
+  flex-direction: row;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-4xl);
+  font-size: var(--font-size-xl);
+}
+.frame-parent2,
+.frame-wrapper2 {
+  max-width: 100%;
+}
+.frame-parent2 {
+  flex: 1;
+  flex-direction: column;
+  gap: 61.2px;
+}
+.frame-wrapper2 {
+  width: 966px;
+  flex-direction: row;
+  padding: 0 var(--padding-lgi);
+  box-sizing: border-box;
+  font-size: var(--bold-type70-size);
+  color: var(--text-color);
+}
+.trending-blogs {
+  margin: 0;
+  height: 66px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.trending-blogs-wrapper {
+  width: 387px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-6xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-child4 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.india-gate,
+.k-saves {
+  position: relative;
+  display: inline-block;
+  min-width: 119px;
+}
+.k-saves {
+  color: var(--st);
+  min-width: 99px;
+}
+.india-gate-parent {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-parent8,
+.frame-wrapper6,
+.india-gate-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame-wrapper6 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-37xl) var(--padding-11xl);
+  cursor: pointer;
+}
+.frame-parent8 {
+  height: 522px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-child5 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-frame {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.k-saves1,
+.qutub-minar {
+  position: relative;
+}
+.k-saves1 {
+  color: var(--st);
+}
+.qutub-minar-parent {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-parent9,
+.frame-wrapper7,
+.qutub-minar-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame-wrapper7 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-38xl) var(--padding-11xl);
+}
+.frame-parent9 {
+  height: 524px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-child6 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper1 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.humayuns-tomb,
+.k-saves2 {
+  position: relative;
+}
+.k-saves2 {
+  display: inline-block;
+  color: var(--st);
+  min-width: 99px;
+}
+.humayuns-tomb-parent {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-parent10,
+.frame-wrapper8,
+.humayuns-tomb-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame-wrapper8 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-39xl) var(--padding-11xl);
+}
+.frame-parent10 {
+  height: 526px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent7,
+.frame-wrapper5 {
+  align-self: stretch;
+  max-width: 100%;
+}
+.frame-parent7 {
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+  grid-template-columns: repeat(3, minmax(262px, 1fr));
+}
+.frame-wrapper5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.explore-top-tourist {
+  margin: 0;
+  height: 66px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.explore-top-tourist-attraction-wrapper {
+  width: 775px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-6xs);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--font-size-33xl);
+  color: var(--color-gray-200);
+}
+.frame-child7,
+.frame-parent6 {
+  align-self: stretch;
+  max-width: 100%;
+}
+.frame-parent6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-6xs) 0 0;
+  box-sizing: border-box;
+  gap: 47.5px;
+}
+.frame-child7 {
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper2 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.india-gate1,
+.k-saves3 {
+  position: relative;
+  display: inline-block;
+  min-width: 119px;
+}
+.k-saves3 {
+  color: var(--st);
+  min-width: 99px;
+}
+.india-gate-group {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-parent12,
+.india-gate-group,
+.top-tourist-attractions1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.top-tourist-attractions1 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-37xl) var(--padding-11xl);
+  cursor: pointer;
+}
+.frame-parent12 {
+  height: 522px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-child8 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper3 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.k-saves4,
+.qutub-minar1 {
+  position: relative;
+}
+.k-saves4 {
+  color: var(--st);
+}
+.qutub-minar-group {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-parent13,
+.frame-wrapper11,
+.qutub-minar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame-wrapper11 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-38xl) var(--padding-11xl);
+}
+.frame-parent13 {
+  height: 524px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-child9 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper4 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.humayuns-tomb1,
+.k-saves5 {
+  position: relative;
+}
+.k-saves5 {
+  display: inline-block;
+  color: var(--st);
+  min-width: 99px;
+}
+.frame-wrapper12,
+.humayuns-tomb-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.humayuns-tomb-group {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-wrapper12 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-39xl) var(--padding-11xl);
+}
+.frame-parent11,
+.frame-parent14 {
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent14 {
+  height: 526px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+.frame-parent11 {
+  align-self: stretch;
+  display: grid;
+  flex-direction: row;
+  gap: var(--gap-11xl);
+  grid-template-columns: repeat(3, minmax(262px, 1fr));
+}
+.frame-wrapper10 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+.frame-wrapper9 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-6xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.ellipse-div,
+.frame-parent5 {
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.frame-parent5 {
+  width: 1117px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 89.5px;
+  min-width: 1117px;
+}
+.ellipse-div {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-blueviolet-400);
+  filter: blur(500px);
+}
+.ellipse-wrapper {
+  height: 821px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 321px 0 0;
+  box-sizing: border-box;
+  min-width: 500px;
+  max-width: 100%;
+}
+.frame-parent4 {
+  align-self: stretch;
+  flex-direction: row;
+  gap: 42px;
+  font-size: var(--bold-type24-size);
+  color: var(--black);
+}
+.frame-parent3,
+.frame-parent4,
+.frame-wrapper4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent3 {
+  flex: 1;
+  flex-direction: column;
+  gap: 44px;
+}
+.frame-wrapper4 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 var(--padding-22xl) var(--padding-10xs);
+  box-sizing: border-box;
+}
+.where-to-eat {
+  margin: 0;
+  height: 66px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.where-to-eat-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xs) 0 var(--padding-sm);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-child10 {
+  height: 330px;
+  width: 350px;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  object-fit: cover;
+  display: none;
+  max-width: 100%;
+}
+.component-1-icon {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  z-index: 2;
+}
+.rectangle-parent1 {
+  align-self: stretch;
+  height: 330px;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-4xl) var(--padding-base);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+  background-image: url(./public/rectangle-61@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.chole-paratha-by {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--bold-type24-size);
+  color: var(--black);
+}
+.k-likes {
+  position: relative;
+  display: inline-block;
+  min-width: 70px;
+}
+.k-likes-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-16xl);
+}
+.vector-icon2 {
+  width: 22px;
+  height: 15px;
+  position: relative;
+  z-index: 2;
+}
+.vector-wrapper {
+  height: 17.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-10xs-5);
+  box-sizing: border-box;
+}
+.k-views {
+  position: relative;
+  display: inline-block;
+  min-width: 90px;
+}
+.frame-parent17,
+.frame-wrapper13 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.frame-parent17 {
+  align-items: flex-end;
+  gap: var(--gap-3xs);
+}
+.frame-wrapper13 {
+  align-items: flex-start;
+  padding: 0 var(--padding-10xs);
+}
+.chole-paratha-by-atharva-zanwa-parent,
+.frame-parent15,
+.frame-parent16 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.chole-paratha-by-atharva-zanwa-parent {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  padding: var(--padding-5xl-5) var(--padding-2xs) var(--padding-14xl-5)
+    var(--padding-11xl);
+  gap: var(--gap-mini);
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.frame-parent15,
+.frame-parent16 {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-parent16 {
+  align-self: stretch;
+  height: 522px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  padding: 0 0 var(--padding-173xl);
+  z-index: 1;
+  font-size: var(--medium-type18-size);
+  color: var(--color-darkgray-200);
+}
+.frame-parent15 {
+  width: 370px;
+  padding: 0 var(--padding-xl) 55.3px 0;
+  gap: var(--gap-61xl);
+}
+.things-to-do {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.things-to-do-wrapper {
+  width: 323px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-2xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-child11 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper5 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.chole-paratha,
+.k-saves6 {
+  position: relative;
+}
+.k-saves6 {
+  display: inline-block;
+  color: var(--st);
+  min-width: 99px;
+}
+.chole-paratha-parent {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.chole-paratha-parent,
+.frame-parent20,
+.frame-wrapper15 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame-wrapper15 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-37xl) var(--padding-11xl);
+}
+.frame-parent20 {
+  height: 522px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-child12 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper6 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.butter-chicken,
+.k-saves7 {
+  position: relative;
+}
+.k-saves7 {
+  color: var(--st);
+}
+.butter-chicken-parent {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.butter-chicken-parent,
+.frame-parent21,
+.frame-wrapper16 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frame-wrapper16 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-38xl) var(--padding-11xl);
+}
+.frame-parent21 {
+  height: 524px;
+  box-shadow: 0 2px 70px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-child13 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.rectangle-wrapper7 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.k-saves8,
+.momos {
+  position: relative;
+  display: inline-block;
+  min-width: 88px;
+}
+.k-saves8 {
+  color: var(--st);
+  min-width: 99px;
+}
+.frame-wrapper17,
+.momos-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.momos-parent {
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.frame-wrapper17 {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-11xl) var(--br-11xl);
+  background-color: var(--w-background);
+  justify-content: center;
+  padding: var(--padding-39xl) var(--padding-11xl);
+}
+.frame-parent19,
+.frame-parent22 {
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent22 {
+  height: 526px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+.frame-parent19 {
+  align-self: stretch;
+  display: grid;
+  flex-direction: row;
+  gap: var(--gap-11xl);
+  grid-template-columns: repeat(3, minmax(262px, 1fr));
+}
+.frame-parent18,
+.frame-wrapper14 {
+  display: flex;
+  flex-direction: column;
+}
+.frame-wrapper14 {
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  font-size: var(--bold-type24-size);
+  color: var(--black);
+}
+.frame-parent18 {
+  flex: 1;
+  align-items: flex-start;
+  gap: 78.7px;
+}
+.container-with-borders,
+.frame-div,
+.frame-parent18 {
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.container-with-borders {
+  width: 1116px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 var(--padding-10xs);
+  box-sizing: border-box;
+  font-size: var(--font-size-32xl);
+}
+.frame-div {
+  width: 1299px;
+  flex-direction: column;
+  gap: 58px;
+}
+.frame-container,
+.frame-div,
+.frame-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.frame-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: flex-end;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-33xl);
+  color: var(--color-gray-200);
+  font-family: var(--medium-type18);
+}
+.frame-container {
+  width: 1387px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: 63.1px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.background-icon,
+.graphic-elements-icon {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.background-icon {
+  margin-right: -24.5px;
+  width: 447.5px;
+  height: 272px;
+  object-fit: cover;
+}
+.graphic-elements-icon {
+  align-self: stretch;
+  flex: 1;
+  max-height: 100%;
+  debug_commit: f6aba90;
+}
+.graphic-elements-wrapper {
+  height: 625.4px;
+  width: 183.9px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-430xl) 0 0;
+  box-sizing: border-box;
+}
+.frame-child14 {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-darkgoldenrod);
+  filter: blur(500px);
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.background-parent,
+.frame-parent23 {
+  display: flex;
+  justify-content: flex-start;
+}
+.frame-parent23 {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-774xl-1);
+  max-width: 100%;
+}
+.background-parent {
+  width: 1315px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 0 436.6px var(--padding-xl);
+  box-sizing: border-box;
+  gap: 25px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.objects-icon1 {
+  margin-right: -299.8000000000002px;
+  width: 483.8px;
+  height: 483.2px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  debug_commit: f6aba90;
+}
+.city-guide-delhi-sprint1 {
+  width: 100%;
+  height: 3683px;
+  position: relative;
+  background-color: var(--w-background);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-12xl) 0 162px;
+  box-sizing: border-box;
+  gap: 362px;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1400px) {
+  .frame-parent5 {
+    flex: 1;
+    min-width: 100%;
+  }
+  .ellipse-wrapper {
+    flex: 1;
+  }
+  .frame-parent4 {
+    flex-wrap: wrap;
+  }
+  .frame-wrapper4 {
+    padding-bottom: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+  .frame-parent23 {
+    flex-wrap: wrap;
+    gap: 793.1px 397px;
+  }
+  .background-parent {
+    padding-bottom: 284px;
+    box-sizing: border-box;
+  }
+  .city-guide-delhi-sprint1 {
+    gap: 181px 362px;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .top-tourist-attractions {
+    display: none;
+  }
+  .shopping-best-places {
+    gap: 178px 89px;
+  }
+  .frame-parent2 {
+    gap: 31px 61.2px;
+  }
+  .frame-parent11,
+  .frame-parent7 {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(262px, 455px));
+  }
+  .frame-parent5 {
+    gap: 45px 89.5px;
+  }
+  .ellipse-wrapper {
+    padding-top: 209px;
+    box-sizing: border-box;
+  }
+  .frame-parent19 {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(262px, 455px));
+  }
+  .frame-parent18 {
+    gap: 39px 78.7px;
+  }
+}
+@media screen and (max-width: 825px) {
+  .india-gate-qutub-minar-humayun {
+    display: none;
+  }
+  .shopping-best-places {
+    width: 625px;
+  }
+  .explore-delhi {
+    font-size: var(--font-size-37xl);
+  }
+  .trending-blogs {
+    font-size: var(--font-size-23xl);
+  }
+  .frame-parent7 {
+    grid-template-columns: minmax(262px, 1fr);
+  }
+  .explore-top-tourist {
+    font-size: var(--font-size-23xl);
+  }
+  .frame-parent6 {
+    gap: 24px 47.5px;
+  }
+  .frame-parent11 {
+    grid-template-columns: minmax(262px, 1fr);
+  }
+  .frame-parent5 {
+    gap: 22px 89.5px;
+  }
+  .ellipse-wrapper {
+    min-width: 100%;
+  }
+  .frame-parent4 {
+    gap: 42px 21px;
+  }
+  .frame-parent3 {
+    gap: 22px 44px;
+  }
+  .frame-wrapper4 {
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .where-to-eat {
+    font-size: var(--font-size-23xl);
+  }
+  .frame-parent15,
+  .frame-parent16 {
+    padding-bottom: var(--padding-106xl);
+    box-sizing: border-box;
+  }
+  .frame-parent15 {
+    padding-bottom: var(--padding-17xl);
+  }
+  .things-to-do {
+    font-size: 41px;
+  }
+  .frame-parent19 {
+    grid-template-columns: minmax(262px, 1fr);
+  }
+  .frame-parent18 {
+    gap: 20px 78.7px;
+  }
+  .frame-div {
+    gap: 29px 58px;
+  }
+  .frame-container {
+    gap: 32px 63.1px;
+  }
+  .graphic-elements-wrapper {
+    padding-top: var(--padding-273xl);
+    box-sizing: border-box;
+  }
+  .frame-parent23 {
+    gap: 793.1px 198px;
+  }
+  .background-parent {
+    padding-bottom: 185px;
+    box-sizing: border-box;
+  }
+  .city-guide-delhi-sprint1 {
+    gap: 90px 362px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .shopping-best-places {
+    gap: 178px 44px;
+  }
+  .explore-delhi {
+    font-size: var(--font-size-23xl);
+  }
+  .explore-delhi-parent {
+    gap: 18px 36px;
+  }
+  .latest,
+  .popular,
+  .sort-by {
+    font-size: var(--body-m-size);
+  }
+  .frame-parent2 {
+    gap: 15px 61.2px;
+  }
+  .trending-blogs {
+    font-size: var(--font-size-12xl);
+  }
+  .humayuns-tomb,
+  .india-gate,
+  .k-saves,
+  .k-saves1,
+  .k-saves2,
+  .qutub-minar {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-wrapper8 {
+    gap: 18px 36px;
+  }
+  .explore-top-tourist {
+    font-size: var(--font-size-12xl);
+  }
+  .humayuns-tomb1,
+  .india-gate1,
+  .k-saves3,
+  .k-saves4,
+  .k-saves5,
+  .qutub-minar1 {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-wrapper12 {
+    gap: 18px 36px;
+  }
+  .ellipse-wrapper {
+    padding-top: 136px;
+    box-sizing: border-box;
+  }
+  .where-to-eat {
+    font-size: var(--font-size-12xl);
+  }
+  .chole-paratha-by {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-parent15 {
+    gap: 40px 80px;
+  }
+  .things-to-do {
+    font-size: var(--font-size-12xl);
+  }
+  .butter-chicken,
+  .chole-paratha,
+  .k-saves6,
+  .k-saves7,
+  .k-saves8,
+  .momos {
+    font-size: var(--font-size-lgi);
+  }
+  .frame-container {
+    gap: 16px 63.1px;
+  }
+  .frame-parent23 {
+    gap: 793.1px 99px;
+  }
+  .city-guide-delhi-sprint1 {
+    height: auto;
+    gap: 45px 362px;
+  }
+}

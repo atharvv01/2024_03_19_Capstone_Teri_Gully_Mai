@@ -10,6 +10,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
 import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,7 @@ const routes: Routes = [
     component:ResetPasswordComponent
   },
   {
-    path: 'blog/:id',
+    path: 'blog/:blogId',
     component:WriteBlogComponent
   },
   {
@@ -51,6 +52,11 @@ const routes: Routes = [
   {
     path: 'my_blog',
     component:MyBlogsComponent
+  },
+  {
+    path: '**',  
+    component: NotfoundComponent
+
   }
 ];
 

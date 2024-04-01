@@ -14,14 +14,17 @@
                 <div class="chole-paratha-group">
                     <h2 class="chole-paratha2">{{ title }} mada</h2>
                     <h2 class="k-saves9">{{ likes }} saves</h2>
-                    
+
                 </div>
                 <div>
-                    <span class="material-symbols-outlined" (click)="onSave(blogId)" >
+                    <span class="material-symbols-outlined" *ngIf="!isSaved" (click)="onSave(blogId)">
                         bookmark
                     </span>
+                    <span class="material-symbols-outlined" *ngIf="isSaved" (click)="onUnsave(blogId)">
+                        book
+                    </span>
                 </div>
-                
+
             </div>
         </div>
     </div>
