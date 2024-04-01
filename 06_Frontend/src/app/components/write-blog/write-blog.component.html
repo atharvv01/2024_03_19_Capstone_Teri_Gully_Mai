@@ -21,13 +21,14 @@
       <div class="frame-wrapper26">
         <div class="frame-parent41">
           <h1 class="best-outdoor-restaurants">
-            17 Best Outdoor Restaurants And Cafes In Delhi To Make The Best Of
-            Winter Sun
+            {{ blogTitle }}
           </h1>
         </div>
       </div>
     </div>
-    <app-inner-blog class="placesOfBlog"></app-inner-blog>
+    <div *ngFor="let place of blogPlaces">
+      <app-inner-blog class="placesOfBlog" [place]="place"></app-inner-blog>
+    </div>
   </div>
 </body>
 

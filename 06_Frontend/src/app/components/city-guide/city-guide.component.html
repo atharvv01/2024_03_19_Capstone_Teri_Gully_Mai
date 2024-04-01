@@ -85,7 +85,7 @@
                 <div class="frame-wrapper4">
                   <div class="frame-parent9">
                     <ng-container *ngFor="let blog of blogs">
-                      <app-smaller-blog [title]="blog.title" [likes]="blog.likes"
+                      <app-smaller-blog [title]="blog.title" [likes]="blog.likes" [blogId]="blog._id"
                         (blogClicked)="onBlogClicked($event)"></app-smaller-blog>
                     </ng-container>
                   </div>
