@@ -8,7 +8,10 @@ const { verifyToken} = require("../middleware/auth")
 
 //unprotected routes 
 router.get("/city",BlogController.getBlogByCity)
-
+//route to get blog by blog id
+router.get('/get_blog_by_id',BlogController.getBlogById)
+//router to get all places of a blog 
+router.get('/get_places_of_blog',BlogController.getAllPlacesOfBlog)
 
 //protected routes 
 router.use(verifyToken)
@@ -18,8 +21,8 @@ router.post('/create',BlogController.createBlog);
 router.post('/:blogId/places/add',BlogController.addPlaceToBlog);
 // Route to delete a the places 
 router.delete('/deletePlace',BlogController.placeToDelete)
-// route to get blog by id
-router.get('/get_blog_by_id',BlogController.getBlogById)
+// route to get blog by author id
+router.get('/get_blog_by_author_id',BlogController.getBlogByAuthorId)
 //route to delete a blog
 router.delete('/deleteBlog',BlogController.deleteBlogAndPlaces)
 //route to modify a blog
