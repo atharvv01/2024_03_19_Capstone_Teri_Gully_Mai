@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CityGuideComponent } from './components/city-guide/city-guide.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { SavedBlogComponent } from './components/saved-blog/saved-blog.component';
-import { WriteBlogComponent } from './components/write-blog/write-blog.component';
+// import { WriteBlogComponent } from './components/write-blog/write-blog.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
-import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
+// import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
@@ -41,18 +41,18 @@ const routes: Routes = [
     path: 'reset_password',
     component:ResetPasswordComponent
   },
-  {
-    path: 'blog/:blogId',
-    component:WriteBlogComponent
-  },
+  // {
+  //   path: 'blog/:blogId',
+  //   component:WriteBlogComponent
+  // },
   {
     path: 'write_blog',
     component:CreateABlogComponent
   },
-  {
-    path: 'my_blog',
-    component:MyBlogsComponent
-  },
+  // {
+  //   path: 'my_blog',
+  //   component:MyBlogsComponent
+  // },
   {
     path: '**',  
     component: NotfoundComponent
