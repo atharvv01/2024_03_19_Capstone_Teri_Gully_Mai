@@ -29,14 +29,17 @@
   border: 1.1px solid gray;
   border-radius: 30px;
 }
+
 .selected-city {
   border: 3.4px solid #c39df6;
 }
+
 .city-wrapper:hover{
   cursor: pointer;
   /* background-color: #c39df6; */
   background-color: rgb(225, 225, 225);
 }
+
 .city-name{
   font-size: medium;
   font-weight: 400;
@@ -162,85 +165,4 @@ font-weight: 700;
   /* background-color: darkslategray; */
   display: flex;
   gap: 40px;
-}
-
-.blog-frame{
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  height: 450px;
-  min-width: 320px;
-  max-width: 320px;
-  /* background-color: black; */
-}
-
-.blog-img{
-  width: 100%;
-  height: 300px;
-  background-color: gray;
-  position: relative;
-  display: inline-block;
-}
-.save-button {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  top: 3%;
-  right: 3%;
-  background-color: rgba(0, 0, 0, 0.271);
-  opacity: 0.6;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  z-index: 0;
-}
-.save-button:hover{
-  transform: scale(1.1);
-}
-
-.fa-bookmark{
-  font-size: large;
-  z-index: 100;
-}
-
-.blog-thumbail{
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.blog-details{
-  height:150px;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 1.4rem;
-}
-.blog-title{
-  height: fit-content;
-  word-wrap: normal;
-  width: 100%;
-  /* background-color:darkgoldenrod; */
-  
-}
-
-.blog-title p{
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: black;
-}
-
-.blog-views,.blog-likes{
-  align-items: center;
-  display: flex;
-  gap: 10px;
-}
-
-.likes-and-views{
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #666666;
 }
