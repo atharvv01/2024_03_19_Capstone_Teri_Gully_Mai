@@ -4,9 +4,98 @@
     <p>Create a Blog</p>
   </div>
   <div class="main-content">
+    <div class="blog-details">
+      <div class="blog-property">
+        <div class="property-name">
+          <p>Title of the blog:</p>
+        </div>
+        <div class="property-input">
+          <input class="text-box" placeholder="Type here" type="text" />
+        </div>
+      </div>
+      <div class="blog-property">
+        <div class="property-name">
+          <p>About blog:</p>
+        </div>
+        <div class="property-input">
+          <textarea class="text-box" id="blog-desc-text" placeholder="What is blog about" rows="12"
+            cols="26"></textarea>
+        </div>
+      </div>
+      <div class="city-category-wrapper">
+        <div class="blog-property" id="city-field">
+          <div class="property-name">
+            <p>City:</p>
+          </div>
+          <div class="property-input">
+            <select class="dropdown">
+              <option value="default">Select city</option>
+              <option value="option1">Delhi</option>
+              <option value="option2">Goa</option>
+              <option value="option3">Pune</option>
+              <option value="option3">Hyderabad</option>
+            </select>
+          </div>
+        </div>
+        <div class="blog-property" id="category-field">
+          <div class="property-name">
+            <p>Category:</p>
+          </div>
+          <div class="property-input">
+            <select class="dropdown">
+              <option value="default">Select category</option>
+              <option value="option1">Top tourist attractions</option>
+              <option value="option2">Where to eat</option>
+              <option value="option3">Things to do</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="thumnail-comments-wrapper">
+        <div class="thumbnail">
+          <div class="blog-property" id="thumbnail-field">
+            <div class="property-name">
+              <p>Thumbnail:</p>
+            </div>
+            <div class="property-input" id="thumbnail-button-field">
+              <button class="Upload-photo">Upload</button>
+            </div>
+          </div>
+        </div>
+        <div class="comments">
+          <div class="blog-property" id="category-field">
+            <div class="property-name">
+              <p>Comments:</p>
+            </div>
+            <div class="property-input">
+              <select class="dropdown">
+                <option value="default">Select category</option>
+                <option value="option1">Enable</option>
+                <option value="option2">Disable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="places-details">
+      <div class="places-name-add-button-wrapper">
+        <div class="title-places">
+          <p>Places
+          <p>
+        </div>
+        <div class="add-button-wrapper">
+          <button class="add-button">Add</button>
+        </div>
+      </div>
+      <div class="places-info">
+        
+        <app-create-places></app-create-places>
 
+      </div>
+    </div>
   </div>
   <div class="post-button-wrapper">
-
+    <button class="Post-Place">Post</button>
   </div>
 </div>

@@ -1,42 +1,42 @@
-<div class="places-parent">
-  <h1 class="places">Places</h1>
-  <button class="name-of-place-input-field" (click)="addNewPlace()"> <!-- Add click event handler -->
-    <div class="add">Add</div>
-  </button>
-</div>
-<div class="scrollable-container">
-  <div *ngFor="let place of places; let i = index" class="frame-parent37">
-    <!-- Place input fields here for each new place -->
-    <div class="name-of-place-parent">
-      <div class="name-of-place">
-        <b class="input-text-label1">Name of the Place:</b>
-        <div class="input-field1">
-          <div class="text1">
-            <input class="type-here1" placeholder="Type here" type="text" [(ngModel)]="place.name" /> <!-- Bind to place.name -->
-          </div>
-        </div>
-        <div class="assistive-text1">Assistive Text</div>
+<div class="places-card">
+  <div class="cross-button-wrapper">
+    <button class="cross-button">
+      <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+    </button>
+  </div>
+  <div class="place-property">
+    <div class="place-name">
+      <p>Name:</p>
+    </div>
+    <div class="property-input">
+      <input class="places-text-box" placeholder="Type here" type="text" />
+    </div>
+  </div>
+  <div class="place-property">
+    <div class="place-name">
+      <p>Google map link:</p>
+    </div>
+    <div class="property-input">
+      <input class="places-text-box" placeholder="Type here" type="text" />
+    </div>
+  </div>
+  <div class="blog-property">
+    <div class="property-name">
+      <p>About Place:</p>
+    </div>
+    <div class="property-input">
+      <textarea class="text-box" id="blog-desc-text" placeholder="More about this place" rows="12"
+        cols="26"></textarea>
+    </div>
+  </div>
+  <div class="thumbnail">
+    <div class="blog-property" id="thumbnail-field">
+      <div class="property-name">
+        <p>Images:</p>
       </div>
-      <div class="google-map-link1">
-        <b class="input-text-label2">Google Map link:</b>
-        <div class="input-field2">
-          <div class="text2">
-            <input class="type-here2" placeholder="Type here" type="text" [(ngModel)]="place.googleMapLink" /> <!-- Bind to place.googleMapLink -->
-          </div>
-        </div>
-        <div class="assistive-text2">Assistive Text</div>
-      </div>
-      <div class="images1">
-        <b class="images2">Images:</b>
-        <div class="rectangle-parent4">
-          <div class="frame-child17"></div>
-        </div>
-      </div>
-      <div class="blog-desc">
-        <b class="about">About :</b>
-        <textarea class="blog-desc-child" placeholder="More about this place" rows="12" cols="30" [(ngModel)]="place.about"></textarea> <!-- Bind to place.about -->
+      <div class="property-input" id="thumbnail-button-field">
+        <button class="Upload-photo">Upload</button>
       </div>
     </div>
-    <h1 class="h11" (click)="deletePlace(i)">+</h1> <!-- Add click event handler to deletePlace method -->
   </div>
 </div>
