@@ -10,6 +10,9 @@ import { HttpClient } from "@angular/common/http";
 export class CityGuideComponent implements OnInit {
   currentCity: string = "Delhi"; // Initialize currentCity with 'Delhi'
   blogs: any[] = [];
+  doBlogs : any[] = []
+  foodBlogs: any[] = [];
+  topBlogs: any[] = [];
   constructor(private router: Router, private http: HttpClient) {}
   ngOnInit(): void {
     this.callMyApi(this.currentCity);
@@ -24,6 +27,10 @@ export class CityGuideComponent implements OnInit {
           // Specify the type as any[]
           console.log("API Response:", response);
           this.blogs = response; // Assign API response to blogs array
+          this.topBlogs = this.blogs.filter( blog => blog.type === "Explore top Tourist attractions")
+          this.foodBlogs = this.blogs.filter( blog => blog.type === "Where to Eat")
+          this.doBlogs = this.blogs.filter( blog => blog.type === "Things to do")
+
         },
         (error) => {
           console.error("API Error:", error);

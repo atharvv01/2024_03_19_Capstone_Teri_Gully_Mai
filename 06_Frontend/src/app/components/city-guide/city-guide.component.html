@@ -60,23 +60,15 @@
         </div>
       </div>
     </div>
-    <div class="blog-types">
+    <div class="blog-types" *ngIf="topBlogs.length > 0">
       <div class="type-name">
         <h1>
           <span>Explore top tourist attractions</span>
         </h1>
       </div>
-      <!-- <div class="rendered-blogs-scroll">
-        <div class="rendered-blogs">
-          <app-smaller-blog></app-smaller-blog>
-          <app-smaller-blog></app-smaller-blog>       
-          <app-smaller-blog></app-smaller-blog>
-          <app-smaller-blog></app-smaller-blog>
-        </div>
-      </div> -->
       <div class="rendered-blogs">
         <app-smaller-blog
-          *ngFor="let blog of blogs"
+          *ngFor="let blog of topBlogs"
           [title]="blog.title" 
           [likes]="blog.likes"
           [views]="blog.views"
@@ -85,7 +77,7 @@
         ></app-smaller-blog>
       </div>
     </div>
-    <div class="blog-types">
+    <div class="blog-types" *ngIf="foodBlogs.length > 0">
       <div class="type-name">
         <h1>
           <span>Where to Eat</span>
@@ -93,14 +85,18 @@
       </div>
       <div class="rendered-blogs-scroll">
         <div class="rendered-blogs">
-          <app-smaller-blog></app-smaller-blog>
-          <app-smaller-blog></app-smaller-blog>       
-          <app-smaller-blog></app-smaller-blog>
-          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog
+          *ngFor="let blog of foodBlogs"
+          [title]="blog.title" 
+          [likes]="blog.likes"
+          [views]="blog.views"
+          [blogId]="blog.id"
+          (blogClicked)="onBlogClicked($event)"
+        ></app-smaller-blog>
         </div>
       </div>
     </div>
-    <div class="blog-types">
+    <div class="blog-types" *ngIf="doBlogs.length > 0">
       <div class="type-name">
         <h1>
           <span>Things to do</span>
@@ -108,10 +104,14 @@
       </div>
       <div class="rendered-blogs-scroll">
         <div class="rendered-blogs">
-          <app-smaller-blog></app-smaller-blog>
-          <app-smaller-blog></app-smaller-blog>       
-          <app-smaller-blog></app-smaller-blog>
-          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog
+          *ngFor="let blog of doBlogs"
+          [title]="blog.title" 
+          [likes]="blog.likes"
+          [views]="blog.views"
+          [blogId]="blog.id"
+          (blogClicked)="onBlogClicked($event)"
+        ></app-smaller-blog>
         </div>
       </div>
     </div>
