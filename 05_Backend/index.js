@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // Define routes
 const userRoutes = require("./routes/user_routes")
 const blogRoutes =  require("./routes/blog_routes")
-
+const adminRoutes = require("./routes/admin_routes")
 const savesRoutes = require("./routes/saves_routes")
 const likeRoutes = require("./routes/like_routes")
 const commentRoutes = require("./routes/comment_routes")
@@ -31,6 +31,7 @@ app.use("/blogs", blogRoutes)
 app.use("/saves", savesRoutes)
 app.use("/likes",likeRoutes)
 app.use("/comments",commentRoutes)
+app.use("/admin", adminRoutes)
 
 
 
