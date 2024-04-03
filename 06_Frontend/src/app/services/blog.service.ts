@@ -15,4 +15,6 @@ export class BlogService {
       const url = `${this.baseUrl}/get_places_of_blog?blogId=${blogId}`;
       return this.http.get<Place[]>(url);
     }
-  }
+  } 
+
+  

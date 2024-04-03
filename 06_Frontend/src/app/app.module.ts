@@ -20,6 +20,7 @@ import { SmallerBlogComponent } from './components/smaller-blog/smaller-blog.com
 import { CreatePlacesComponent } from './components/create-places/create-places.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     SmallerBlogComponent,
     CreatePlacesComponent,
     NotfoundComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,

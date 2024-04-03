@@ -16,6 +16,7 @@ export class SmallerBlogComponent implements OnInit {
   @Input() title: string = ''; // Input property to receive the title from the parent component
   @Input() likes: number = 0;
   @Input() blogId: string = '';
+  @Input() views: number = 0;
 
   isSaved: boolean = false;
 
