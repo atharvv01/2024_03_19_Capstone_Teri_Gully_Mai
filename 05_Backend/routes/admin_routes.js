@@ -12,7 +12,6 @@ router.use(verifyToken)
 router.get('/pendingblogs', AdminController.getPendingBlogs);
 // Route to approve a blog
 router.put('/approve/:id', AdminController.approveBlog);
-
 // Route to reject a blog
 router.put('/reject/:id', AdminController.rejectBlog);
 

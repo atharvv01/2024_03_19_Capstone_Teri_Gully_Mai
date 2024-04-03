@@ -1,6 +1,6 @@
 
 .blog-frame{
-  /* box-shadow: 0 4px 8px black; */
+  box-shadow: 0px 0px 10px rgb(46, 46, 46);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,7 @@
   min-width: 320px;
   max-width: 320px;
   /* background-color: black; */
+  border: none;
 }
 
 .blog-img{
@@ -58,12 +59,13 @@
 .blog-title{
   height: fit-content;
   word-wrap: normal;
-  width: 100%;
+  width: 90%;
   /* background-color:darkgoldenrod; */
   
 }
 
 .blog-title p{
+  word-wrap: normal;
   font-weight: 500;
   font-size: 1.2rem;
   color: black;

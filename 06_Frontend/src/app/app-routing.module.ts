@@ -9,11 +9,16 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { WriteBlogComponent } from './components/city-blog/write-blog.component';
 
 const routes: Routes = [
   {
     path: 'city_guides',
     component:CityGuideComponent
+  },
+  {
+    path: 'blog',
+    component:WriteBlogComponent
   },
   {
     path:'',
