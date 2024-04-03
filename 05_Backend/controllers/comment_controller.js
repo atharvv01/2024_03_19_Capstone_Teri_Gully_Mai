@@ -104,14 +104,14 @@ const deleteComment = async (req, res) => {
       });
     }
 
-    console.log(comment)
-    
+    console.log(comment);
+
     // Filter out the comment to be removed
     comment.comments = comment.comments.filter(
       (c) => c.user_id.toString() !== blog.author.toString()
     );
 
-    console.log(comment)
+    console.log(comment);
 
     // Save the updated comments document
     await comment.save();
@@ -134,7 +134,64 @@ const deleteComment = async (req, res) => {
   }
 };
 
+// Change approve status of specific comment
+const changeApproveComment = async (req, res) => {
+  try {
+    const commentId = req.params.commentId;
+    const userId = req.decoded.userId; // Assuming userId is available in the decoded token
+    console.log(commentId,userId);
+    // Find the comment by commentId
+    const comment = await Comments.findById(commentId);
+
+    if (!comment) {
+      return res.status(404).json({
+        success: false,
+        message: "Comment not found",
+      });
+    }
+
+    // Retrieve the blog associated with the comment
+    const blogId = comment.blog_id.toString();
+    const blog = await Blog.findById(blogId);
+
+    if (!blog) {
+      return res.status(404).json({
+        success: false,
+        message: "Blog not found",
+      });
+    }
+
+    // Check if the user is the owner of the blog
+    if (blog.author.toString() !== userId) {
+      return res.status(403).json({
+        success: false,
+        message:
+          "You are not authorized to change the approval status of comments for this blog",
+      });
+    }
+
+    // Toggle the is_approved field of the comment
+    comment.is_approved = !comment.is_approved;
+
+    // Save the updated comment
+    await comment.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Approval status of the comment changed successfully!",
+      t,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+};
+
 module.exports = {
   addComment,
   deleteComment,
+  changeApproveComment,
 };
