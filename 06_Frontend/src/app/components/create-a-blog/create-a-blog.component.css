@@ -1,23 +1,232 @@
-.navba
-
-.screen
-{
-  align-items: center;
+*{
+  box-sizing: border-box;
+}
+.screen{
   display: flex;
   flex-direction: column;
-  padding: 0rem 7rem;
+  align-items: center;
+  height: fit-content;
   width: 100vw;
-  height: 100vh;
-  background-color: blue;
+  /* background-color: black; */
+  padding: 0rem 5rem;
+ 
 }
+
 .title{
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+  width: fit-content;
+  height: 60px;
+  /* background-color: aqua; */
+}
+
+.main-content{
+  display: flex;
+  height: 45rem;
+  width: 75rem;
+  /* background-color: blanchedalmond; */
+  padding: 2rem;
+  gap: 20px;
+}
+
+.blog-details{
+  height: 100%;
+  width: 50%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.blog-property{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
   width: fit-content;
   height: fit-content;
+  /* background-color: aqua; */
+}
+
+.property-name{
+  font-size: x-large;
+  font-weight: 600;
+  color: black;
+}
+
+/* .property-input, */
+.text-box{
+  font-size: large;
+  font-weight: 300;
+  color: #333333;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+  height: 45px;
+  width: 500px;
+}
+
+#blog-desc-text{
+  /* width: 300px; */
+  height: 150px;
+}
+
+.city-category-wrapper{
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#city-field,
+#category-field{
+  width: 250px;
+}
+
+.dropdown{
+  font-size: larger;
+  text-align: center;
+  height: 45px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.thumnail-comments-wrapper{
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+#thumbnail-button-field{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blue;
+}
+
+.Upload-photo{
+  height: 35px;
+  width: 80px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.places-name-add-button-wrapper{
+  display: flex;
+  height: 50px;
+  width: 100%;
+  /* background-color: aqua; */
+  padding: 5px;
+  align-items:center;
+  justify-content: space-between;
+}
+.title-places{
+  color: #666666;
+  height: 35px;
+  font-size: 35px;
+  font-weight: 500;
+}
+.title-places p{
+  height: inherit;
+  width:inherit;
+}
+.add-button{
+  height: 35px;
+  width: 70px;
+  border: none;
+  background-color: #872BFF;
+  border-radius: 13px;
+  font-size: large;
+  font-weight: 500;
+  color: white;
+}
+.places-details{
+  height: 100%;
+  width: 50%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.places-info{
+  overflow-y: auto;
+  max-height: 550px;
+  width: 100%;
+  /* background-color: #872BFF; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.place-property{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+  /* background-color: aqua; */
+}
+
+.place-name{
+  font-size: x-large;
+  font-weight: 600;
+  color: black;
+}
+
+.places-card{
+  /* padding-top: 30px; */
+  display: flex;
+  width: inherit;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: rgba(222, 222, 222, 0.767);
+  border-radius: 10px;
+}
+
+.cross-button-wrapper{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 30px;
+  /* background-color: cadetblue; */
+}
+
+.cross-button{
+ height: inherit;
+ width: 30px;
+ font-size: x-large;
+ font-weight: 600;
+ background-color:  transparent;
+ border: none;
+}
+
+.places-text-box{
+  font-size: large;
+  font-weight: 300;
+  color: #333333;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+  height: 45px;
+  width: 240px;
+}
+
+
+.post-button-wrapper{
+  margin-bottom: 100px;
+}
+
+.Post-Place{
+  background-color: #b98cf4;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: x-large;
+  height: 60px;
+  width: 150px;
+  font-weight: 600;
 }
