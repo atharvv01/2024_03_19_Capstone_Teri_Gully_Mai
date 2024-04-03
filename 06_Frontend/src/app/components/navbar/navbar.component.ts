@@ -7,22 +7,17 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   constructor(private router: Router){}
-  navigateToHome(){
-    this.router.navigate(['/']);
-  }
-  navigateToCityGuides(){
-    this.router.navigate(['/city_guides']);
-  }
-  navigateToSaves(){
-    this.router.navigate(['/saved_blogs']);
-  }
-  navigateToMyBlogs(){
-    this.router.navigate(['/my_blog']);
-  }
-  navigateToLogin(){
+
+  onLogIn(){
     this.router.navigate(['/login']);
   }
-  navigateToSignup(){
+
+  onSignup(){
     this.router.navigate(['/signup']);
   }
+
+  isActive(route: string): boolean {
+    return this.router.url === route;
+  }
+
 }

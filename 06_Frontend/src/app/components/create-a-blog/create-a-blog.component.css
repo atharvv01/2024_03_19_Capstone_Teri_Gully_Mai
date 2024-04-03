@@ -9,6 +9,7 @@
   width: 100vw;
   /* background-color: black; */
   padding: 0rem 5rem;
+  gap: 10px;
  
 }
 
@@ -24,9 +25,11 @@
   display: flex;
   height: 45rem;
   width: 75rem;
-  /* background-color: blanchedalmond; */
   padding: 2rem;
   gap: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(46, 46, 46);
 }
 
 .blog-details{
@@ -229,4 +232,10 @@
   height: 60px;
   width: 150px;
   font-weight: 600;
+}
+
+.Post-Place:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background-color: #9e5ff0;
 }

@@ -21,6 +21,7 @@ import { CreatePlacesComponent } from './components/create-places/create-places.
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     CreatePlacesComponent,
     NotfoundComponent,
     UserProfileComponent,
-    DropdownComponent
+    DropdownComponent,
+    UpgradePlanComponent,
+    UpgradePlanComponent
   ],
   imports: [
     BrowserModule,
