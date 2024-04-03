@@ -228,9 +228,25 @@ const deleteBlogAndPlaces = async (req, res) => {
  */
 const modifyBlogAndPlaces = async (req, res) => {
   try {
-    const userdata = req.decoded
+    const userdata = req.decoded;
     const blogId = req.query.blogId; // Assuming the blog ID is provided in the request parameters
-    const { title, description, city, thumbnail, places } = req.body; // Assuming the updated blog and places details are provided in the request body
+    const { 
+      title, 
+      description, 
+      city, 
+      thumbnail, 
+      places, 
+      likes, 
+      views, 
+      comments, 
+      isCommentsEnabled, 
+      status, 
+      isTrending, 
+      isPromoted, 
+      saves, 
+      flags, 
+      type // Additional fields to modify
+    } = req.body; // Assuming the updated blog and places details are provided in the request body
 
     // Validate input data if necessary
 
@@ -239,11 +255,24 @@ const modifyBlogAndPlaces = async (req, res) => {
     if (!blog) {
       return res.status(403).json({ success: false, message: "You are not authorized to modify this blog" });
     }
+
     // Update blog details
     if (title) blog.title = title;
     if (description) blog.description = description;
     if (city) blog.city = city;
     if (thumbnail) blog.thumbnail = thumbnail;
+    if (places) blog.places = places;
+    if (likes) blog.likes = likes;
+    if (views) blog.views = views;
+    if (comments) blog.comments = comments;
+    if (isCommentsEnabled !== undefined) blog.isCommentsEnabled = isCommentsEnabled;
+    if (status) blog.status = status;
+    if (isTrending !== undefined) blog.isTrending = isTrending;
+    if (isPromoted !== undefined) blog.isPromoted = isPromoted;
+    if (saves) blog.saves = saves;
+    if (flags) blog.flags = flags;
+    if (type) blog.type = type;
+    
     await blog.save();
 
     res.status(200).json({ success: true, message: "Blog and places updated successfully" });

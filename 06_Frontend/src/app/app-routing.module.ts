@@ -2,15 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CityGuideComponent } from './components/city-guide/city-guide.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { SavedBlogComponent } from './components/saved-blog/saved-blog.component';
-import { WriteBlogComponent } from './components/write-blog/write-blog.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
-import { MyBlogsComponent } from './components/my-blogs/my-blogs.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { WriteBlogComponent } from './components/city-blog/write-blog.component';
 
 const routes: Routes = [
   {
@@ -18,12 +17,12 @@ const routes: Routes = [
     component:CityGuideComponent
   },
   {
-    path:'',
-    component:HomepageComponent
+    path: 'blog',
+    component:WriteBlogComponent
   },
   {
-    path: 'saved_blogs',
-    component:SavedBlogComponent
+    path:'',
+    component:HomepageComponent
   },
   {
     path: 'login',
@@ -42,22 +41,18 @@ const routes: Routes = [
     component:ResetPasswordComponent
   },
   {
-    path: 'blog/:blogId',
-    component:WriteBlogComponent
-  },
-  {
-    path: 'write_blog',
+    path: 'create_blog',
     component:CreateABlogComponent
   },
   {
-    path: 'my_blog',
-    component:MyBlogsComponent
+    path: 'user_profile',  
+    component: UserProfileComponent
   },
   {
     path: '**',  
     component: NotfoundComponent
-
   }
+
 ];
 
 

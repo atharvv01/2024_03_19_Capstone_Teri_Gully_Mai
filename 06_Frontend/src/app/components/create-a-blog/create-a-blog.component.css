@@ -1,3 +1,16 @@
+.city-and-type{
+  display: flex;
+  gap: 15px;
+}
+
+
+.city-div{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
 .createPlaces{
   position: absolute;
   top: -16px;

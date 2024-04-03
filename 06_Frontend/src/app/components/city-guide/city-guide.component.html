@@ -1,106 +1,110 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-  <link rel="stylesheet" href="../../../styles.css" />
-  <link rel="stylesheet" href="./city-guide.component.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display SC:wght@700&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
-</head>
-
-<body>
-  <div class="city-guide-delhi">
-    <!-- <div class="city-guide-delhi-child"></div> -->
-    <!-- <div class="city-guide-delhi-item"></div> -->
-    <div class="login-sign-up-wrapper">
-      <div class="login-sign-up">
-        <app-navbar></app-navbar>
-        <div class="background">
-          <div class="frame-parent1">
-            <div class="frame-wrapper1">
-              <div class="frame-parent2">
-                <button class="rectangle-parent" (click)="selectCity('Delhi')"
-                  [ngClass]="{'selected-city': currentCity === 'Delhi'}">
-                  <div class="delhi">Delhi</div>
-                </button>
-                <button class="rectangle-group" (click)="selectCity('Goa')"
-                  [ngClass]="{'selected-city': currentCity === 'Goa'}">
-                  <div class="goa">Goa</div>
-                </button>
-                <button class="rectangle-container" (click)="selectCity('Pune')"
-                  [ngClass]="{'selected-city': currentCity === 'Pune'}">
-                  <div class="pune">Pune</div>
-                </button>
-                <button class="group-button" (click)="selectCity('Hyderabad')"
-                  [ngClass]="{'selected-city': currentCity === 'Hyderabad'}">
-                  <div class="hyderabad">Hyderabad</div>
-                </button>
-              </div>
-            </div>
-            <div class="circle-agra-jaipur">
-              <h1 class="explore-delhi">
-                <span>Explore </span>
-                <span class="delhi1">{{ currentCity }}</span>
-              </h1>
-              <div class="discover-a-complete">
-                Discover a complete guide to where to shop, best places to
-                eat, top bars & nightlife, things to do, top places to see,
-                and best tourist attractions in Delhi. Find curated reviews
-                and tried and tested recommendations
-              </div>
-            </div>
-          </div>
+<app-navbar class="navbar"></app-navbar>
+<div class="wholescreen">
+<div class="cities-bar">
+  <div class="cities">
+    <button class="city-wrapper" (click)="selectCity('Delhi')" [ngClass]="{'selected-city': currentCity === 'Delhi'}">
+      <div class="city-name">Delhi</div>
+    </button>
+    <button class="city-wrapper" (click)="selectCity('Goa')" [ngClass]="{'selected-city': currentCity === 'Goa'}">
+      <div class="city-name">Goa</div>
+    </button>
+    <button class="city-wrapper" (click)="selectCity('Pune')" [ngClass]="{'selected-city': currentCity === 'Pune'}">
+      <div class="city-name">Pune</div>
+    </button>
+    <button class="city-wrapper" (click)="selectCity('Hyderabad')"
+      [ngClass]="{'selected-city': currentCity === 'Hyderabad'}">
+      <div class="city-name">Hyderabad</div>
+    </button>
+  </div>
+</div>
+<!-- <hr> -->
+<div class="main-content">
+  <div class="city-info">
+    <div class="city-selected">
+      <span>Explore </span>
+      <span class="current-city">{{ currentCity }}</span>
+    </div>
+    <div class="city-desc">
+      <p>
+        Discover a complete guide to where to shop, best places to
+        eat, top bars & nightlife, things to do, top places to see,
+        and best tourist attractions in Delhi. Find curated reviews
+        and tried and tested recommendations
+      </p>
+    </div>
+    <div class="filter-options">
+      <div class="filter-text">
+        <p>Sort By:</p>
+      </div>
+      <div class="filter-text filters">
+        <p>Popularity</p>
+      </div>
+      <div class="filter-text filters">
+        <p>Latest</p>
+      </div>
+    </div>
+  </div>
+  <div class="blog-content">
+    <div class="blog-types">
+      <div class="type-name">
+        <h1>
+          <span>Trending Blogs</span>
+        </h1>
+      </div>
+      <div class="rendered-blogs-scroll">
+        <div class="rendered-blogs">
+         <app-smaller-blog></app-smaller-blog>
+         <app-smaller-blog></app-smaller-blog>       
+         <app-smaller-blog></app-smaller-blog>
+         <app-smaller-blog></app-smaller-blog>
         </div>
       </div>
     </div>
-    <main class="frame-parent3">
-      <!-- <img class="frame-child3" alt="" src="../../assets/public/frame-50@2x.png" /> -->
-      <section class="frame-section">
-        <div class="frame-parent4">
-          <div class="frame-wrapper2">
-            <div class="sort-by-parent">
-              <div class="sort-by">Sort by :</div>
-              <div class="popular-wrapper">
-                <b class="popular">Popular</b>
-              </div>
-              <div class="latest">Latest</div>
-            </div>
-          </div>
-          <div class="frame-wrapper3">
-            <div class="frame-parent5">
-              <div class="frame-parent6">
-                <div class="explore-top-tourist-attraction-wrapper">
-                  <h1 class="explore-top-tourist">
-                    Explore top Tourist attractions
-                  </h1>
-                </div>
-              </div>
-              <div class="frame-parent8">
-                <div class="frame-wrapper4">
-                  <div class="frame-parent9">
-                    <ng-container *ngFor="let blog of blogs">
-                      <app-smaller-blog [title]="blog.title" [likes]="blog.likes" [blogId]="blog._id"
-                        (blogClicked)="onBlogClicked($event)"></app-smaller-blog>
-                    </ng-container>
-                  </div>
-                </div>
-                <div class="ellipse-wrapper">
-                  <div class="ellipse-div"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="blog-types">
+      <div class="type-name">
+        <h1>
+          <span>Explore top tourist attractions</span>
+        </h1>
+      </div>
+      <div class="rendered-blogs-scroll">
+        <div class="rendered-blogs">
+          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog></app-smaller-blog>       
+          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog></app-smaller-blog>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
+    <div class="blog-types">
+      <div class="type-name">
+        <h1>
+          <span>Where to Eat</span>
+        </h1>
+      </div>
+      <div class="rendered-blogs-scroll">
+        <div class="rendered-blogs">
+          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog></app-smaller-blog>       
+          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog></app-smaller-blog>
+        </div>
+      </div>
+    </div>
+    <div class="blog-types">
+      <div class="type-name">
+        <h1>
+          <span>Things to do</span>
+        </h1>
+      </div>
+      <div class="rendered-blogs-scroll">
+        <div class="rendered-blogs">
+          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog></app-smaller-blog>       
+          <app-smaller-blog></app-smaller-blog>
+          <app-smaller-blog></app-smaller-blog>
+        </div>
+      </div>
+    </div>
   </div>
-
-</body>
-
-</html>
+</div>
+</div>
