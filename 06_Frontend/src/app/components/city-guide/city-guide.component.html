@@ -66,13 +66,23 @@
           <span>Explore top tourist attractions</span>
         </h1>
       </div>
-      <div class="rendered-blogs-scroll">
+      <!-- <div class="rendered-blogs-scroll">
         <div class="rendered-blogs">
           <app-smaller-blog></app-smaller-blog>
           <app-smaller-blog></app-smaller-blog>       
           <app-smaller-blog></app-smaller-blog>
           <app-smaller-blog></app-smaller-blog>
         </div>
+      </div> -->
+      <div class="rendered-blogs">
+        <app-smaller-blog
+          *ngFor="let blog of blogs"
+          [title]="blog.title" 
+          [likes]="blog.likes"
+          [views]="blog.views"
+          [blogId]="blog.id"
+          (blogClicked)="onBlogClicked($event)"
+        ></app-smaller-blog>
       </div>
     </div>
     <div class="blog-types">

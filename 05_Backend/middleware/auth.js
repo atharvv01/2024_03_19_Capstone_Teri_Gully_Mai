@@ -4,6 +4,7 @@ const User = require('../schema/user_schema')
 // Middleware to verify the JWT token
 const verifyToken = (req, res, next) => {
   const token = req.headers.authorization;
+  
 
   if (!token) {
     return res.status(401).json({
@@ -11,7 +12,7 @@ const verifyToken = (req, res, next) => {
       message: 'Unauthorized: No token provided',
     });
   }
-  const extractedToken = token.replace("Bearer ","")
+  const extractedToken = token.replace("Bearer ","") 
   jwt.verify(extractedToken, process.env.SECRET_KEY, (err, decoded) => {
     if (err) {
       console.error(err);

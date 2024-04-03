@@ -10,5 +10,6 @@ const { verifyToken } = require("../middleware/auth");
 router.use(verifyToken);
 router.post('/add_comment', CommentController.addComment);// Add comment to blog
 router.delete('/delete_comment/:commentId', CommentController.deleteComment);// Delete specific comment
+router.post('/change_approve/:commentId', CommentController.changeApproveComment);// Add comment to blog
 
 module.exports = router;
