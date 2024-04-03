@@ -1,12 +1,25 @@
 *{
   box-sizing: border-box;
 }
+
+.navbar{
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+}
+
+.wholescreen{
+  position: absolute;
+  /* top: 10px; */
+  /* background-color: #c39df6; */
+  top: 110px;
+}
 .cities-bar{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 13vh;
+  height: 100px;
   /* background-color: aqua; */
   padding: 1rem;
 }
@@ -96,7 +109,7 @@ font-weight: 700;
 }
 
 .city-desc p{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #666666;
 }
 
@@ -156,13 +169,14 @@ font-weight: 700;
   width: 100%;
   /* white-space: nowrap; */
   box-sizing: border-box;
-  padding: 1.2rem 0rem;
+  
   /* background-color: chartreuse; */
 }
 
 .rendered-blogs{
   overflow-x: auto;
   /* background-color: darkslategray; */
+  padding: 1.2rem 1rem;
   display: flex;
   gap: 40px;
 }
