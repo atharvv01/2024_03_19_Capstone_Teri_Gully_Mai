@@ -6,8 +6,13 @@
             </div>
         </div>
         <div class="blog-renders-wrapper">
-            <div class="blog-renders">
-                <app-smaller-blog></app-smaller-blog>
+            <div class="blog-renders" *ngFor="let blog of blogs">
+                <!-- <div class="blog-renders"> -->
+                <app-smaller-blog 
+                [title]="blog.title"
+                [likes]="blog.likes"
+                [views]="blog.views"></app-smaller-blog>
+                <!-- <app-smaller-blog></app-smaller-blog> -->
                 <div class="approve-delete-buttons">
                     <button class="approve-button">
                         <div class="approve">Approve</div>
@@ -17,18 +22,22 @@
                     </button>
                 </div>
             </div>
+            <!-- <button class="scroll-button" (click)="scrollBlogs('left')">Scroll Left</button>
+            <button class="scroll-button" (click)="scrollBlogs('right')">Scroll Right</button> -->
         </div>
     </div>
 
-    <div class="flaggedblogs-section">
+    <!-- <div class="flaggedblogs-section">
         <div class="flagged-blogs-text-wrapper">
             <div class="flagged-blog-text">
                 <p>Flagged Blogs</p>
             </div>
         </div>
-        <div class="flagged-blog-renders-wrapper">
-            <div class="flagged-blog-renders">
-                <app-smaller-blog></app-smaller-blog>
+        <div class="flagged-blog-renders-wrapper"> -->
+            <!-- <div class="flagged-blog-renders" *ngFor="let blog of flaggedBlogs"> -->
+                <!-- <div class="flagged-blog-renders"> -->
+                <!-- <app-smaller-blog [blog]="blog"></app-smaller-blog> -->
+                <!-- <app-smaller-blog></app-smaller-blog>
                 <div class="ignore-delete-buttons">
                     <button class="ignore-button">
                         <div class="ignore">Ignore</div>
@@ -37,7 +46,9 @@
                         <div class="delete">Delete</div>
                     </button>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div> -->
+            <!-- <button class="scroll-button" (click)="scrollBlogs('left')">Scroll Left</button>
+            <button class="scroll-button" (click)="scrollBlogs('right')">Scroll Right</button> -->
+        <!-- </div>
+    </div> -->
 </div>
