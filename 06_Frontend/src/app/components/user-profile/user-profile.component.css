@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-content {
+    padding: 2rem 9rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: aquamarine; */
+    gap: 20px;
+}
+
+.profile-section {
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 50%;
+    max-height: fit-content;
+    /* background-color: crimson; */
+}
+
+.username-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    /* background-color: burlywood; */
+    /* gap: 1rem; */
+}
+
+.profile-photo {
+    height: 7rem;
+    width: 8rem;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.user-details {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.username {
+    display: flex;
+    gap: 2rem;
+    width: 400px;
+    height: 40%;
+    /* background-color: brown; */
+    align-items: center;
+}
+
+.name {
+    /* background-color: aqua; */
+    font-weight: 100;
+}
+
+.name-of-user {
+    color: #872BFF;
+}
+
+.edit-name-button {
+    background-color: #F0EFFA;
+    border: none;
+    height: 25px;
+    width: 50px;
+    border-radius: 20px;
+}
+
+.points-section {
+    color: #666666;
+    display: flex;
+    /* gap: 2rem; */
+    width: 400px;
+    height: fit-content;
+}
+
+.upload-photo-button {
+    background-color: #F0EFFA;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+}
+
+.about-user-section {
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    height: 60%;
+    /* background-color: cornflowerblue; */
+    padding: 1rem;
+}
+
+.email-section-wrapper {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 40%;
+    height: 100px;
+    /* background-color: black; */
+}
+
+.tag {
+    color: #666666;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    /* background-color: chartreuse; */
+}
+
+.email {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 70%;
+    /* background-color: bisque; */
+}
+.email-id{
+    font-weight: 700;
+    color: #333333;
+
+}
+
+.about-section-wrapper {
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* background-color: darkkhaki; */
+}
+
+#about-me-tag{
+    padding: 10px;
+}
+.user-bio{
+    padding: 10px;
+    width: 100%;
+    height: 70%;
+    /* background-color: midnightblue; */
+    display: flex;
+    color: #333333;
+    word-wrap: normal;
+}
+
+
+
+.my-blogs-text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.myblogs-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* background-color: chocolate; */
+    gap: 1rem;
+}
+
+.my-blog-text {
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.blog-renders-wrapper {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: blueviolet; */
+}
+
+.blog-renders {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    word-wrap: normal;
+    margin: 1.1rem;
+}
+
+.edit-delete-buttons {
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 0.8rem;
+    /* gap: 10px; */
+}
+
+.edit-button,
+.delete-button {
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.edit-button {
+    border: 1px solid black;
+}
+
+.delete-button {
+    /* background-color: rgb(255, 85, 0); */
+    color: white;
+}

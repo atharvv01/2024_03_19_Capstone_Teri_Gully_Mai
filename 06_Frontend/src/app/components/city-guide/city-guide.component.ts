@@ -38,9 +38,6 @@ export class CityGuideComponent implements OnInit {
   onBlogClicked(blogId: string): void {
     this.router.navigate(['/blog', blogId]); // Navigate to the details page with blog ID as parameter
     
-    //blogid not going 
-    console.log(blogId+"hello");
-    
   }
 
 }

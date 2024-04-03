@@ -1,177 +1,64 @@
-.frame-group {
-    width: 1447px;;
-    justify-content: space-between;
-    flex-shrink: 0;
-    /* debug_commit: f6aba90; */
-    text-align: left;
-    font-size: var(--bold-type24-size);
-    color: var(--black);
-    font-family: var(--font-playfair-display-sc);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .teri-galli-mai-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-4xs) 0 0;
-  }
-  .teri-galli-mai {
-    margin: 0;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-    white-space: nowrap;
-    z-index: 1;
-  }
-  .frame-container {
-    width: 873px;
-    justify-content: flex-start;
-    gap: var(--gap-159xl);
-    max-width: 100%;
-    font-size: var(--semibold-type14-size);
-    font-family: var(--medium-type18);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
 
-  .frame-wrapper {
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--padding-base) 0 0;
-    box-sizing: border-box;
-    max-width: 100%;
-    display: flex;
-    align-items: flex-start;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+*{
+  font-family: "Plus Jakarta Sans";
+}
+.navbarLayout{
+  gap: 15rem;
+  position: relative;
+  left: 0rem;
+  top: 0rem;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  /* background-color: red; */
+  height: 7rem;
+  width: 100vw ;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.logo{
+  font-family: "Playfair Display SC";
+  /* margin-right: 15rem; */
+}
+.mid-section{
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
 
-  .home-parent {
-    position: relative;
-    left: -69px;
-    display: flex;
-    align-items: flex-start;
-    align-self: stretch;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: var(--gap-xl);
-  }
+}
+.home{
+  /* margin-left: 3rem; */
+  font-weight: 600;
+  font-size: 20px;
+  /* margin-right: 2rem; */
+   
+}
+.cityGuides {
+  /* margin-right: 20rem; */
+  font-size: 20px;
+  font-weight: 600;
+}
 
-  .home {
-    position: relative;
-    font-weight: 600;
-    display: inline-block;
-    min-width: 41px;
-  }
-  .home:hover{
-    cursor: pointer;
-    font-size: large;
-    color: blueviolet;
-  }
-  .city-guides {
-    font-weight: 600;
-    /* color: var(--st); */
-    min-width: 80px;
-    position: relative;
-    display: inline-block;
-    white-space: nowrap;
-  }
-  .city-guides:hover{
-    cursor: pointer;
-    font-size: large;
-    color: blueviolet;
-  }
-  .view-saves{
-    position: relative;
-    display: inline-block;
-    white-space: nowrap;
-    font-weight: 600;
-    min-width: 77px;
-  }
-  .view-saves:hover{
-    cursor: pointer;
-    font-size: large;
-    color: blueviolet;
-  }
-  .write-a-blog {
-    position: relative;
-    display: inline-block;
-    white-space: nowrap;
-    font-weight: 600;
-    min-width: 77px;
-    min-width: 81px;
-  }
-  .write-a-blog:hover{
-    cursor: pointer;
-    font-size: large;
-    color: blueviolet;
-  }
-  
-  .login-sign-up-title {
-    justify-content: flex-start;
-    gap: var(--gap-5xs);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
+.singup-login{
+  display: flex;
+}
 
-  .login-wrapper {
-    cursor: pointer;
-    border: 0;
-    padding: var(--padding-base) var(--padding-22xl);
-    background-color: var(--w-background);
-    border-radius: var(--br-11xl);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .login-wrapper:hover {
-    background-color: var(--color-gainsboro-100);
-  }
-
-  .login {
-    width: 38px;
-    position: relative;
-    font-size: var(--semibold-type14-size);
-    font-weight: 600;
-    font-family: var(--medium-type18);
-    color: var(--black);
-    text-align: center;
-    display: inline-block;
-    min-width: 38px;
-  }
-  
-  .sign-up-wrapper {
-    cursor: pointer;
-    border: 0;
-    padding: var(--padding-base) var(--padding-15xl);
-    background-color: var(--st);
-    border-radius: var(--br-11xl);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    white-space: nowrap;
-  }
-  .sign-up-wrapper:hover {
-    background-color: var(--color-blueviolet-100);
-  }
-
-  .sign-up {
-    width: 52px;
-    position: relative;
-    font-size: var(--semibold-type14-size);
-    font-weight: 600;
-    font-family: var(--medium-type18);
-    color: var(--w-background);
-    text-align: center;
-    display: inline-block;
-    min-width: 52px;
-  } 
-
- 
+.signup,.signin{
+  width:8rem;
+  height: 50px;
+  background-color: #872BFF;
+  border-radius: 25px;
+  box-shadow: none; 
+  color: white;
+  border: none;
+}
+.signin{
+border-radius: 25px;
+background-color: transparent;
+color: black;
+font-weight: bold;
+font-size: 15px;
+}

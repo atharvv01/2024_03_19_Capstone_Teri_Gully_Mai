@@ -1,92 +1,32 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-  <link rel="stylesheet" href="../../../styles.css" />
-  <link rel="stylesheet" href="./homepage.component.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display SC:wght@700&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
-</head>
-
-<body>
-  <div class="landing-page">
-    <div class="image"></div>
-    <img class="objects-icon" alt="" src="../../assets/public/objects@2x.png" />
-
-    <div class="frame-parent">
-      <app-navbar></app-navbar>
-      <div class="image-container">
-        <main class="frame-main">
-          <section class="experience-create-and-explore-wrapper">
-            <div class="experience-create-and-explore">
-              <div class="create-blog-button">
-                <div class="content">
-                  <h1 class="experience-create-and-container">
-                    <span class="word ani">Experience,</span><br>
-                    <span class="word1 ani ">Create and</span><br>
-                    <span class="word2 explore ani">Explore.</span>
-                  </h1>
-                  <div class="stay-updated-with">
-                    Stay updated with travel tips, recommendations, and latest
-                    promos and create your blogs about your experience as
-                    well.
-                  </div>
-                  <button class="create-blog-container-wrapper" (click)="navigateToCreateBlog()">
-                    <div class="create-blog-container">
-                      <b class="create-blog">Create Blog</b>
-                      <img class="vector-icon" alt="" src="../../assets/public/vector.svg" />
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <div class="image-02">
-                <div class="vector">
-                  <div class="map-container">
-                    <div class="frame">
-                      <img class="frame-icon" alt="" src="../../assets/public/frame.svg" />
-
-                      <img class="plane-icon" loading="lazy" alt="" src="../../assets/public/plane@2x.png" />
-                    </div>
-                    <img class="frame-icon1" alt="" src="../../assets/public/frame-1.svg" />
-                  </div>
-                  <div class="frame1">
-                    <div class="maps">
-                      <img class="vector-icon1" loading="lazy" alt="" src="../../assets/public/vector.svg" />
-                    </div>
-                  </div>
-                </div>
-                <div class="images-wrapper">
-                  <div class="images">
-                    <div class="frame2">
-                      <div class="images-container">
-                        <img class="images-container-child" loading="lazy" alt=""
-                          src="../../assets/public/rectangle-4@2x.png" />
-
-                        <img class="images-container-item" loading="lazy" alt=""
-                          src="../../assets/public/rectangle-3@2x.png" />
-                      </div>
-                    </div>
-                    <div class="frame3">
-                      <img class="frame-child" alt="" src="../../assets/public/rectangle-5@2x.png" />
-
-                      <img class="frame-item" alt="" src="../../assets/public/rectangle-2@2x.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="tyuia"></div>
-        </main>
+<!-- <app-navbar class="navbar"></app-navbar> -->
+<div class="screen">
+  <div class="main-container">
+    <div class="text-filed">
+      <div class="explore-text">
+        <div class="explore-text-box">
+          <h1 class="experience-create-and-container">
+            <span class="word ani">Experience,</span><br>
+            <span class="word1 ani ">Create and</span><br>
+            <span class="word2 explore ani">Explore.</span>
+          </h1>
+        </div>
+      </div>
+      <div class="desc-text">
+        <div class="stay-updated-with">
+          Stay updated with travel tips, recommendations, and latest
+          promos and create your blogs about your experience as
+          well.
+        </div>
+      </div>
+      <div class="creat-blog-button">
+        <button class="create-blog-container-wrapper" (click)="navigateToCreateBlog()">
+            <b class="create-blog">Create Blog</b>
+        </button>
       </div>
     </div>
+    <div class="images-field">
+      <!-- ADDITIO OF IMAGE PENDING -->
+    </div>
   </div>
-</body>
-
-</html>
+</div>

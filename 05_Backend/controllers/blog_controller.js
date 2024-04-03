@@ -1,21 +1,57 @@
-//internal dependencies 
-const User = require("../schema/user_schema")
-const SavedBlog = require("../schema/saved_blogs")
+// Internal dependencies
+const User = require("../schema/user_schema");
+const SavedBlog = require("../schema/saved_blogs");
 const Blog = require('../schema/blog_schema');
 const Place = require('../schema/place_schema');
+const cloudinary = require('cloudinary').v2;
+require('dotenv').config();
 
-// Controller to create a new blog
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
+/**
+ * Controller to create a new blog.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 const createBlog = async (req, res) => {
   try {
-
     const userData = req.decoded; // Decoded user information from the token
-
-    const { title, description, city, thumbnail } = req.body;
+    const {  title,
+      description,
+      city,
+      thumbnail,
+      places,
+      likes,
+      views,
+      comments,
+      isCommentsEnabled,
+      status,
+      isTrending,
+      isPromoted,
+      saves,
+      flags,
+      type  } = req.body;
     const newBlog = new Blog({
       title,
       description,
       city,
       thumbnail,
+      places,
+      likes,
+      views,
+      comments,
+      isCommentsEnabled,
+      status,
+      isTrending,
+      isPromoted,
+      saves,
+      flags,
+      type,
       author: userData.userId
     });
     const savedBlog = await newBlog.save();
@@ -25,7 +61,11 @@ const createBlog = async (req, res) => {
   }
 };
 
-// Controller to add a place to a blog
+/**
+ * Controller to add a place to a blog.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 const addPlaceToBlog = async (req, res) => {
   try {
     const { placeName, imageUrl, googleMapLink, description, price, timings, where, ratings } = req.body;
@@ -63,7 +103,11 @@ const addPlaceToBlog = async (req, res) => {
   }
 };
 
-// controller to delete a place while creating a blog
+/**
+ * Controller to delete a place while creating a blog.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 const placeToDelete = async (req, res) => {
   try {
     const placeId = req.query.placeId;
@@ -73,7 +117,7 @@ const placeToDelete = async (req, res) => {
     await Place.findByIdAndDelete(placeId);
 
     // Update blog documents to remove the deleted place ID from the `places` array
-    await Blog.updateMany({ $pull: { places: placeId } });
+    await Blog.updateMany({}, { $pull: { places: placeId } });
 
     res.status(200).json({ message: 'Place deleted successfully' });
   } catch (error) {
@@ -81,7 +125,11 @@ const placeToDelete = async (req, res) => {
   }
 };
 
-// Controller to fetch blog details by city ..here it also fetchs places inside to the blog
+/**
+ * Controller to fetch blog details by city including places.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 const getBlogByCity = async (req, res) => {
   try {
     const city = req.query.city;
@@ -96,12 +144,16 @@ const getBlogByCity = async (req, res) => {
   }
 };
 
-// Controller to fetch blog details by ID
-const getBlogById = async (req, res) => {
+/**
+ * Controller to fetch blog details by author ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
+const getBlogByAuthorId = async (req, res) => {
   try {
     const authorId = req.query.authorId;
     // Find the blog with the specified ID
-    const blog = await Blog.find({ author: authorId});
+    const blog = await Blog.find({ author: authorId });
     if (!blog) {
       return res.status(404).json({ success: false, message: "Blog not found" });
     }
@@ -112,7 +164,31 @@ const getBlogById = async (req, res) => {
   }
 };
 
-// Controller to delete the blog 
+/**
+ * Controller to fetch blog details by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
+const getBlogById = async (req, res) => {
+  try {
+    const blogId = req.query.blogId;
+    // Find the blog with the specified ID
+    const blog = await Blog.findById(blogId);
+    if (!blog) {
+      return res.status(404).json({ success: false, message: "Blog not found" });
+    }
+    res.status(200).json(blog);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+/**
+ * Controller to delete the blog along with associated places.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 const deleteBlogAndPlaces = async (req, res) => {
   try {
     const userdata = req.decoded
@@ -145,12 +221,32 @@ const deleteBlogAndPlaces = async (req, res) => {
   }
 };
 
-// Controller to modify the blog and places in it
+/**
+ * Controller to modify the blog and associated places.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 const modifyBlogAndPlaces = async (req, res) => {
   try {
-    const userdata = req.decoded
+    const userdata = req.decoded;
     const blogId = req.query.blogId; // Assuming the blog ID is provided in the request parameters
-    const { title, description, city, thumbnail, places } = req.body; // Assuming the updated blog and places details are provided in the request body
+    const { 
+      title, 
+      description, 
+      city, 
+      thumbnail, 
+      places, 
+      likes, 
+      views, 
+      comments, 
+      isCommentsEnabled, 
+      status, 
+      isTrending, 
+      isPromoted, 
+      saves, 
+      flags, 
+      type // Additional fields to modify
+    } = req.body; // Assuming the updated blog and places details are provided in the request body
 
     // Validate input data if necessary
 
@@ -159,44 +255,26 @@ const modifyBlogAndPlaces = async (req, res) => {
     if (!blog) {
       return res.status(403).json({ success: false, message: "You are not authorized to modify this blog" });
     }
-// Update blog details
-if (title) blog.title = title;
-if (description) blog.description = description;
-if (city) blog.city = city;
-if (thumbnail) blog.thumbnail = thumbnail;
-await blog.save();
 
-// // Update places within the blog
-// for (const place of places) {
-//   const { placeId, placeName, description, img, googleMapLink, price, timings, where, ratings } = place;
-//   const existingPlace = await Place.findOne({ _id: placeId, blog: blogId });
-//   if (existingPlace) {
-//     // Update existing place
-//     if (placeName) existingPlace.placeName = placeName;
-//     if (description) existingPlace.description = description;
-//     if (img) existingPlace.img = img;
-//     if (googleMapLink) existingPlace.googleMapLink = googleMapLink;
-//     if (price) existingPlace.price = price;
-//     if (timings) existingPlace.timings = timings;
-//     if (where) existingPlace.where = where;
-//     if (ratings) existingPlace.ratings = ratings;
-//     await existingPlace.save();
-//   } else {
-//     // Create new place if not found
-//     const newPlace = new Place({
-//       placeName,
-//       description,
-//       img,
-//       googleMapLink,
-//       price,
-//       timings,
-//       where,
-//       ratings,
-//       blog: blogId
-//     });
-//     await newPlace.save();
-//   }
-// }
+    // Update blog details
+    if (title) blog.title = title;
+    if (description) blog.description = description;
+    if (city) blog.city = city;
+    if (thumbnail) blog.thumbnail = thumbnail;
+    if (places) blog.places = places;
+    if (likes) blog.likes = likes;
+    if (views) blog.views = views;
+    if (comments) blog.comments = comments;
+    if (isCommentsEnabled !== undefined) blog.isCommentsEnabled = isCommentsEnabled;
+    if (status) blog.status = status;
+    if (isTrending !== undefined) blog.isTrending = isTrending;
+    if (isPromoted !== undefined) blog.isPromoted = isPromoted;
+    if (saves) blog.saves = saves;
+    if (flags) blog.flags = flags;
+    if (type) blog.type = type;
+    
+    await blog.save();
+
     res.status(200).json({ success: true, message: "Blog and places updated successfully" });
   } catch (error) {
     console.error(error);
@@ -204,14 +282,41 @@ await blog.save();
   }
 };
 
+/**
+ * Route to get all places of a blog by ID.
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
+const getAllPlacesOfBlog = async (req, res) => {
+  try {
+    const blogId = req.query.blogId;
+    // console.log(blogId);
+    // Find the blog by ID and populate the 'places' field
+    const blog = await Blog.findById(blogId).populate('places');
+    // console.log(blog);
+    // console.log("hello");
+    if (!blog) {
+      return res.status(404).json({ error: 'Blog not found' });
+    }
+
+    // Extract places from the blog and send them as response
+    const places = blog.places;
+    res.json(places);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+};
 
 // Export the controller functions
 module.exports = {
   createBlog,
   addPlaceToBlog,
   getBlogByCity,
+  getBlogByAuthorId,
   getBlogById,
   placeToDelete,
   deleteBlogAndPlaces,
-  modifyBlogAndPlaces
+  modifyBlogAndPlaces,
+  getAllPlacesOfBlog
 };

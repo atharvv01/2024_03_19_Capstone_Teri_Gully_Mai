@@ -1,70 +1,61 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-  <link rel="stylesheet" href="../../../styles.css" />
-  <link rel="stylesheet" href="./create-a-blog.component.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display SC:wght@700&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
-</head>
-
-<body>
-  <div class="create-a-blog">
-    <div class="create-a-blog-child"></div>
-    <app-navbar></app-navbar>
-    <section class="image-container1">
-      <div class="frame-parent34">
-        <div class="frame-parent35">
-          <div class="name-of-place-input-wrapper">
-            <div class="name-of-place-input">
-              <div class="google-map-link">
-                <div class="text-inputs">
-                  <b class="input-text-label">Title of the blog:</b>
-                  <div class="input-field">
-                    <div class="text">
-                      <input class="type-here" placeholder="Type here" type="text" />
-
-                      <!-- <img class="icon" alt="" /> -->
-                    </div>
+<div class="create-a-blog">
+  <div class="create-a-blog-child"></div>
+  <app-navbar></app-navbar>
+  <section class="image-container1">
+    <div class="frame-parent34">
+      <div class="frame-parent35">
+        <div class="name-of-place-input-wrapper">
+          <div class="name-of-place-input">
+            <div class="google-map-link">
+              <div class="text-inputs">
+                <b class="input-text-label">Title of the blog:</b>
+                <div class="input-field">
+                  <div class="text">
+                    <input class="type-here" placeholder="Type here" type="text" [(ngModel)]="blogData.title" />
                   </div>
-                  <div class="assistive-text">Assistive Text</div>
                 </div>
-                <div class="input-container">
-                  <b class="about-blog">About blog:</b>
-                  <textarea class="nameof-place-input-field" placeholder="What is blog about" rows="12"
-                    cols="26"></textarea>
+                <div class="assistive-text">Assistive Text</div>
+              </div>
+              <div class="input-container">
+                <b class="about-blog">About blog:</b>
+                <textarea class="nameof-place-input-field" placeholder="What is blog about" rows="12"
+                  cols="26" [(ngModel)]="blogData.description"></textarea>
+              </div>
+              <div class="city-and-type">
+                <div class="city-div">
+                  <b class="city">City:</b>
+                  <input class="thumbnail" type="text" [(ngModel)]="blogData.city" />
                 </div>
-                <b class="city">City:</b>
-              </div>
-              <div class="thumbnail-parent">
-                <input class="thumbnail" type="text" />
-
-                <b class="thumbnail1">Thumbnail:</b>
-              </div>
-              <div class="rectangle-parent3">
-                <div class="frame-child16"></div>
-                <h1 class="h1">+</h1>
+                <div class="city-div">
+                  <b class="city">Type:</b>
+                  <select class="thumbnail" [(ngModel)]="blogData.type">
+                    <option value="default">Default</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="frame-parent36">
-            <app-create-places></app-create-places>
+            <div class="thumbnail-parent">
+              <b class="thumbnail1">Thumbnail:</b>
+              <input class="thumbnail" type="text" [(ngModel)]="blogData.thumbnail" />
+            </div>
+            <div class="rectangle-parent3">
+              <div class="frame-child16"></div>
+              <h1 class="h1">+</h1>
+            </div>
           </div>
         </div>
-        <div class="post-button">
-          <button class="post-label">
-            <b class="post">Post</b>
-          </button>
+        <div class="frame-parent36">
+          <app-create-places class="createPlaces"></app-create-places>
         </div>
       </div>
-    </section>
-  </div>
-</body>
-
-</html>
+      <div class="post-button">
+        <button class="post-label" (click)="postBlog()">
+          <b class="post">Post</b>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
