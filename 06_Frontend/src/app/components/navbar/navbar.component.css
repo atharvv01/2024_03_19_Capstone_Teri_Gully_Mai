@@ -2,9 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 *{
-  font-family: "Plus Jakarta Sans";
+  font-family: "roboto";
 }
+
+
+.navbarLayout .mid-section .home.active,
+.navbarLayout .mid-section .cityGuides.active {
+  color: blue; /* Change to your desired color */
+  /* Add any other styles for active links */
+}
+
+.home:hover,
+.cityGuides:hover {
+  transform: scale(1.1);
+  color: #872BFF;
+  cursor: pointer;
+}
+
+.signin:hover,
+.signup:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 1.6;
+}
+
+
 .navbarLayout{
+  background-image: url(../../../assets//public/bg_image.png);
+  background-size: cover;
   gap: 15rem;
   position: relative;
   left: 0rem;
@@ -47,6 +72,7 @@
 }
 
 .signup,.signin{
+  font-size: large;
   width:8rem;
   height: 50px;
   background-color: #872BFF;
@@ -54,11 +80,11 @@
   box-shadow: none; 
   color: white;
   border: none;
+  font-weight: bold;
 }
 .signin{
 border-radius: 25px;
 background-color: transparent;
 color: black;
-font-weight: bold;
-font-size: 15px;
+/* font-size: 15px; */
 }
