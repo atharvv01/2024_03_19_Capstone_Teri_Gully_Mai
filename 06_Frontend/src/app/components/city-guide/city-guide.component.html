@@ -1,3 +1,5 @@
+<app-navbar class="navbar"></app-navbar>
+<div class="wholescreen">
 <div class="cities-bar">
   <div class="cities">
     <button class="city-wrapper" (click)="selectCity('Delhi')" [ngClass]="{'selected-city': currentCity === 'Delhi'}">
@@ -15,6 +17,7 @@
     </button>
   </div>
 </div>
+<!-- <hr> -->
 <div class="main-content">
   <div class="city-info">
     <div class="city-selected">
@@ -103,4 +106,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

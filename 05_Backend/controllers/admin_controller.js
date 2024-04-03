@@ -7,7 +7,7 @@ const getPendingBlogs = async (req, res) => {
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
-  };
+};
 
 const approveBlog = async (req, res) => {
     try {
@@ -22,7 +22,7 @@ const approveBlog = async (req, res) => {
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
-  };
+};
 
   const rejectBlog = async (req, res) => {
     try {
@@ -37,7 +37,7 @@ const approveBlog = async (req, res) => {
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
-  };
+};
 
 
 

@@ -6,12 +6,12 @@
 }
 .navbarLayout{
   gap: 15rem;
-  position: fixed;
+  position: relative;
   left: 0rem;
   top: 0rem;
   /* margin-left: 10px; */
   /* margin-right: 10px; */
-  background-color: red;
+  /* background-color: red; */
   height: 7rem;
   width: 100vw ;
   display: flex;
