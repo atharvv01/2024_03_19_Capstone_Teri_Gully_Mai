@@ -5,31 +5,47 @@
   font-family: "Plus Jakarta Sans";
 }
 .navbarLayout{
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: transparent;
-  height: 8rem;
-  width: auto ;
+  gap: 15rem;
+  position: fixed;
+  left: 0rem;
+  top: 0rem;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  background-color: red;
+  height: 7rem;
+  width: 100vw ;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 .logo{
   font-family: "Playfair Display SC";
-  margin-right: 15rem;
+  /* margin-right: 15rem; */
+}
+.mid-section{
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+
 }
 .home{
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
   font-weight: 600;
   font-size: 20px;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
    
 }
 .cityGuides {
-  margin-right: 20rem;
+  /* margin-right: 20rem; */
   font-size: 20px;
   font-weight: 600;
 }
+
+.singup-login{
+  display: flex;
+}
+
 .signup,.signin{
   width:8rem;
   height: 50px;
