@@ -1,5 +1,6 @@
 import { Component , OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
