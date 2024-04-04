@@ -40,7 +40,8 @@
     border-radius: 20px;
     width: 40%;
     height: 100%;
-    background-color: coral;
+    /* border: 1px solid black; */
+    /* background-color: coral; */
 }
 
 .price-and-type{
@@ -64,9 +65,13 @@ hr{
 }
 
 .benfits-section{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 50%;
-    background-color: brown;
+    /* background-color: brown; */
+    padding: 1rem;
+    justify-content: space-evenly;
 }
 
 .button-to-select-wrapper{
@@ -75,7 +80,7 @@ hr{
     align-items: center;
     width: 100%;
     height: 15%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 .button-to-select{
@@ -86,4 +91,27 @@ hr{
     background-color: gray;
     border: none;
     border-radius: 7px;
+}
+
+.benfit{
+    align-items: center;
+    display: flex;
+    font-size: 1.3rem;
+    color: black;
+    gap: 10px;
+}
+
+.normal-plan-wrapper{
+    background-color: rgba(128, 128, 128, 0.534);
+}
+
+.premium-plan-wrapper{
+    background-color: rgba(161, 70, 213, 0.798);
+    border: 2px solid transparent; /* Set the initial border */
+  box-shadow: 0 0 10px rgba(161, 70, 213, 0.798); /* Set the glow effect color */
+  animation: glowing 2s infinite alternate;
+}
+
+#premium-button{
+    background-color: rgb(201, 161, 238);
 }
