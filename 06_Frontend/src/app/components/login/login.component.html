@@ -41,12 +41,18 @@
           Password is required
         </div>
       </div>
-      <div class="forgot-password1" (click)="navigateToForgotPassword()">Forgot password?</div>
-      <div class="description-link-label">
-        <button class="text-button1" (click)="onloginClick()"
-          [disabled]="!usernameInput.valid || !passwordInput.valid"
-          [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}">Log In</button>
+      <div style="display: flex; width: 400px; justify-content: end; align-items: end;">
+        <div class="forgot-password1" (click)="navigateToForgotPassword()">Forgot password?</div>
       </div>
+     
+      <button class="description-link-label"(click)="onloginClick()"
+      [disabled]="!usernameInput.valid || !passwordInput.valid"
+      [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}"  >
+        <!-- <button class="text-button1" (click)="onloginClick()"
+          [disabled]="!usernameInput.valid || !passwordInput.valid"
+          [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}">Log In</button> -->
+          Log In
+      </button>
     </div>
     <div class="description-link1">
       <div class="description2">

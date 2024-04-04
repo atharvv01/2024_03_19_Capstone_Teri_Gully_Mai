@@ -38,7 +38,7 @@
   flex: 1;
   position: relative;
   font-size: inherit;
-  font-weight: 600;
+  font-weight: 500;
   font-family: inherit;
   display: inline-block;
   max-width: 100%;
@@ -137,7 +137,7 @@
   font-weight: 500;
 }
 .forgot-password1 {
-  align-self: stretch;
+  /* align-self: stretch; */
   text-decoration: none;
 }
 .forgot-password1:hover{
@@ -211,6 +211,8 @@ border: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
+  color: white;
 } 
 
 .description-link-label:hover {
@@ -237,16 +239,19 @@ border: none;
 .description3 {
   position: relative;
   font-weight: 500;
+  margin-top: 20px;
   white-space: nowrap;
 }
 .description2 {
   display: flex;
+
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 .link1 {
   position: relative;
+  margin-top: 20px;
   text-decoration: none;
   font-weight: 500;
   display: inline-block;
@@ -383,16 +388,18 @@ border: none;
 
 body, html {
   height: 100%;
+  
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center; 
+  margin-top: 80px;
  
 }
 
 .welcome-back-container {
   text-align: center; 
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .login-container {
