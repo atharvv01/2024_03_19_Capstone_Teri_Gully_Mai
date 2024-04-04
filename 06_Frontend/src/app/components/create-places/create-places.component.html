@@ -19,7 +19,7 @@
         <p>Name:</p>
       </div>
       <div class="property-input">
-        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.name"/>
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.placeName"/>
       </div>
     </div>
     <div class="place-property">
@@ -36,7 +36,7 @@
       </div>
       <div class="property-input">
         <textarea class="text-box" id="blog-desc-text" placeholder="More about this place" rows="12"
-          cols="26" [(ngModel)]="places[index].about"></textarea>
+          cols="26" [(ngModel)]="place.description"></textarea>
       </div>
     </div>
     <div class="thumbnail">

@@ -32,7 +32,7 @@ export class InnerBlogComponent  implements OnInit {
     ngOnInit(): void {
     const blogId = this.route.snapshot.paramMap.get('blogId');
     if (blogId) {
-      this.blogService.getAllPlaces(blogId).subscribe(
+      this.blogService.getAllPlacesOfBlog(blogId).then(
         (places: Place[]) => {
           this.blogPlaces = places;
           console.log('Places:', this.blogPlaces);
