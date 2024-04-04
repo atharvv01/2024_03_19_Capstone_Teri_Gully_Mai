@@ -6,8 +6,6 @@
 const { wordCountValidator } = require('../validators/blog_validators'); // Adjust the path as per your project structure
 
 
-
-
 // Define schema for blog 
 const mongoose = require('mongoose');
 const blogSchema = new mongoose.Schema({
