@@ -1,14 +1,21 @@
 .dropdown {
     position: absolute;
-  
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    display: inline-block; 
+   
   }
   .profile-user {
     width: 35px;
     height: 35px;
     border-radius: 50px;
-    margin-left: 50px; 
-    margin-top: 80px;
+    margin-left: 30px; 
+    margin-top: 10px;
+  } 
+  .dropdown-menu{
+    position: absolute;
+    left: -60px; /* Adjust this value to your preference */ 
+    z-index: 2; 
+
   }
   
   ul {
@@ -35,8 +42,8 @@
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    background: #262626;
-    color: #fff;
+    background: white;
+    color: black;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     transition: 0.5s;
     width: 150px;

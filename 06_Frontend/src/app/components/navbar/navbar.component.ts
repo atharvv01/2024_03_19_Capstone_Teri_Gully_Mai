@@ -1,28 +1,51 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';  
+import { AuthService } from '../../auth.service';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
-  constructor(private router: Router){}
-  navigateToHome(){
+export class NavbarComponent implements OnInit {
+  isLoggedIn: boolean = false; 
+  
+
+  constructor(private router: Router, private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authService.loggedIn$.subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn;
+    });
+  }
+
+  navigateToHome() {
     this.router.navigate(['/']);
   }
-  navigateToCityGuides(){
+
+  navigateToCityGuides() {
     this.router.navigate(['/city_guides']);
   }
-  navigateToSaves(){
+
+  navigateToSaves() {
     this.router.navigate(['/saved_blogs']);
   }
-  navigateToMyBlogs(){
+
+  navigateToMyBlogs() {
     this.router.navigate(['/my_blog']);
   }
-  navigateToLogin(){
+
+  navigateToLogin() {
     this.router.navigate(['/login']);
   }
-  navigateToSignup(){
+
+  navigateToSignup() {
     this.router.navigate(['/signup']);
-  }
+  } 
+
+  logout() {
+    this.authService.logOut();
+    this.router.navigate(['/login']); 
+  } 
+
 }

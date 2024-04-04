@@ -8,8 +8,12 @@ import { AuthService } from '../auth.service';
   styleUrl: './dropdown.component.css'
 })
 export class DropdownComponent { 
+  
+  
 
-  constructor(private router: Router,private authService: AuthService) {}
+  constructor(private router: Router,private authService: AuthService) { 
+    
+  }
   /** Flag indicating whether the dropdown is active or not. */
   dropdownActive = false;
 

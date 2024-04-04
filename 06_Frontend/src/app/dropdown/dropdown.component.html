@@ -1,14 +1,17 @@
 <div class="dropdown">
-    <a (click)="toggleDropdown()">
+  <a (click)="toggleDropdown()">
       <img
-        class="profile-user"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2za5BkrRdiLySsA5tgm_SwWZqemTjg42T9PTME4hJEA&amp;s"
-        alt="Description of the image"
-    /></a>
-    <ul [ngClass]="{ active: dropdownActive }">
-      <li (click)="navigateTo('/editprofile')">Edit Profile</li>
-      <li><a routerLink="/booking">My Booking</a></li>
-      <li><a routerLink="/my_cars">My Cars</a></li>
-      <li (click)="logOut()">Log Out</li>
-    </ul>
-  </div>
+          class="profile-user"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2za5BkrRdiLySsA5tgm_SwWZqemTjg42T9PTME4hJEA&amp;s"
+          alt="Description of the image"
+      />
+  </a>
+  <ul [ngClass]="{ active: dropdownActive }" class="dropdown-menu">  
+   
+      <li><a (click)="navigateTo('/editprofile')"><i class="fa fa-user"></i> Profile Settings</a></li>
+      <li><a (click)="navigateTo('/saved_blogs')"><i class="fa fa-bookmark"></i> Saved Blogs</a></li>
+      <li><a (click)="navigateTo('/create_blog')"><i class="fa fa-user-pen"></i> Create Blog</a></li>
+      <li><a (click)="navigateTo('/upgrade_plan')"><i class="fa fa-arrow-up"></i> Upgrade Plan</a></li>
+      <li><a (click)="logOut()"><i class="fa fa-right-from-bracket"></i> Sign Out</a></li>
+  </ul>
+</div>
