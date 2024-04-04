@@ -14,10 +14,10 @@
                 [views]="blog.views"></app-smaller-blog>
                 <!-- <app-smaller-blog></app-smaller-blog> -->
                 <div class="approve-delete-buttons">
-                    <button class="approve-button">
+                    <button class="approve-button" (click)="approveBlog(blog._id)">
                         <div class="approve">Approve</div>
                     </button>
-                    <button class="delete-button">
+                    <button class="delete-button" (click)="deleteBlog(blog._id)">
                         <div class="delete">Delete</div>
                     </button>
                 </div>

@@ -47,7 +47,8 @@ export class AdminApprovalComponent implements OnInit{
           this.blogs = response.map(blog => ({
           title: blog.title,
           likes: blog.likes,
-          views: blog.views
+          views: blog.views,
+          _id: blog._id
         }));
         console.log(this.blogs);
           },
@@ -57,6 +58,58 @@ export class AdminApprovalComponent implements OnInit{
         );
     } else {
       console.error('No token provided'); // Log error if no token is found in local storage
+    }
+  }
+
+  approveBlog(blogId: string): void {
+    const token = localStorage.getItem('authToken'); // Retrieve token from local storage
+
+    if (token) {
+      const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`); // Setting authorization header
+
+      // Prepare the request body
+    const body = { type: 'approved' };
+
+      // Call the API endpoint to approve the blog
+      this.http.put(`http://localhost:3000/admin/approve/${blogId}`, body, { headers: headers })
+        .subscribe(
+          (response) => {
+            console.log('Blog approved successfully:', response);
+            // Refresh the list of pending blogs after approval
+            this.fetchPendingBlogs();
+          },
+          (error) => {
+            console.error('Error approving blog:', error);
+          }
+        );
+    } else {
+      console.error('No token provided');
+    }
+  }
+
+  deleteBlog(blogId: string): void {
+    const token = localStorage.getItem('authToken'); // Retrieve token from local storage
+
+    if (token) {
+      const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`); // Setting authorization header
+
+      // Prepare the request body
+    const body = { type: 'rejected' };
+
+      // Call the API endpoint to approve the blog
+      this.http.put(`http://localhost:3000/admin/reject/${blogId}`, body, { headers: headers })
+        .subscribe(
+          (response) => {
+            console.log('Blog rejected successfully:', response);
+            // Refresh the list of pending blogs after approval
+            this.fetchPendingBlogs();
+          },
+          (error) => {
+            console.error('Error rejecting blog:', error);
+          }
+        );
+    } else {
+      console.error('No token provided');
     }
   }
 
