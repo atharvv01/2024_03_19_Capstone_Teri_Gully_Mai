@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root",
 })
 export class SaveCollectionService {
-  private url = "http://localhost:3000/users";
+  private url = "http://localhost:3000/saves";
   private token: string | null = null;
 
   constructor(

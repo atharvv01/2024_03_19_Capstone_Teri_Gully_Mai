@@ -9,7 +9,7 @@
           <div class="name">
             <H1>
               <span>heyy, </span>
-              <span class="name-of-user">Atharva</span>
+              <span class="name-of-user">{{ userDetails.username }}</span>
             </H1>
           </div>
           <!-- <div class="edit-button"> -->
@@ -33,7 +33,7 @@
         </div>
         <div class="email">
           <div class="email-id">
-            <p>athzanwar&#64;gmail.com</p>
+            <p>{{userDetails.email}}</p>
           </div>
           <button class="edit-name-button">Edit</button>
         </div>
@@ -48,7 +48,7 @@
       </div>
     </div>
   </div>
-  <div class="myblogs-section">
+  <div class="myblogs-section" *ngIf="userBlogs.length > 0">
     <div class="my-blogs-text-wrapper">
       <div class="my-blog-text">
         <p>My Blogs</p>
@@ -56,8 +56,11 @@
     </div>
     <div class="blog-renders-wrapper">
       
-      <div class="blog-renders">
-        <app-smaller-blog></app-smaller-blog>
+      <div class="blog-renders" *ngFor="let blog of userBlogs">
+        <app-smaller-blog  [blog]="blog" [title]="blog.title" 
+        [likes]="blog.likes"
+        [views]="blog.views"
+        [blogId]="blog.id"></app-smaller-blog>
         <div class="edit-delete-buttons">
           <button class="edit-button">
             <div class="edit">Edit</div>
@@ -68,53 +71,6 @@
         </div>
       </div>
 
-      <div class="blog-renders">
-        <app-smaller-blog></app-smaller-blog>
-        <div class="edit-delete-buttons">
-          <button class="edit-button">
-            <div class="edit">Edit</div>
-          </button>
-          <button class="delete-button">
-            <div class="delete">Delete</div>
-          </button>
-        </div>
-      </div>
-
-      <div class="blog-renders">
-        <app-smaller-blog></app-smaller-blog>
-        <div class="edit-delete-buttons">
-          <button class="edit-button">
-            <div class="edit">Edit</div>
-          </button>
-          <button class="delete-button">
-            <div class="delete">Delete</div>
-          </button>
-        </div>
-      </div>
-
-      <div class="blog-renders">
-        <app-smaller-blog></app-smaller-blog>
-        <div class="edit-delete-buttons">
-          <button class="edit-button">
-            <div class="edit">Edit</div>
-          </button>
-          <button class="delete-button">
-            <div class="delete">Delete</div>
-          </button>
-        </div>
-      </div>
-
-      <div class="blog-renders">
-        <app-smaller-blog></app-smaller-blog>
-        <div class="edit-delete-buttons">
-          <button class="edit-button">
-            <div class="edit">Edit</div>
-          </button>
-          <button class="delete-button">
-            <div class="delete">Delete</div>
-          </button>
-        </div>
-      </div>
     </div>
   </div>
 </div>

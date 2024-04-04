@@ -22,7 +22,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.component';
-import {WriteBlogComponent} from './components/city-blog/write-blog.component'
+import {WriteBlogComponent} from './components/city-blog/write-blog.component';
+import { EditBlogComponent } from './components/edit-blog/edit-blog.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,10 @@ import {WriteBlogComponent} from './components/city-blog/write-blog.component'
     SmallerBlogComponent,
     CreatePlacesComponent,
     NotfoundComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UpgradePlanComponent,
+    WriteBlogComponent,
+    EditBlogComponent
   ],
   imports: [
     BrowserModule,

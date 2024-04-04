@@ -317,10 +317,33 @@ function sample(array, size) {
     return shuffled.slice(min);
 }
 
+const getUserDetails = async (req, res) => {
+    try {
+        const userData = req.decoded;        
+        // Find the user, if it doesn't exist
+        let user = await User.findById(userData.userId)
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Blog added to saved section and like count incremented successfully!",
+            details : user
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error",
+        });
+    }
+};
 module.exports = {
     signup,
     login,
     forget_password,
     reset_password,
-    saveRandomBlogsForRandomUser
+    saveRandomBlogsForRandomUser,
+    getUserDetails
 };
