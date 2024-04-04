@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-content {
+    padding: 2rem 9rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: aquamarine; */
+    gap: 20px;
+}
+.my-blogs-text-wrapper, .flagged-blogs-text-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.myblogs-section , .flaggedblogs-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* background-color: chocolate; */
+    gap: 1rem;
+}
+.my-blog-text, .flagged-blog-text{
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.blog-renders-wrapper, .flagged-blog-renders-wrapper{
+    justify-content: space-evenly;
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    /* background-color: blueviolet; */
+}
+
+.blog-renders, .flagged-blog-renders {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    word-wrap: normal;
+    margin: 1.1rem;
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.approve-delete-buttons, .ignore-delete-buttons{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 0.8rem;
+    /* gap: 10px; */
+}
+
+.approve-button,
+.delete-button, .ignore-button {
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.approve-button:hover,
+.delete-button:hover, .ignore-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.approve-button {
+    /* border: 1px solid black; */
+    background-color: rgb(128, 236, 128);
+}
+
+.delete-button {
+    /* background-color: rgb(255, 85, 0); */
+    background-color: rgb(237, 139, 104);
+    color: white;
+}
+
+.ignore-button{
+    background-color: rgb(240, 112, 112);
+}
+
+.scroll-button {
+    flex: 0 0 auto;
+    margin-left: 10px;
+  }
+
+  
+  
