@@ -3,18 +3,18 @@
     Teri Galli Mai
   </h1>
   <div class="mid-section">
-    <div class="home">
+    <div class="home" [routerLink]="['']" [class.active]="isActive('/home')">
       Home
     </div>
-    <div class="cityGuides">
+    <div class="cityGuides" [routerLink]="['/city_guides']" [class.active]="isActive('/city-guides')">
       City Guides
     </div>
   </div>
   <div class="singup-login">
-    <button class="signin">
+    <button class="signin" (click)="onLogIn()">
       Login
     </button>
-    <button class="signup">
+    <button class="signup" (click)="onSignup()">
       Sign Up
     </button>
   </div>

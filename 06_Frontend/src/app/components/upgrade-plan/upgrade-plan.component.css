@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+.screen{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 45rem;
+    /* background-color: black; */
+    padding: 2rem 7rem;
+    gap: 5px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 80px;
+    /* background-color: aqua; */
+    font-size: x-large;
+}
+
+.plans-component{
+    display: flex;
+    width: 60rem;
+    height: inherit;
+    /* background-color: red; */
+    padding: 2rem;
+    justify-content: space-evenly;
+}
+
+.premium-plan-wrapper,
+.normal-plan-wrapper{
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 40%;
+    height: 100%;
+    background-color: coral;
+}
+
+.price-and-type{
+    padding: 2rem;
+    justify-content: space-between;
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+.fee{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+hr{
+    width: 80%;
+    /* background-color: black; */
+}
+
+.benfits-section{
+    width: 100%;
+    height: 50%;
+    background-color: brown;
+}
+
+.button-to-select-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background-color: blueviolet;
+}
+
+.button-to-select{
+    font-weight: 500;
+    font-size: larger;
+    height: 60%;
+    width: 70%;
+    background-color: gray;
+    border: none;
+    border-radius: 7px;
+}

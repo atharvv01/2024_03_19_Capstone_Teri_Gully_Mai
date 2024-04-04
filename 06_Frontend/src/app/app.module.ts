@@ -20,6 +20,8 @@ import { SmallerBlogComponent } from './components/smaller-blog/smaller-blog.com
 import { CreatePlacesComponent } from './components/create-places/create-places.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.component';
 import {WriteBlogComponent} from './components/city-blog/write-blog.component'
 @NgModule({
   declarations: [
@@ -36,8 +38,7 @@ import {WriteBlogComponent} from './components/city-blog/write-blog.component'
     SmallerBlogComponent,
     CreatePlacesComponent,
     NotfoundComponent,
-    UserProfileComponent,
-    WriteBlogComponent
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

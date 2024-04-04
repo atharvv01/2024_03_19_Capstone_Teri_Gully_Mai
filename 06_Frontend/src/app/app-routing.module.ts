@@ -10,6 +10,7 @@ import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.c
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { WriteBlogComponent } from './components/city-blog/write-blog.component';
+import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'user_profile',  
     component: UserProfileComponent
+  },
+  {
+    path: 'upgrade_plan',  
+    component: UpgradePlanComponent
   },
   {
     path: '**',  
