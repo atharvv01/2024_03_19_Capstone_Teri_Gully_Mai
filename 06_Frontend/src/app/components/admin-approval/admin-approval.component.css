@@ -35,7 +35,9 @@
 .blog-renders-wrapper, .flagged-blog-renders-wrapper{
     justify-content: space-evenly;
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    width: 100%;
+    /* flex-wrap: wrap; */
     /* background-color: blueviolet; */
 }
 
@@ -45,6 +47,8 @@
     flex-direction: column;
     word-wrap: normal;
     margin: 1.1rem;
+    flex: 0 0 auto;
+    margin-right: 10px;
 }
 
 .approve-delete-buttons, .ignore-delete-buttons{
@@ -73,7 +77,7 @@
 }
 
 .approve-button {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: rgb(128, 236, 128);
 }
 
@@ -84,5 +88,13 @@
 }
 
 .ignore-button{
-    background-color: aliceblue;
+    background-color: rgb(240, 112, 112);
 }
+
+.scroll-button {
+    flex: 0 0 auto;
+    margin-left: 10px;
+  }
+
+  
+  
