@@ -10,7 +10,7 @@
           <p>Title of the blog:</p>
         </div>
         <div class="property-input">
-          <input class="text-box" placeholder="Type here" type="text" />
+          <input class="text-box" placeholder="Type here" type="text" [(ngModel)]="blogData.title"/>
         </div>
       </div>
       <div class="blog-property">
@@ -19,7 +19,7 @@
         </div>
         <div class="property-input">
           <textarea class="text-box" id="blog-desc-text" placeholder="What is blog about" rows="12"
-            cols="26"></textarea>
+            cols="26" [(ngModel)]="blogData.description"></textarea>
         </div>
       </div>
       <div class="city-category-wrapper">
@@ -28,12 +28,12 @@
             <p>City:</p>
           </div>
           <div class="property-input">
-            <select class="dropdown">
+            <select class="dropdown" [(ngModel)]="blogData.city">
               <option value="default">Select city</option>
-              <option value="option1">Delhi</option>
-              <option value="option2">Goa</option>
-              <option value="option3">Pune</option>
-              <option value="option3">Hyderabad</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Goa">Goa</option>
+              <option value="Pune">Pune</option>
+              <option value="Hyderabad">Hyderabad</option>
             </select>
           </div>
         </div>
@@ -42,11 +42,11 @@
             <p>Category:</p>
           </div>
           <div class="property-input">
-            <select class="dropdown">
+            <select class="dropdown" [(ngModel)]="blogData.type">
               <option value="default">Select category</option>
-              <option value="option1">Top tourist attractions</option>
-              <option value="option2">Where to eat</option>
-              <option value="option3">Things to do</option>
+              <option value="Top tourist attractions">Top tourist attractions</option>
+              <option value="Where to eat">Where to eat</option>
+              <option value="Things to do">Things to do</option>
             </select>
           </div>
         </div>
@@ -67,11 +67,11 @@
             <div class="property-name">
               <p>Comments:</p>
             </div>
-            <div class="property-input">
+            <div class="property-input" [(ngModel)]="blogData.isCommentsEnabled">
               <select class="dropdown">
                 <option value="default">Select category</option>
-                <option value="option1">Enable</option>
-                <option value="option2">Disable</option>
+                <option value="true">Enable</option>
+                <option value="false">Disable</option>
               </select>
             </div>
           </div>
@@ -90,12 +90,12 @@
       </div>
       <div class="places-info">
         
-        <app-create-places></app-create-places>
+        <app-create-places ></app-create-places>
 
       </div>
     </div>
   </div>
   <div class="post-button-wrapper">
-    <button class="Post-Place">Post</button>
+    <button class="Post-Place" (click)="postBlog()">Post</button>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-create-a-blog',
@@ -17,33 +18,24 @@ export class CreateABlogComponent {
     views: 0,
     comments: [],
     isCommentsEnabled: true,
-    status: 'draft',
     isTrending: false,
     isPromoted: false,
     saves: [],
-    flags: [],
     type: 'default'
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private blogService : BlogService) {}
 
-  postBlog(): void {
-    const token = localStorage.getItem('authToken');
-
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`
-    });
-
-    this.http.post('http://localhost:3000/blogs/create', this.blogData, { headers })
-      .subscribe(
-        (response) => {
+    postBlog(): void {
+      this.blogService.createBlog(this.blogData)
+        .then((response) => {
           console.log('Blog created successfully:', response);
           // Reset form or perform any other actions after successful creation
-        },
-        (error) => {
+        })
+        .catch((error) => {
           console.error('Error creating blog:', error);
-        }
-      );
-  }
+        });
+    }
 }

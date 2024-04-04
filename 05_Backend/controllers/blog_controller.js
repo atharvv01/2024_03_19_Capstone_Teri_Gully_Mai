@@ -19,6 +19,7 @@ cloudinary.config({
  * @param {Object} res - The response object.
  */
 const createBlog = async (req, res) => {
+  
   try {
     const userData = req.decoded; // Decoded user information from the token
     const {  title,
@@ -54,10 +55,12 @@ const createBlog = async (req, res) => {
       type,
       author: userData.userId
     });
+    // console.log(newBlog)
     const savedBlog = await newBlog.save();
-    res.status(201).json(savedBlog);
+    
+    return res.status(201).json(savedBlog);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 

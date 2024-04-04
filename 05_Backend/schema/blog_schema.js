@@ -14,10 +14,8 @@ const blogSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    validate: {
-      validator: wordCountValidator(5, 15),
-      message: props => `${props.value} must have between 5 and 15 words`
-    }
+    minLength : 5,
+    maxLength : 15
   },
   description: {
     type: String,
@@ -35,7 +33,7 @@ const blogSchema = new mongoose.Schema({
   thumbnail:
   {
     type: String,
-    required: true
+    // required: true
   },
 
   // Referencing the Place model for places mentioned in the blog
@@ -67,12 +65,6 @@ const blogSchema = new mongoose.Schema({
   views: {
     type: Number,
     default: 0
-  },
-
-  // Array of comments posted on the blog post
-  comments: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Comments'
   },
 
   // Flag indicating whether comments are enabled for the blog post
