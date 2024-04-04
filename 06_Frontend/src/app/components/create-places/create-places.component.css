@@ -1,417 +1,232 @@
-.scrollable-container {
-    height: 800px; /* Set the desired height */
-    overflow: auto; /* Make it scrollable */
+*{
+    box-sizing: border-box;
+  }
+  .screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: 100vw;
+    /* background-color: black; */
+    padding: 0rem 5rem;
+   
   }
   
-  /* Add your existing CSS styles here */
-  
-
-
-
-.places-parent {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 660px;
-    justify-content: space-between;
-    gap: var(--gap-xl);
-    max-width: 100%;
-}
-
-.places {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    height: 50px;
-    width: 169px;
-    font-size: inherit;
-    line-height: 18px;
-    font-weight: 700;
-    font-family: inherit;
-    flex-shrink: 0;
-}
-
-.name-of-place-input-field {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.name-of-place-input-field {
-    cursor: pointer;
-    border: 0;
-    padding: var(--padding-4xs) var(--padding-8xl);
-    background-color: var(--st);
-    border-radius: 14px;
-    overflow: hidden;
-    justify-content: flex-start;
-}
-
-.name-of-place-input-field:hover {
-    background-color: var(--color-blueviolet-100);
-}
-
-.add {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 51px;
-    font-size: var(--font-size-6xl);
+  .title{
+    font-size: 3rem;
     font-weight: 600;
-    font-family: var(--medium-type18);
-    color: var(--w-background);
-    text-align: center;
-    justify-content: center;
-    min-width: 51px;
-}
-
-.frame-parent37 {
-    margin-top: 20px;
-    align-self: stretch;
-    height: 790px;
-    border-radius: 17px;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 28px var(--padding-17xl);
-    box-sizing: border-box;
-    position: relative;
-    max-width: 100%;
-    font-size: var(--font-size-6xl);
-    color: var(--color-darkslategray);
-}
-
-.name-of-place-parent {
-    align-self: stretch;
-    height: 680px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    gap: 36px 38px;
-    max-width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.name-of-place {
-    width: 280px;
-    margin: 0 !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-13xl);
-}
-
-.input-text-label1 {
-    align-self: stretch;
-    position: relative;
-    line-height: 18px;
-    font-size: var(--font-size-xl);
-    line-height: 14px;
-}
-
-.input-field1 {
-    border-radius: var(--br-5xs);
-    background-color: var(--w-background);
-    border: 1px solid var(--color-lightgray);
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--padding-base) var(--padding-mini);
-    align-self: stretch;
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-}
-
-.text1 {
-    align-self: stretch;
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    gap: var(--gap-93xs);
-}
-
-.type-here1 {
-    height: 24px;
-    position: relative;
-    width: 304px;
-    border: 0;
-    outline: 0;
-    font-family: var(--font-noto-sans);
-    font-size: var(--font-size-base);
-    background-color: transparent;
-    line-height: 24px;
-    color: var(--color-dimgray);
-    text-align: left;
-    display: inline-block;
-    padding: 0;
-}
-
-.assistive-text1 {
-    align-self: stretch;
-    height: 18px;
-    position: relative;
-    font-size: var(--font-size-xs);
-    line-height: 18px;
-    font-family: var(--font-noto-sans);
-    color: var(--color-dimgray);
-    display: none;
-}
-
-.google-map-link1 {
-    width: 280px;
-    margin: 0 !important;
-    position: absolute;
-    top: 0;
-    left: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-13xl);
-}
-
-.input-text-label2 {
-    align-self: stretch;
-    position: relative;
-    line-height: 18px;
-    font-size: var(--font-size-xl);
-    line-height: 14px;
-}
-
-.input-field2 {
-    border-radius: var(--br-5xs);
-    background-color: var(--w-background);
-    border: 1px solid var(--color-lightgray);
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--padding-base) var(--padding-mini);
-    align-self: stretch;
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-}
-
-
-.text2 {
-    align-self: stretch;
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    gap: var(--gap-93xs);
-}
-
-.type-here2 {
-    width: 304px;
-    border: 0;
-    outline: 0;
-    font-family: var(--font-noto-sans);
-    font-size: var(--font-size-base);
-    background-color: transparent;
-    line-height: 24px;
-    color: var(--color-dimgray);
-    text-align: left;
-    display: inline-block;
-    padding: 0;
-    height: 24px;
-    position: relative;
-}
-
-.assistive-text2 {
-    align-self: stretch;
-    height: 18px;
-    position: relative;
-    font-size: var(--font-size-xs);
-    line-height: 18px;
-    font-family: var(--font-noto-sans);
-    color: var(--color-dimgray);
-    display: none;
-}
-
-.images1 {
-    width: 522px;
-    margin: 0 !important;
-    position: absolute;
-    top: 142px;
-    left: 0;
-    flex-direction: column;
-    gap: 34px;
-    max-width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.images2 {
-    align-self: stretch;
-    position: relative;
-    line-height: 18px;
-    font-size: var(--font-size-xl);
-    line-height: 14px;
-}
-
-.rectangle-parent4 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 175px;
-    border-radius: var(--br-xs);
-    background-color: var(--color-gainsboro-200);
-    border: 1px solid var(--color-silver-100);
-    box-sizing: border-box;
-    flex-direction: row;
-    padding: 70px 62px var(--padding-54xl) var(--padding-45xl);
-    font-size: var(--bold-type70-size);
-    color: var(--color-black);
-}
-
-.frame-child17 {
-    height: 175px;
-    width: 175px;
-    position: relative;
-    border-radius: var(--br-xs);
-    background-color: var(--color-gainsboro-200);
-    border: 1px solid var(--color-silver-100);
-    box-sizing: border-box;
-    display: none;
-}
-
-.add-place-btn {
-    margin: 0;
-    height: 32px;
-    flex: 1;
-    position: relative;
-    font-size: inherit;
-    line-height: 18px;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    z-index: 1;
-}
-
-.blog-desc,
-.blog-desc-child {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.blog-desc-child {
-    border: 1px solid var(--color-silver-100);
-    background-color: var(--color-gainsboro-300);
-    height: 231px;
-    width: auto;
-    outline: 0;
-    align-self: stretch;
-    border-radius: var(--br-xs);
-    box-sizing: border-box;
-    flex-direction: row;
-    padding: var(--padding-7xl) var(--padding-lg);
-    font-family: var(--medium-type18);
-    font-weight: 500;
-    font-size: var(--font-size-xl);
-    color: var(--color-dimgray);
-}
-
-.blog-desc {
-    max-width: 100%;
-}
-
-.blog-desc {
-    width: 100%;
-    margin: 0 !important;
-    position: absolute;
-    top: 405px;
-    left: 0;
-    flex-direction: column;
-    gap: var(--gap-7xl);
-}
-
-.about {
-    align-self: stretch;
-    position: relative;
-    line-height: 18px;
-}
-
-.h11 {
-    width: 46px;
-    height: 32px;
-    top: 10.98px;
-    right: -9.65px;
-    font-size: 55px;
-    line-height: 18px;
-    font-weight: 500;
-    font-family: inherit;
-    color: var(--color-black);
-    display: inline-block;
-    transform: rotate(45deg);
-    transform-origin: 0 0;
-    position: absolute;
-    margin: 0 !important;
-}
-
-.frame-child18 {
-    position: absolute;
-    margin: 0 !important;
-    width: 500px;
-    height: 500px;
-    right: -326px;
-    bottom: -384px;
-    border-radius: 50%;
-    background-color: var(--color-blueviolet-400);
-    filter: blur(500px);
-    z-index: 1;
-} 
-
-
-/* Add your provided CSS styles here */
-
-@media screen and (max-width: 750px) {
-    .places-parent {
-      width: 100%;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-    
-    .frame-parent37 {
-      padding: 20px;
-    }
+    width: fit-content;
+    height: 60px;
+    /* background-color: aqua; */
   }
   
-  @media screen and (max-width: 450px) {
-    .name-of-place-parent {
-      flex-direction: column;
-      gap: 20px;
-    }
-    
-    .name-of-place,
-    .google-map-link1,
-    .images1,
-    .blog-desc {
-      width: 100%;
-      position: static;
-    }
-    
-    .google-map-link1 {
-      margin-top: 20px;
-    }
-    
-    .h11,
-    .frame-child18 {
-      display: none;
-    }
+  .main-content{
+    display: flex;
+    height: 45rem;
+    width: 75rem;
+    /* background-color: blanchedalmond; */
+    padding: 2rem;
+    gap: 20px;
   }
-
+  
+  .blog-details{
+    height: 100%;
+    width: 50%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .blog-property{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    /* background-color: aqua; */
+  }
+  
+  .property-name{
+    font-size: x-large;
+    font-weight: 600;
+    color: black;
+  }
+  
+  /* .property-input, */
+  .text-box{
+    font-size: large;
+    font-weight: 300;
+    color: #333333;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    height: 45px;
+    width: 500px;
+  }
+  
+  #blog-desc-text{
+    /* width: 300px; */
+    height: 150px;
+  }
+  
+  .city-category-wrapper{
+    display: flex;
+    /* justify-content: space-between; */
+  }
+  
+  #city-field,
+  #category-field{
+    width: 250px;
+  }
+  
+  .dropdown{
+    font-size: larger;
+    text-align: center;
+    height: 45px;
+    width: 180px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  .thumnail-comments-wrapper{
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+    /* justify-content: space-evenly; */
+  }
+  
+  #thumbnail-button-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Upload-photo{
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  .places-name-add-button-wrapper{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    /* background-color: aqua; */
+    padding: 5px;
+    align-items:center;
+    justify-content: space-between;
+  }
+  .title-places{
+    color: #666666;
+    height: 35px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .title-places p{
+    height: inherit;
+    width:inherit;
+  }
+  .add-button{
+    height: 35px;
+    width: 70px;
+    border: none;
+    background-color: #872BFF;
+    border-radius: 13px;
+    font-size: large;
+    font-weight: 500;
+    color: white;
+  }
+  .places-details{
+    height: 100%;
+    width: 50%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+  .places-info{
+    overflow-y: auto;
+    max-height: 550px;
+    width: 100%;
+    /* background-color: #872BFF; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  
+  
+  .place-property{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    /* background-color: aqua; */
+  }
+  
+  .place-name{
+    font-size: x-large;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .places-card{
+    /* padding-top: 30px; */
+    display: flex;
+    width: inherit;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: rgba(222, 222, 222, 0.767);
+    border-radius: 10px;
+  }
+  
+  .cross-button-wrapper{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 30px;
+    /* background-color: cadetblue; */
+  }
+  
+  .cross-button{
+   height: inherit;
+   width: 30px;
+   font-size: x-large;
+   font-weight: 600;
+   background-color:  transparent;
+   border: none;
+  }
+  
+  .places-text-box{
+    font-size: large;
+    font-weight: 300;
+    color: #333333;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    height: 45px;
+    width: 240px;
+  }
+  
+  
+  .post-button-wrapper{
+    margin-bottom: 100px;
+  }
+  
+  .Post-Place{
+    background-color: #b98cf4;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: x-large;
+    height: 60px;
+    width: 150px;
+    font-weight: 600;
+  }

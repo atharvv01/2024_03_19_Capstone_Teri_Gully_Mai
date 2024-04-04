@@ -21,7 +21,8 @@ import { CreatePlacesComponent } from './components/create-places/create-places.
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
-
+import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.component';
+import {WriteBlogComponent} from './components/city-blog/write-blog.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +38,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     SmallerBlogComponent,
     CreatePlacesComponent,
     NotfoundComponent,
-    UserProfileComponent,
-    DropdownComponent
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

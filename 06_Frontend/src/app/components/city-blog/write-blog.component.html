@@ -1,0 +1,96 @@
+<!-- <app-navbar></app-navbar> -->
+<hr>
+<div class="main">
+ <div class="title">
+    {{place.title}}
+ </div>
+ <div class="author">
+    <div class="profilePic"></div> 
+    <span class="authorName">By Riya <br>
+    1 day ago
+    </span>
+ </div>
+ 
+ <div class="placesLayout">
+  <div class="placeTitle">
+    Cafe Name
+  </div>
+    <div class="slide-container">
+        <!-- <span *ngFor="let slider of sliders; let i = index" [attr.id]="'slider' + (i + 1)"></span> -->
+        <div class="image-container">
+          <img *ngFor="let image of images; let i = index" [src]="image" [alt]="'slider-image ' + (i + 1)" [class]="'slider-image ' + (i + 1)" height="350px" >
+        </div>
+        <!-- <div class="button-container" >
+          <a *ngFor="let slider of sliders; let i = index" [href]="'#slider' + (i + 1)" class="slider-button"></a>
+        </div> -->
+      </div>
+      <div class="mapsDetails">
+        <h2> </h2>
+        <button class="sendBtn"> Book Table</button>
+      </div>
+      <div class="placeDesc">
+        Winter days are perfect if you're someone who loves sitting out in the open, soaking in the sun, enjoying a warm cuppa or a cocktail or two with great food. The best part about restaurants with outdoor seating is that they have the ability to make you feel like you've made the most of your day when you spend time brunching there! Here are the top restaurants you can check out in Delhi NCR that offer the best outdoor seating. 
+      </div>
+      <div class="placePrice">
+       <div>
+        Price : 100 -200 rs
+       </div> 
+       <div>
+        Must Try : Pancakes, dosa from the live station, pasta and pastries 
+       </div> 
+       <div>
+        Zomato Rating : 3.8
+       </div> 
+      </div>
+ </div>
+ 
+ <div class="placesLayout">
+  <div class="placeTitle">
+    Cafe Name
+  </div>
+  <div class="slide-container">
+      <span *ngFor="let slider of sliders; let i = index" [attr.id]="'slider' + (i + 1)"></span>
+      <div class="image-container">
+        <img *ngFor="let image of images; let i = index" [src]="image" [alt]="'slider-image ' + (i + 1)" [class]="'slider-image ' + (i + 1)">
+      </div>
+      <div class="button-container">
+        <a *ngFor="let slider of sliders; let i = index" [href]="'#slider' + (i + 1)" class="slider-button"></a>
+      </div>
+    </div>
+    <div class="placeDesc">
+      Winter days are perfect if you're someone who loves sitting out in the open, soaking in the sun, enjoying a warm cuppa or a cocktail or two with great food. The best part about restaurants with outdoor seating is that they have the ability to make you feel like you've made the most of your day when you spend time brunching there! Here are the top restaurants you can check out in Delhi NCR that offer the best outdoor seating. 
+    </div>
+    <div class="placePrice">
+     <div>
+      Price : 100 -200 rs
+     </div> 
+     <div>
+      Must Try : Pancakes, dosa from the live station, pasta and pastries 
+     </div> 
+     <div>
+      Zomato Rating : 3.8
+     </div> 
+    </div>
+</div>
+
+<div class="likeBlog">
+ <button class="likeBtn"> ❤️ like this Blog !</button>
+  <button class="flagBtn">Flag This Blog</button>
+</div>
+
+<div class="blogComment">
+  <div class="profilePic" style="margin-right: 10px;"></div>
+  <textarea placeholder="Add a Comment" class="commentBox" ></textarea>
+  <button class="sendBtn">Send</button>
+</div>
+
+<div class="otherComments">
+  <div style="display: flex;  align-items: center; margin-bottom: 10px;">
+  <div class="profilePic" style="margin-right: 10px;  height: 35px;
+  width: 35px;"></div>
+  <div>User</div>
+</div>
+<div>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You’ve nailed the design and the responsiveness at various breakpoints works really well.</div>
+</div>
+
+</div>

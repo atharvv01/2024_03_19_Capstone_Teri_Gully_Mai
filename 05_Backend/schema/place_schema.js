@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const placeSchema = new mongoose.Schema({
   placeName: {
     type: String,
-    required: true
+    required: true,
+    unique : true
   },
   img: [String],
   googleMapLink: {
@@ -16,7 +17,6 @@ const placeSchema = new mongoose.Schema({
   },
   price: Number,
   ratings: Number
-  // Add more properties as needed
 });
 
 module.exports = mongoose.model('Place', placeSchema);

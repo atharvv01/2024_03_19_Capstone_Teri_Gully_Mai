@@ -10,7 +10,7 @@ export class HomepageComponent {
 
   navigateToCreateBlog() {
     if (localStorage.getItem('authToken')) {
-      this.router.navigate(['/write_blog']);
+      this.router.navigate(['/create_blog']);
     }
     else {
       // alert("Please Login to Continue");
