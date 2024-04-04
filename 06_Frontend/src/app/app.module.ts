@@ -38,7 +38,10 @@ import {WriteBlogComponent} from './components/city-blog/write-blog.component'
     SmallerBlogComponent,
     CreatePlacesComponent,
     NotfoundComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    // DropdownComponent,
+    UpgradePlanComponent,
+    WriteBlogComponent
   ],
   imports: [
     BrowserModule,
