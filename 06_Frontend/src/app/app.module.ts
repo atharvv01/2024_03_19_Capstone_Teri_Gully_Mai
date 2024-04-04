@@ -39,9 +39,8 @@ import { WriteBlogComponent } from './components/city-blog/write-blog.component'
     CreatePlacesComponent,
     NotfoundComponent,
     UserProfileComponent,
-    // DropdownComponent,
     UpgradePlanComponent,
-    WriteBlogComponent
+    WriteBlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +50,7 @@ import { WriteBlogComponent } from './components/city-blog/write-blog.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    DropdownComponent,    
   ],
   providers: [],
   bootstrap: [AppComponent],
