@@ -6,7 +6,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrl: './dropdown.component.css'
+  styleUrl: './dropdown.component.css',
+  standalone:true,
+  imports:[CommonModule]
 })
 export class DropdownComponent { 
 
