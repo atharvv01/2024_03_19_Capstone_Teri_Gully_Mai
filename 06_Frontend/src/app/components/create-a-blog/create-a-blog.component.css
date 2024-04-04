@@ -10,6 +10,8 @@
   /* background-color: black; */
   padding: 0rem 5rem;
   gap: 10px;
+  background-image: url(../../../assets/public/bg_image.png);
+  background-size: cover;
  
 }
 
