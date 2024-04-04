@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'; 
-
-/** Declare Razorpay as an external variable */
 declare var Razorpay: any;
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-upgrade-plan',

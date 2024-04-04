@@ -2,12 +2,13 @@
 
 .main{
     /* background-color: blue; */
-    padding-left: 70px;
+    padding-left: 130px;
     padding-right: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 20px;
+    
 }
 .title{
     margin-top: 10px;
@@ -43,7 +44,7 @@
 }
 
 .placesLayout{
-    border: 2px solid green;  
+    /* border: 2px solid green;   */
     width: 50%;
     /* background-color: violet; */
     margin-left: 300px;
@@ -217,7 +218,7 @@
     border-radius: 10px;
     background-color: #FF5722;
   }
-.sendBtn{
+.sendBtn,.bookBtn{
   width: 130px;
   height: 40px;
   color: white;
@@ -229,5 +230,13 @@
 .mapsDetails{
   width: auto;
   height: 100px;
-  background-color: red;
+  /* background-color: red; */
+  display: flex;
+   justify-content: space-around;
+   align-items: center;
+   
+}
+
+.bookBtn{
+  margin-right: 50px;
 }
