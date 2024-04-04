@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms'; // FormsModule for handling forms 
 import { Router } from '@angular/router'; // Router module for navigation
 import { Output, EventEmitter } from '@angular/core'; // Output and EventEmitter for emitting events
 import { NgModel } from '@angular/forms';
+import { AuthService } from '../../auth.service';
 
 // Define an interface that represents the structure of your API response
 interface LoginResponse {
@@ -25,7 +26,7 @@ interface LoginResponse {
   styleUrl: './login.component.css' // CSS file URL for the component
 })
 export class LoginComponent {
-  constructor(private router: Router, private http: HttpClient) { } // Constructor with Router and HttpClient injection
+  constructor(private router: Router, private http: HttpClient, private authService: AuthService) { } // Constructor with Router and HttpClient injection
   
   // Initialize username and password variables
   username: string = '';
@@ -70,7 +71,7 @@ export class LoginComponent {
           console.log('Response:', response);
           localStorage.setItem('authToken', response.token); // Store auth token in local storage
           console.log(localStorage.getItem('authToken'));
-          
+          this.authService.logIn()
           this.loginStateChange.emit(true); // Emit true on success
           this.router.navigate(['/']); // Navigate to home page
         },

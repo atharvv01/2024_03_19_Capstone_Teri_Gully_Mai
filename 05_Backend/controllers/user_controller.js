@@ -66,6 +66,7 @@ const login = async (req, res) => {
         const userData = req.body;
         const username = userData.username;
         const password = userData.password;
+        
 
         // validate  inputs
         const validationError = validateInputs(userData);
@@ -75,17 +76,17 @@ const login = async (req, res) => {
                 message: validationError,
             });
         }
-
+        
         // Find the user by username
         const user = await User.findOne({ username });
-
+        
         if (!user) {
             return res.status(404).json({
                 success: false,
                 message: "User not found",
             });
         }
-
+        console.log("Hello");
         // Compare the provided password with the hashed password in the database
         const isPasswordValid = await bcrypt.compare(password, user.password);
 

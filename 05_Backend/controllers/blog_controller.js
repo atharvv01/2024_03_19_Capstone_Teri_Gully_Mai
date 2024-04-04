@@ -19,45 +19,57 @@ cloudinary.config({
  * @param {Object} res - The response object.
  */
 const createBlog = async (req, res) => {
+  
   try {
     const userData = req.decoded; // Decoded user information from the token
-    const {  title,
-      description,
-      city,
-      thumbnail,
-      places,
-      likes,
-      views,
-      comments,
-      isCommentsEnabled,
-      status,
-      isTrending,
-      isPromoted,
-      saves,
-      flags,
-      type  } = req.body;
+    const { title, description, city, thumbnail, isCommentsEnabled, type } = req.body;
     const newBlog = new Blog({
       title,
       description,
       city,
       thumbnail,
-      places,
-      likes,
-      views,
-      comments,
+      likes : 0,
+      views : 0,
       isCommentsEnabled,
-      status,
-      isTrending,
-      isPromoted,
-      saves,
-      flags,
       type,
       author: userData.userId
     });
+    
+    // Save the new blog
     const savedBlog = await newBlog.save();
-    res.status(201).json(savedBlog);
+
+    // Check if places are provided in the request body
+    if (req.body.places && req.body.places.length > 0) {
+      // Create an array to store references to the newly created places
+      const createdPlaces = [];
+
+      // Iterate through each place provided in the request
+      for (const placeData of req.body.places) {
+        // Create a new place instance using data from the request
+        const newPlace = new Place({
+          placeName: placeData.placeName,
+          img: placeData.img,
+          googleMapLink: placeData.googleMapLink,
+          description: placeData.description,
+          price: placeData.price,
+          ratings: placeData.ratings
+        });
+
+        // Save the new place
+        const savedPlace = await newPlace.save();
+
+        // Push the ID of the saved place to the array
+        createdPlaces.push(savedPlace._id);
+      }
+
+      // Update the newly created blog with references to the created places
+      savedBlog.places = createdPlaces;
+      await savedBlog.save();
+    }
+    
+    return res.status(201).json(savedBlog);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
@@ -68,36 +80,40 @@ const createBlog = async (req, res) => {
  */
 const addPlaceToBlog = async (req, res) => {
   try {
-    const { placeName, imageUrl, googleMapLink, description, price, timings, where, ratings } = req.body;
+    const userData = req.decoded; // Decoded user information from the token
+    const { placeName, img, googleMapLink, description, price, ratings } = req.body;
     const blogId = req.query.blogId;
-
-    let img;
-    if (imageUrl) {
-      // If imageURL is provided, upload the image to Cloudinary
-      const result = await cloudinary.uploader.upload(imageUrl);
-      img = result.secure_url; // Use the Cloudinary URL for the image
-    } else {
-      // If imageURL is not provided, use the img parameter from the request body
-      img = req.body.img;
+    // Ensure the user is authenticated
+    if (!userData) {
+      return res.status(401).json({ error: "Unauthorized" });
     }
 
+    // Create a new place instance using the Place schema
     const newPlace = new Place({
       placeName,
       img,
       googleMapLink,
       description,
       price,
-      timings,
-      where,
       ratings
     });
 
+    // Save the new place
     const savedPlace = await newPlace.save();
+    
 
     // Update the blog with the new place
-    await Blog.findByIdAndUpdate(blogId, { $push: { places: savedPlace._id } });
+    const blogToUpdate  = await Blog.findOne(blogId)
+    if (!blogToUpdate) {
+      return res.status(404).json({ error: "Blog not found" });
+    }
 
-    res.status(201).json(savedPlace);
+    // Push the new place ID into the places array of the blog
+    blogToUpdate.places.push(savedPlace._id);
+
+    // Save the updated blog
+    const updatedBlog = await blogToUpdate.save();
+    res.status(201).json({ blog: updatedBlog, place: savedPlace });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

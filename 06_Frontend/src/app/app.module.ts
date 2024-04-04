@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { InnerBlogComponent } from './components/inner-blog/inner-blog.component';
-import { FormsModule,FormControl, Validators} from '@angular/forms';
+import { FormsModule, FormControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CreateABlogComponent } from './components/create-a-blog/create-a-blog.component';
@@ -21,8 +21,8 @@ import { CreatePlacesComponent } from './components/create-places/create-places.
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
-import { AdminApprovalComponent } from './components/admin-approval/admin-approval.component';
-
+import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.component';
+import { WriteBlogComponent } from './components/city-blog/write-blog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +39,8 @@ import { AdminApprovalComponent } from './components/admin-approval/admin-approv
     CreatePlacesComponent,
     NotfoundComponent,
     UserProfileComponent,
-    DropdownComponent,
-    AdminApprovalComponent
+    UpgradePlanComponent,
+    WriteBlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,10 +50,10 @@ import { AdminApprovalComponent } from './components/admin-approval/admin-approv
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    
+    DropdownComponent,    
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}

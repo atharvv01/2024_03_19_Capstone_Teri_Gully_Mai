@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+.screen{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 45rem;
+    /* background-color: black; */
+    padding: 2rem 7rem;
+    gap: 5px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 80px;
+    /* background-color: aqua; */
+    font-size: x-large;
+}
+
+.plans-component{
+    display: flex;
+    width: 60rem;
+    height: inherit;
+    /* background-color: red; */
+    padding: 2rem;
+    justify-content: space-evenly;
+}
+
+.premium-plan-wrapper,
+.normal-plan-wrapper{
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid black; */
+    /* background-color: coral; */
+}
+
+.price-and-type{
+    padding: 2rem;
+    justify-content: space-between;
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+.fee{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+hr{
+    width: 80%;
+    /* background-color: black; */
+}
+
+.benfits-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    /* background-color: brown; */
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.button-to-select-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    /* background-color: blueviolet; */
+}
+
+.button-to-select{
+    font-weight: 500;
+    font-size: larger;
+    height: 60%;
+    width: 70%;
+    background-color: gray;
+    border: none;
+    border-radius: 7px;
+}
+
+.benfit{
+    align-items: center;
+    display: flex;
+    font-size: 1.3rem;
+    color: black;
+    gap: 10px;
+}
+
+.normal-plan-wrapper{
+    background-color: rgba(128, 128, 128, 0.534);
+}
+
+.premium-plan-wrapper{
+    background-color: rgba(161, 70, 213, 0.798);
+    border: 2px solid transparent; /* Set the initial border */
+  box-shadow: 0 0 10px rgba(161, 70, 213, 0.798); /* Set the glow effect color */
+  animation: glowing 2s infinite alternate;
+}
+
+#premium-button{
+    background-color: rgb(201, 161, 238);
+}

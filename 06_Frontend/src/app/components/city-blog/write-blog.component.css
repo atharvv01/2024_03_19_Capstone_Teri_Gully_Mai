@@ -1,112 +1,242 @@
-.placesOfBlog{
-    position: relative;
-    width: inherit;
-    left: 100px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-.header{
-    position: relative;
-    left: 26px;
-}
-
-.best-outdoor-restaurants {
-    margin: 0;
-    align-self: stretch;
-    position: relative;
-    font-size: inherit;
-    font-weight: 800;
-    font-family: inherit;
-}
-
-.frame-parent41 {
-    width: 1146px;
+.main{
+    /* background-color: blue; */
+    padding-left: 130px;
+    padding-right: 70px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 51.5px;
-    max-width: 100%;
-}
-
-.frame-parent38,
-.frame-wrapper26 {
-    display: flex;
-    align-items: flex-start;
-    box-sizing: border-box;
-}
-
-.frame-wrapper26 {
-    width: inherit;
-    flex-direction: row;
     justify-content: center;
-    padding: 0 var(--padding-xl);
-    max-width: 100%;
+    padding-bottom: 20px;
+    
+}
+.title{
+    margin-top: 10px;
+    /* background-color: red; */
+    text-align: left;
+    font-size: 60px;
+    font-weight: bolder;
+    font-family: 'Plus Jakarta Sans';
+    padding-left: 200px;
+    padding-right: 150px;
+}
+.author{
+    margin-top: 30px;
+    /* background-color: aqua; */
+    padding-left: 200px;
+    padding-right: 150px;
+    display: flex;
+   align-items: center;
+    
+}
+.profilePic{
+  height: 55px;
+  width: 55px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.frame-parent38 {
-    width: inherit;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 0 0 var(--padding-xl);
-    gap: 91.5px;
-    flex-shrink: 0;
+.authorName{
+    margin-left: 10px;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: bold;
 }
-.blog1 {
+
+.placesLayout{
+    /* border: 2px solid green;   */
+    width: 50%;
+    /* background-color: violet; */
+    margin-left: 300px;
+    padding-bottom: 20px;
+}
+
+  .slide-container {
+    margin: 25vh auto 0 auto;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+  }
+  img {
+    width: 20%;
+  }
+  
+  .image-container {
+    display: inline-block;
+    width: 3000px;
+    height: 300px;
+    position: relative;
+    transition: left 2s;
+    animation: slide 15s infinite;
+  }
+  .slider-image {
+    float: left;
+  }
+  
+  .button-container {
+    position: relative;
+    top: 10px;
+  }
+  
+  .slider-button {
+    height: 10px;
+    width: 10px;
+    margin: 4px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: rgba(white, 0.5);
+  }
+  .slider-button:hover {
+    background-color: rgba(white, 0.7);
+  }
+  
+  #slider1:target ~ .image-container {
+    left: 0px;
+  }
+  #slider2:target ~ .image-container {
+    left: -600px;
+  }
+  #slider3:target ~ .image-container {
+    left: -1200px;
+  }
+  #slider4:target ~ .image-container {
+    left: -1800px;
+  }
+  #slider5:target ~ .image-container {
+    left: -2400px;
+  }
+  
+  .image-container:hover {
+    animation: slide 10s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: -600px;
+    }
+    40% {
+        left: -1200px;
+    }
+    60% {
+        left: -1800px;
+    }
+    80% {
+        left: -2400px;
+    }
+    100% {
+        left: 0;
+    }
+  }
+
+  .placeTitle{
+    height: 30px;
+    padding-top: 10px;
+    width: auto;
+    /* background-color: chartreuse; */
+    padding-left: 100px;
+    margin-bottom: 0px;
+    padding-right: 150px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans';
+  }
+  .placeDesc{
+    padding-left: 100px;
+    padding-right: 150px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans';
+  }
+
+  .placePrice{
+    margin-top: 10px;
+    padding-left: 100px;
+    padding-right: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans';
+  }
+
+  .likeBlog{
+    /* background-color: saddlebrown; */
+    height: 30px;
+    width: 50%;
+    margin-left: 300px;
+    margin-top: 10px;
+    align-items: center;
+    padding-right: 150px;
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .blogComment{
+    /* height: 200px; */
+    margin-top: 10px;
+    /* background-color: rosybrown; */
+    display: flex;
+    margin-left: 80px;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .commentBox{
+    width: 700px;
+    height: 70px;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+
+  .otherComments{
+    margin-top: 30px;
+    /* height: 100px; */
+    /* background-color: red; */
+    margin-right: 370px;
+    margin-left: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    height: fit-content;
-    position: relative;
-    background-color: var(--w-background);
-    overflow: hidden;
-    align-items: flex-end;
-    padding: var(--padding-12xl) 17px var(--padding-54xl) var(--padding-7xs);
-    box-sizing: border-box;
-    gap: 125px;
-    letter-spacing: normal;
-    text-align: left;
-    font-size: var(--bold-type70-size);
-    color: var(--color-black);
-    font-family: var(--medium-type18);
+    align-items: start;
+  }
+
+  .likeBtn{
+    width: 130px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid grey;
+    background-color: white;
+    margin-right: 200px;
+  }
+
+  .flagBtn{
+    width: 130px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF5722;
+  }
+.sendBtn,.bookBtn{
+  width: 130px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background-color: #7413F2 ;
 }
 
-@media screen and (max-width: 1225px) {
-
-    .blog1 {
-        gap: 62px 125px;
-    }
+.mapsDetails{
+  width: auto;
+  height: 100px;
+  /* background-color: red; */
+  display: flex;
+   justify-content: space-around;
+   align-items: center;
+   
 }
 
-@media screen and (max-width: 750px) {
-    .best-outdoor-restaurants {
-        font-size: var(--font-size-37xl);
-    }
-
-    .frame-parent41 {
-        gap: 26px 51.5px;
-    }
-
-    .frame-parent38 {
-        gap: 46px 91.5px;
-    }
-
-    .blog1 {
-        height: auto;
-        gap: 31px 125px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    .best-outdoor-restaurants {
-        font-size: var(--font-size-23xl);
-    }
-
-    .frame-parent38 {
-        gap: 23px 91.5px;
-    }
-    .blog1 {
-        gap: 16px 125px;
-    }
+.bookBtn{
+  margin-right: 50px;
 }

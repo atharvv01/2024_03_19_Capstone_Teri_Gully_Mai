@@ -3,19 +3,22 @@
     Teri Galli Mai
   </h1>
   <div class="mid-section">
-    <div class="home">
+
+    <div (click)="navigateToHome()" class="home">
       Home
     </div>
-    <div class="cityGuides">
+    <div (click)="navigateToCityGuides()" class="cityGuides">
       City Guides
     </div>
   </div>
   <div class="singup-login">
-    <button class="signin">
-      Login
-    </button>
-    <button class="signup">
-      Sign Up
-    </button>
+
+    <app-dropdown *ngIf="isLoggedIn"></app-dropdown>
+    <!-- Dropdown for logged-in user -->
+    <ng-container *ngIf="!isLoggedIn;">
+
+      <button (click)="navigateToLogin()" class="signin">Login</button>
+      <button (click)="navigateToSignup()" class="signup">Sign Up</button>
+    </ng-container>
   </div>
 </main>

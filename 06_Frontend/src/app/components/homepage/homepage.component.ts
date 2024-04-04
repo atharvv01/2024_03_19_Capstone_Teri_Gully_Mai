@@ -1,5 +1,6 @@
 import { Component , OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -10,7 +11,7 @@ export class HomepageComponent {
 
   navigateToCreateBlog() {
     if (localStorage.getItem('authToken')) {
-      this.router.navigate(['/write_blog']);
+      this.router.navigate(['/create_blog']);
     }
     else {
       // alert("Please Login to Continue");
