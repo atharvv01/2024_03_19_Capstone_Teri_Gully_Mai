@@ -122,6 +122,26 @@ const login = async (req, res) => {
     }
 };
 
+const getUserDetails = async (req, res) => {
+    try {
+      // Get the author ID from the request parameters
+      const authorId = req.query.authorId;
+  
+      // Find the user by author ID
+      const user = await User.findOne({ _id: authorId });
+  
+      // If user is found, return user details
+      if (user) {
+        res.status(200).json(user);
+      } else {
+        // If user is not found, return 404 status
+        res.status(404).json({ message: "User not found" });
+      }
+    } catch (err) {
+      // If there's any error, return 500 status
+      res.status(500).json({ message: err.message });
+    }
+  };
 
 // Function to initiate the password reset process
 const forget_password = async (req, res) => {
@@ -317,10 +337,14 @@ function sample(array, size) {
     return shuffled.slice(min);
 }
 
+
+
+
 module.exports = {
     signup,
     login,
     forget_password,
     reset_password,
-    saveRandomBlogsForRandomUser
+    saveRandomBlogsForRandomUser,
+    getUserDetails
 };

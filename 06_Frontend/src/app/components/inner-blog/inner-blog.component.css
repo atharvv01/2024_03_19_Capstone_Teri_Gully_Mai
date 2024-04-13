@@ -32,7 +32,7 @@
     align-items: flex-start;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     max-width: 100%;
 }
@@ -58,7 +58,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 21px 312px;
-    min-height: 1154px;
+    margin-top: 90px;
     z-index: 1;
 }
 .frame-wrapper28 {
@@ -107,6 +107,10 @@
   }
   .cafe-name-and-booking{
     display: flex;
+    /* position: relative;
+    top: -54px; */
+    justify-content: space-between;
+    width: 100%;
   }
   .cafe-name-parent {
     display: flex;
@@ -190,6 +194,8 @@
     /* padding: var(--padding-xl) var(--padding-5xs) var(--padding-xl) 0; */
     box-sizing: border-box;
     max-width: 100%;
+    /* position: relative;
+    top: -109px; */
   }
   .winter-days-are {
     height: fit-content;
@@ -209,6 +215,8 @@
     /* padding: var(--padding-xl) 0 var(--padding-xl) 0; */
     box-sizing: border-box;
     max-width: 100%;
+    /* position: relative;
+    top: -143px; */
   }
   .price-100-container {
     width: 196px;

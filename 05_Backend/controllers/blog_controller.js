@@ -95,7 +95,7 @@ const addPlaceToBlog = async (req, res) => {
       googleMapLink,
       description,
       price,
-      ratings
+      mustTry
     });
 
     // Save the new place

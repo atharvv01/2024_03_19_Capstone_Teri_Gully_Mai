@@ -3,15 +3,18 @@
     <div class="ellipse-parent" *ngIf="blogPlaces && blogPlaces.length > 0">
       <div class="frame-child19"></div>
       <div class="frame-parent44" *ngFor="let place of blogPlaces">
-        <div class="frame-wrapper28">
+
+
+        <!-- <div class="frame-wrapper28">
           <div class="mask-group-parent">
             <img class="mask-group-icon" loading="lazy" alt="" src="../../assets/public/mask-group.svg" />
             <div class="by-riya-wrapper">
               <div class="by-riya">By Riya</div>
             </div>
           </div>
-        </div>
-        <img class="despina-galani-q8irmopsgm-uns-icon" loading="lazy" alt="" src="../../assets/public/despinagalani-q8irmopsgmunsplash-1@2x.png" />
+        </div> -->
+        
+        <img class="despina-galani-q8irmopsgm-uns-icon" loading="lazy" alt="" src="place.img && place.img.length > 0 ? place.img[0] : ''" />
         <div class="cafe-name-and-booking">
           <div class="cafe-name-parent">
             <b class="cafe-name">
@@ -32,18 +35,20 @@
             {{ place.description }}
           </div>
         </div>
-        <div class="price-100-200-rs-parent">
+        <div class="price-100-200-rs-parent" *ngIf="place.price">
           <div class="price-100-container">
             <b>Price : </b>
             <span class="rs">{{ place.price }}</span>
           </div>
-          <div class="must-try-container">
+
+          <!-- <div class="must-try-container">
             <b>Must Try : </b>
             <span class="pancakes-dosa-from">Pancakes, dosa from the live station, pasta and pastries </span>
-          </div>
-          <div class="zomato-rating-container">
-            <b>Zomato Rating : </b>
-            <span class="span1">{{ place.ratings }}</span>
+          </div> -->
+
+          <div class="zomato-rating-container" *ngIf="place.mustTry">
+            <b>Must Try : </b>
+            <span class="span1">{{ place.mustTry }}</span>
           </div>
         </div>
       </div>

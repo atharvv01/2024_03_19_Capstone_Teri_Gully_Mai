@@ -8,9 +8,10 @@ export interface Place {
   img: string[];
   placeName: string;
   price: number;
-  ratings: number;
-  timings: string;
-  where: string;
+  // ratings: number;
+  // timings: string;
+  // where: string;
+  mustTry: string;
 }
 
 @Component({
@@ -42,6 +43,7 @@ export class InnerBlogComponent  implements OnInit {
         }
       );
     }
+    
   }
 }
 

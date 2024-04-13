@@ -1,3 +1,4 @@
+const { string } = require('joi');
 const mongoose = require('mongoose');
 
 const placeSchema = new mongoose.Schema({
@@ -16,7 +17,7 @@ const placeSchema = new mongoose.Schema({
     required: true
   },
   price: Number,
-  ratings: Number
+  mustTry: String
 });
 
 module.exports = mongoose.model('Place', placeSchema);

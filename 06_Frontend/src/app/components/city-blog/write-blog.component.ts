@@ -1,24 +1,55 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { BlogService } from '../../services/blog.service';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
-  selector: 'app-write-blog',
-  templateUrl: './write-blog.component.html',
-  styleUrls: ['./write-blog.component.css']
+  selector: "app-write-blog",
+  templateUrl: "./write-blog.component.html",
+  styleUrls: ["./write-blog.component.css"],
 })
-export class WriteBlogComponent {
- 
-  place:any={
-    title:"17 Best Outdoor Restaurants And Cafes In Delhi To Make The Best Of Winter Sun"
+export class WriteBlogComponent implements OnInit {
+
+  blogData: any; // Define a property to store blog data
+  blogId: string = ''; // Initialize with an empty string
+  authorName: string = ''; // Define a property to store author name
+  authorPic: string = ''; //profile photo of author
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.blogId = params.get('blogId') ?? ''; // Use nullish coalescing operator
+      this.callApi(this.blogId);
+    });
   }
-  sliders: number[] = [1, 2, 3, 4, 5]; 
-  images: string[] = [
-    'https://images.unsplash.com/flagged/photo-1556667885-a6e05b14f2eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    'https://images.unsplash.com/photo-1556815054-cd8e705a758e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    'https://images.unsplash.com/photo-1556228721-e65f06ab45c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    'https://images.unsplash.com/photo-1556228578-626e9590b81f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    'https://images.unsplash.com/photo-1556228454-1690896f350c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-  ]; 
+
+  callApi(blogId: string): void {
+    this.http.get(`http://localhost:3000/blogs/get_blog_by_id?blogId=${blogId}`)
+      .subscribe(
+        (response: any) => {
+          console.log("API Response:", response);
+          this.blogData = response; 
+          this.fetchAuthorName(this.blogData.author);
+        },
+        (error) => {
+          console.error("API Error:", error);
+        }
+      );
+  }
+  fetchAuthorName(authorId: string): void {
+    this.http.get<any>(`http://localhost:3000/users/getUserDetails?authorId=${authorId}`)
+      .subscribe(
+        (response: any) => {
+          console.log("Author Details:", response);
+          this.authorName = response.username; // Extract author's name from the response
+
+
+          // this.authorPic = response.   
+
+          
+        },
+        (error) => {
+          console.error("API Error:", error);
+        }
+      );
+  }
 }
