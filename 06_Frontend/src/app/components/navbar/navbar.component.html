@@ -12,8 +12,14 @@
     </div>
   </div>
   <div class="singup-login">
+    <!-- <app-dropdown></app-dropdown> -->
+
+    <!-- <button (click)="navigateToLogin()" class="signin">Login</button>
+    <button (click)="navigateToSignup()" class="signup">Sign Up</button> -->
+
 
     <app-dropdown *ngIf="isLoggedIn"></app-dropdown>
+    
     <!-- Dropdown for logged-in user -->
     <ng-container *ngIf="!isLoggedIn;">
 

@@ -18,7 +18,7 @@ const routes: Routes = [
     component:CityGuideComponent
   },
   {
-    path: 'blog',
+    path: 'blog/:blogId',
     component:WriteBlogComponent
   },
   {

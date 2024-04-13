@@ -1,8 +1,18 @@
+.dropdown-button{
+  background-color: red;
+  width: 130px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+}
+
+
 .dropdown {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  display: inline-block;
+  position: relative;
+  /* transform: translate(-50%, -50%); */
+  /* display: inline-block; */
   z-index: 100;
+  /* background-color: blue; */
 }
 
 .profile-user {
@@ -14,14 +24,22 @@
 }
 
 .dropdown-menu {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(76, 76, 76, 0.745);
+  border-radius: 10px;
+  margin-top: 10px;
+  width: fit-content;
+  padding: 20px;
+  box-sizing: border-box;
   position: absolute;
-  left: -60px;
+  left: -30px;
   /* Adjust this value to your preference */
   z-index: 2;
 
 }
 
 ul {
+  box-sizing: border-box;
   position: absolute;
   margin: 0;
   padding: 0;
@@ -41,6 +59,8 @@ ul li {
 }
 
 ul li {
+  margin-bottom: 5px;
+  box-sizing: border-box;
   display: block;
   padding: 10px;
   text-align: center;

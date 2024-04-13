@@ -43,7 +43,8 @@ export class CityGuideComponent implements OnInit {
     this.callMyApi(city);
   }
 
-  onBlogClicked(blogId: string): void {
-    this.router.navigate(["/blog", blogId]); // Navigate to the details page with blog ID as parameter
+  onBlogClicked(blog: any): void {
+    this.router.navigate(['/blog', blog._id]);
+    // console.log("Clicked blog ID:", blog._id); 
   }
 }

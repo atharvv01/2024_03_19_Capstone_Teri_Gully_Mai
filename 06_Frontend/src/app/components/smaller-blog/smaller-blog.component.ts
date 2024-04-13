@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, input } from '@angular/core';
 import { SaveCollectionService } from '../../services/save-collection.service';
 
 // Interface to describe the structure of the savedBlog objects
@@ -17,6 +17,7 @@ export class SmallerBlogComponent implements OnInit {
   @Input() likes: number = 0;
   @Input() blogId: string = '';
   @Input() views: number = 0;
+  @Input() thumbnail: string = ''; // Input property to receive the thumbnail from the parent component
 
   isSaved: boolean = false;
 
@@ -26,51 +27,60 @@ export class SmallerBlogComponent implements OnInit {
 
   ngOnInit(): void {
     // Check if the blog is saved by the current user when initializing the component
-    this.checkIfSaved();
+    // this.checkIfSaved();
+
+    // Log the value of thumbnail
+    // console.log('Thumbnail:', this.title);
   }
 
   onClick(): void {
+    console.log("Clicked");
+    
     this.blogClicked.emit(this.blogId); // Emit the blog ID when clicked
+    // console.log(this.blogClicked.emit(this.blogId));
+    
   }
 
-  checkIfSaved(): void {
-    // Call the method to check if the blog is saved by the current user
-    this.saveService.getSavedBlogs()
-      .then((savedBlogs: SavedBlog[]) => { // Annotate the type of savedBlogs
-        // Check if the current blog ID exists in the savedBlogs array
-        this.isSaved = savedBlogs.some(savedBlog => savedBlog.blog === this.blogId);
-      })
-      .catch(error => {
-        // Handle error
-        console.error('Failed to check if blog is saved', error);
-      });
-  }
 
-  onSave(blogId: string): void {
-    // Call the saveBlog method from the BlogService
-    this.saveService.saveBlog(blogId)
-      .then(response => {
-        // Handle success
-        console.log('Blog saved successfully', response);
-        this.isSaved = true;
-      })
-      .catch(error => {
-        // Handle error
-        console.error('Failed to save blog', error);
-      });
-  }
 
-  onUnsave(blogId: string): void {
-    // Call the unsaveBlog method from the SaveCollectionService
-    this.saveService.unsaveBlog(blogId)
-      .then(response => {
-        // Handle success
-        console.log('Blog unsaved successfully', response);
-        this.isSaved = false; // Update the isSaved property
-      })
-      .catch(error => {
-        // Handle error
-        console.error('Failed to unsave blog', error);
-      });
-  }
+  // checkIfSaved(): void {
+  //   // Call the method to check if the blog is saved by the current user
+  //   this.saveService.getSavedBlogs()
+  //     .then((savedBlogs: SavedBlog[]) => { // Annotate the type of savedBlogs
+  //       // Check if the current blog ID exists in the savedBlogs array
+  //       this.isSaved = savedBlogs.some(savedBlog => savedBlog.blog === this.blogId);
+  //     })
+  //     .catch(error => {
+  //       // Handle error
+  //       console.error('Failed to check if blog is saved', error);
+  //     });
+  // }
+
+  // onSave(blogId: string): void {
+  //   // Call the saveBlog method from the BlogService
+  //   this.saveService.saveBlog(blogId)
+  //     .then(response => {
+  //       // Handle success
+  //       console.log('Blog saved successfully', response);
+  //       this.isSaved = true;
+  //     })
+  //     .catch(error => {
+  //       // Handle error
+  //       console.error('Failed to save blog', error);
+  //     });
+  // }
+
+  // onUnsave(blogId: string): void {
+  //   // Call the unsaveBlog method from the SaveCollectionService
+  //   this.saveService.unsaveBlog(blogId)
+  //     .then(response => {
+  //       // Handle success
+  //       console.log('Blog unsaved successfully', response);
+  //       this.isSaved = false; // Update the isSaved property
+  //     })
+  //     .catch(error => {
+  //       // Handle error
+  //       console.error('Failed to unsave blog', error);
+  //     });
+  // }
 }

@@ -45,7 +45,9 @@
     </div>
   </div>
   <div class="blog-content">
-    <div class="blog-types">
+
+    <!-- Not implemented yet -->
+    <!-- <div class="blog-types">
       <div class="type-name">
         <h1>
           <span>Trending Blogs</span>
@@ -59,7 +61,9 @@
          <app-smaller-blog></app-smaller-blog>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
     <div class="blog-types" *ngIf="topBlogs.length > 0">
       <div class="type-name">
         <h1>
@@ -72,8 +76,8 @@
           [title]="blog.title" 
           [likes]="blog.likes"
           [views]="blog.views"
-          [blogId]="blog.id"
-          (blogClicked)="onBlogClicked($event)"
+          [thumbnail]="blog.thumbail"
+          (blogClicked)="onBlogClicked(blog)"
         ></app-smaller-blog>
       </div>
     </div>
@@ -91,7 +95,8 @@
           [likes]="blog.likes"
           [views]="blog.views"
           [blogId]="blog.id"
-          (blogClicked)="onBlogClicked($event)"
+          [thumbnail]="blog.thumbail"
+          (blogClicked)="onBlogClicked(blog)"
         ></app-smaller-blog>
         </div>
       </div>
@@ -110,7 +115,8 @@
           [likes]="blog.likes"
           [views]="blog.views"
           [blogId]="blog.id"
-          (blogClicked)="onBlogClicked($event)"
+          [thumbnail]="blog.thumbail"
+          (blogClicked)="onBlogClicked(blog)"
         ></app-smaller-blog>
         </div>
       </div>

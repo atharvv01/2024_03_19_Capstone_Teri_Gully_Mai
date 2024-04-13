@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';  
 import { AuthService } from '../../auth.service';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,9 +10,9 @@ import { AuthService } from '../../auth.service';
 })
 
 export class NavbarComponent implements OnInit {
+
   isLoggedIn: boolean = false; 
   
-
   constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {
@@ -28,14 +29,6 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/city_guides']);
   }
 
-  navigateToSaves() {
-    this.router.navigate(['/saved_blogs']);
-  }
-
-  navigateToMyBlogs() {
-    this.router.navigate(['/my_blog']);
-  }
-
   navigateToLogin() {
     this.router.navigate(['/login']);
   }
@@ -43,10 +36,4 @@ export class NavbarComponent implements OnInit {
   navigateToSignup() {
     this.router.navigate(['/signup']);
   } 
-
-  logout() {
-    this.authService.logOut();
-    this.router.navigate(['/login']); 
-  } 
-
 }

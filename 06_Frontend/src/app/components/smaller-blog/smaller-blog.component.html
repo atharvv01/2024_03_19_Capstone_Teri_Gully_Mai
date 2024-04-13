@@ -1,9 +1,9 @@
-<div class="blog-frame">
+<div class="blog-frame" (click)="onClick()">
     <div class="blog-img">
       <button class="save-button">
         <i class="fa-regular fa-bookmark" style="color: #000000;"></i>
       </button>
-      <img src="../../../assets/public/thumbail.jpeg" alt="" class="blog-thumbail">  
+      <img [src]="thumbnail" alt="" class="blog-thumbail">  
     </div>
     <div class="blog-details">
       <div class="blog-title">

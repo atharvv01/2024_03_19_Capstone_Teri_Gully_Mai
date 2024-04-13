@@ -1,24 +1,33 @@
-import { Injectable } from '@angular/core'; 
-import { BehaviorSubject } from "rxjs";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private loggedIn = new BehaviorSubject<boolean>(false) 
+  private loggedInSubject = new BehaviorSubject<boolean>(false);
+  loggedIn$ = this.loggedInSubject.asObservable();
 
-  loggedIn$ = this.loggedIn.asObservable();
+  constructor() {
+    // Check if the user is logged in from local storage on initialization
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn) {
+      this.loggedInSubject.next(true);
+    }
+  }
 
-constructor() { }
+  logIn() {
+    // Your login logic here
+    // After successful login, set isLoggedIn to true and store it in local storage
+    localStorage.setItem('authToken', 'true');
+    this.loggedInSubject.next(true);
+  }
 
-// Method to call when user logs in
-logIn() {
-  this.loggedIn.next(true);
-}
-
-// Method to call when user logs out
-logOut() {
-  this.loggedIn.next(false);
-}
-
+  logOut() {
+    console.log("logout");
+    // Your logout logic here
+    // After logout, set isLoggedIn to false and remove it from local storage
+    localStorage.removeItem('authToken');
+    this.loggedInSubject.next(false);
+  }
 }
