@@ -43,8 +43,11 @@
       </div>
       <div class="forgot-password1" (click)="navigateToForgotPassword()">Forgot password?</div>
       <div class="description-link-label">
+        
         <button class="text-button1" (click)="onloginClick()"
+
           [disabled]="!usernameInput.valid || !passwordInput.valid"
+          
           [ngClass]="{'invalid-button': !usernameInput.valid || !passwordInput.valid}">Log In</button>
       </div>
     </div>

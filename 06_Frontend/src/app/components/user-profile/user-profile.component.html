@@ -52,19 +52,19 @@
   <div class="myblogs-section">
     <div class="my-blogs-text-wrapper">
       <div class="my-blog-text">
-        <p>My Blogs</p>
+        <p>Saved Blogs</p>
       </div>
     </div>
     <div class="blog-renders-wrapper">
       
-      <div class="blog-renders">
+      <div class="blog-renders" *ngFor="let blog of blogDetails">
         <app-smaller-blog 
-        *ngFor="let blog of blogsByAuthor"
         [title]="blog.title"
         [likes]="blog.likes"
-        [blogId]="blog.id"
+        [blogId]="blog._id"
         [views]="blog.views"
-        [thumbnail]="blog.thumbnail">
+        [thumbnail]="blog.thumbnail"
+        (blogClicked)="onBlogClicked(blog)">
       </app-smaller-blog>
 
         <!-- <div class="edit-delete-buttons">

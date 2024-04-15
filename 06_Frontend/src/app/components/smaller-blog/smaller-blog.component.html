@@ -1,21 +1,21 @@
 <div class="blog-frame" (click)="onClick()">
     <div class="blog-img">
-      <button class="save-button">
+      <button class="save-button" (click)="onSave(blogId)">
         <i class="fa-regular fa-bookmark" style="color: #000000;"></i>
       </button>
-      <img [src]="thumbnail" alt="" class="blog-thumbail">  
+      <img src={{thumbnail}} alt="" class="blog-thumbail">  
     </div>
     <div class="blog-details">
       <div class="blog-title">
         <p>{{title}}</p>
       </div>
-      <div class="blog-views">
+      <!-- <div class="blog-views">
         <i class="fa-solid fa-eye" style="color: #666666;"></i>
         <div class="likes-and-views"> {{views}} views</div> 
-      </div>
+      </div> -->
       <div class="blog-likes">
         <i class="fa-solid fa-heart" style="color: #666666;"></i>
-        <div class="likes-and-views">{{ likes }} likes</div>
+        <div class="likes-and-views">{{ likes }} saves</div>
       </div>
     </div>
   </div>

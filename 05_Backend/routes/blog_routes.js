@@ -5,6 +5,10 @@ const router = express.Router();
 // internal imports
 const BlogController = require("../controllers/blog_controller")
 const { verifyToken} = require("../middleware/auth")
+// middleware to upload image to cloudinary
+const uploadImage = require("../controllers/blog_controller").uploadImage;
+
+
 
 //unprotected routes 
 router.get("/city",BlogController.getBlogByCity)
@@ -16,9 +20,9 @@ router.get('/get_places_of_blog',BlogController.getAllPlacesOfBlog)
 //protected routes 
 router.use(verifyToken)
 // Route to create a new blog
-router.post('/create',BlogController.createBlog);
+router.post('/create',uploadImage,BlogController.createBlog);
 // Route to add a place to a blog
-router.post('/:blogId/places/add',BlogController.addPlaceToBlog);
+router.post('/:blogid/places/add',BlogController.addPlaceToBlog);
 // Route to delete a the places 
 router.delete('/deletePlace',BlogController.placeToDelete)
 // route to get blog by author id

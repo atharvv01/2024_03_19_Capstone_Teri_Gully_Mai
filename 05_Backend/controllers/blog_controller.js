@@ -4,6 +4,11 @@ const SavedBlog = require("../schema/saved_blogs");
 const Blog = require('../schema/blog_schema');
 const Place = require('../schema/place_schema');
 const cloudinary = require('cloudinary').v2;
+const multer = require('multer');
+const storage = require("../utils/cloudinary");
+const mongoose = require('mongoose');
+
+// Require dotenv
 require('dotenv').config();
 
 // Configure Cloudinary
@@ -13,6 +18,13 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
+//uploading the image to the multer
+const upload = multer({ storage: storage });
+
+// Add a middleware for handling file upload
+const uploadImage = upload.single("thumbnail");
+
+
 /**
  * Controller to create a new blog.
  * @param {Object} req - The request object.
@@ -21,8 +33,15 @@ cloudinary.config({
 const createBlog = async (req, res) => {
   
   try {
+
     const userData = req.decoded; // Decoded user information from the token
-    const { title, description, city, thumbnail, isCommentsEnabled, type } = req.body;
+
+
+    // console.log("this is image path"+req.file);
+
+    // const image = req.file.path;
+    
+    const { title, description, thumbnail, city, isCommentsEnabled, type } = req.body;
     const newBlog = new Blog({
       title,
       description,
@@ -81,43 +100,50 @@ const createBlog = async (req, res) => {
 const addPlaceToBlog = async (req, res) => {
   try {
     const userData = req.decoded; // Decoded user information from the token
-    const { placeName, img, googleMapLink, description, price, mustTry } = req.body;
-    const blogId = req.query.blogId;
+    const placeData = req.body.placeData; // Accessing the placeData array
+    console.log(placeData);
+
+    const blogId = req.params.blogid; // Convert string to ObjectId
     // Ensure the user is authenticated
     if (!userData) {
       return res.status(401).json({ error: "Unauthorized" });
     }
 
-    // Create a new place instance using the Place schema
-    const newPlace = new Place({
-      placeName,
-      img,
-      googleMapLink,
-      description,
-      price,
-      mustTry
-    });
+    // Iterate over each object in the placeData array
+    for (const place of placeData) {
+      // Create a new place instance using the Place schema
+      const newPlace = new Place({
+        placeName: place.placeName,
+        img: place.images,
+        googleMapLink: place.googleMapLink,
+        description: place.description,
+        price: place.price,
+        mustTry: place.MustTry,
+      });
 
-    // Save the new place
-    const savedPlace = await newPlace.save();
-    
+      console.log("newplace", newPlace);
+      // Save the new place
+      const savedPlace = await newPlace.save();
 
-    // Update the blog with the new place
-    const blogToUpdate  = await Blog.findOne(blogId)
-    if (!blogToUpdate) {
-      return res.status(404).json({ error: "Blog not found" });
+      console.log(blogId);
+      // Update the blog with the new place
+      const blogToUpdate = await Blog.findById(blogId);
+      if (!blogToUpdate) {
+        return res.status(404).json({ error: "Blog not found" });
+      }
+
+      // Push the new place ID into the places array of the blog
+      blogToUpdate.places.push(savedPlace._id);
+      // Save the updated blog
+      const updatedBlog = await blogToUpdate.save();
     }
 
-    // Push the new place ID into the places array of the blog
-    blogToUpdate.places.push(savedPlace._id);
-
-    // Save the updated blog
-    const updatedBlog = await blogToUpdate.save();
-    res.status(201).json({ blog: updatedBlog, place: savedPlace });
+    res.status(201).json({ message: "Places added to blog successfully" });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 /**
  * Controller to delete a place while creating a blog.
@@ -334,5 +360,6 @@ module.exports = {
   placeToDelete,
   deleteBlogAndPlaces,
   modifyBlogAndPlaces,
-  getAllPlacesOfBlog
+  getAllPlacesOfBlog,
+  uploadImage
 };

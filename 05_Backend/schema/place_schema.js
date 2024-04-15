@@ -4,17 +4,17 @@ const mongoose = require('mongoose');
 const placeSchema = new mongoose.Schema({
   placeName: {
     type: String,
-    required: true,
+    // required: true,
     unique : true
   },
   img: [String],
   googleMapLink: {
     type: String,
-    required: true
+    // required: true
   },
   description: {
     type: String,
-    required: true
+    // required: true
   },
   price: Number,
   mustTry: {

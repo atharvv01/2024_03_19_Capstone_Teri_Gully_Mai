@@ -8,8 +8,9 @@ import { BlogService } from "../../services/blog.service";
   styleUrls: ["./create-a-blog.component.css"],
 })
 export class CreateABlogComponent {
-
+  blogId:any;
   placeData: any[] = [];
+  // image: File | null = null;
 
   blogData = {
     title:"",
@@ -39,11 +40,14 @@ export class CreateABlogComponent {
       (res: any) => {
         console.log('First API call response:', res); // Log the response from the first API call
         // Upon successful completion of the first API call, call the second API
-        const blogId = res?._id; // Extract the blogId from the response
-        console.log("this is blog id"+blogId);
+        this.blogId = res?._id; // Extract the blogId from the response
+        console.log("this is blog id"+this.blogId);
         
-        if (blogId) {
-          this.http.post<any>(`http://localhost:3000/blogs/${blogId}/places/add`, this.placeData, { headers }).subscribe(
+        if (this.blogId) {
+          console.log(this.placeData);
+          // console.log(this.blogId)
+
+          this.http.post<any>(`http://localhost:3000/blogs/${this.blogId}/places/add`, { placeData: this.placeData }, { headers }).subscribe(
             (secondRes: any) => {
               // Handle success of second API call
               console.log('Second API call successful:', secondRes);
@@ -66,28 +70,21 @@ export class CreateABlogComponent {
   
   updatePlaces(updatedPlaces: any[]) {
     this.placeData = updatedPlaces;
-    console.log(this.placeData)
-  }
-
-  addPlacesToBlog(blogId: string): void {
-    // Iterate through the places array and add each place to the blog
-    console.log(this.placeData)
-    this.placeData.forEach((place) => {
-      this.blogService
-        .addPlaceToBlog(place, blogId)
-        .then((response) => {
-          console.log("Place added to blog successfully:", response);
-          // Reset form or perform any other actions after successful addition
-        })
-        .catch((error) => {
-          console.error("Error adding place to blog:", error);
-        });
-    });
+    console.log("updatedplaces"+JSON.stringify(this.placeData))
   }
 
   addNewPlace(newPlaceData: any) {
-    // Add the newly created place to the blogData.places array
+    // Add the newly created place to the placeData array
     this.placeData.push(newPlaceData);
-    console.log(this.placeData)
+    console.log("New place added:", newPlaceData);
   }
+
+  onPlaceAdded(newPlace: any) {
+    // Log the received data
+    console.log("New place added:", newPlace);
+    
+    // You can perform additional actions here, such as sending the data to your backend
+    // or updating other component properties as needed.
+  }
+
 }

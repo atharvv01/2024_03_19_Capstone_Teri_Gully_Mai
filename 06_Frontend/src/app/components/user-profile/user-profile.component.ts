@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt'; // Import JwtHelperService for decoding JWT tokens
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,8 +11,9 @@ import { JwtHelperService } from '@auth0/angular-jwt'; // Import JwtHelperServic
 export class UserProfileComponent implements OnInit {
   userDetails: any;
   blogsByAuthor: any[] = []; // Initialize blogsByAuthor with an empty array
+  blogDetails: any[] = []; // Initialize blogDetails with an empty array to store third API responses
 
-  constructor(private http: HttpClient, private jwtHelper: JwtHelperService) { }
+  constructor(private http: HttpClient, private jwtHelper: JwtHelperService,private router: Router) { }
 
   ngOnInit(): void {
     // Retrieve JWT token from local storage
@@ -26,11 +28,11 @@ export class UserProfileComponent implements OnInit {
       this.getUserDetails(authorId);
   
       // Call the second API to get blogs by author
-      this.getBlogsByAuthor(authorId, authToken); // Pass authToken to the getBlogsByAuthor method
+      this.getSavedBlogsByAuthor(authorId, authToken);
+      
     } else {
       console.log("JWT token not found in local storage");
     }
-
   }
 
   // Method to decode JWT token
@@ -52,22 +54,52 @@ export class UserProfileComponent implements OnInit {
       );
   }
 
-  getBlogsByAuthor(authorId: string, authToken: string): void {
+  getSavedBlogsByAuthor(authorId: string, authToken: string): void {
     // Prepare the headers with the JWT token
     const headers = new HttpHeaders().set('Authorization', `Bearer ${authToken}`);
 
-    // Make HTTP GET request to the second API with JWT token in header
-    this.http.get<any>(`http://localhost:3000/blogs/get_blog_by_author_id?authorId=${authorId}`, { headers })
+    // Make HTTP GET request to the new API with JWT token in header
+    this.http.get<any>('http://localhost:3000/saves/saved_blogs_by_user', { headers })
       .subscribe(
-        (response: any) => {
+        (response: any[]) => {
           // Store blogs by author
           this.blogsByAuthor = response;
           console.log(this.blogsByAuthor);
-          
+
+          // Iterate over the array of blogs and fetch details for each blog
+          this.blogsByAuthor.forEach((blog: any) => {
+            this.getBlogById(blog.blog, authToken);
+          });
         },
         (error) => {
           console.error('Error fetching blogs by author:', error);
         }
       );
+  }
+
+  getBlogById(blogId: string, authToken: string): void {
+    // Prepare the headers with the JWT token
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${authToken}`);
+    console.log(blogId);
+    
+    // Make HTTP GET request to the third API with blogId as query parameter
+    this.http.get<any>(`http://localhost:3000/blogs/get_blog_by_id?blogId=${blogId}`, { headers })
+      .subscribe(
+        (response: any) => {
+          // Store the response in the blogDetails array
+          this.blogDetails.push(response);
+          console.log("getting blog details response", JSON.stringify(this.blogDetails));
+
+          
+        },
+        (error) => {
+          console.error('Error fetching blog by ID:', error);
+        }
+      );
+  }
+
+  onBlogClicked(blog: any): void {
+    this.router.navigate(['/blog', blog._id]);
+    // console.log("Clicked blog ID:", blog._id); 
   }
 }

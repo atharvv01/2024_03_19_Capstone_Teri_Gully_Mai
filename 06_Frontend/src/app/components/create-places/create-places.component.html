@@ -5,6 +5,7 @@
   </div>
   <div class="add-button-wrapper">
     <button class="add-button" (click)="addNewPlace()">Add</button>
+    <button class="add-button" (click)="saveThePlace()">Save</button>
   </div>
 </div>
 <div class="places-info">
@@ -19,7 +20,7 @@
         <p>Name:</p>
       </div>
       <div class="property-input">
-        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.placeName"/>
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.placeName" />
       </div>
     </div>
     <div class="place-property">
@@ -27,7 +28,7 @@
         <p>Google map link:</p>
       </div>
       <div class="property-input">
-        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.googleMapLink"/>
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.googleMapLink" />
       </div>
     </div>
     <div class="blog-property">
@@ -35,8 +36,8 @@
         <p>About Place:</p>
       </div>
       <div class="property-input">
-        <textarea class="text-box" id="blog-desc-text" placeholder="More about this place" rows="12"
-          cols="26" [(ngModel)]="place.description"></textarea>
+        <textarea class="text-box" id="blog-desc-text" placeholder="More about this place" rows="12" cols="26"
+          [(ngModel)]="place.description"></textarea>
       </div>
     </div>
     <div class="thumnail-comments-wrapper">
@@ -46,26 +47,28 @@
             <p>Photo:</p>
           </div>
           <div class="property-input" id="thumbnail-button-field">
-            <button class="Upload-photo">Upload</button>
+            <div class="property-input">
+            <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.images" />
           </div>
-        </div>
-      </div>
-      <div class="place-property">
-        <div class="place-name">
-          <p>Price:</p>
-        </div>
-        <div class="property-input">
-          <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.price"/>
         </div>
       </div>
     </div>
     <div class="place-property">
       <div class="place-name">
-        <p>Must Try:</p>
+        <p>Price:</p>
       </div>
       <div class="property-input">
-        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.MustTry"/>
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.price" />
       </div>
     </div>
   </div>
+  <div class="place-property">
+    <div class="place-name">
+      <p>Must Try:</p>
+    </div>
+    <div class="property-input">
+      <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.MustTry" />
+    </div>
+  </div>
+</div>
 </div>
