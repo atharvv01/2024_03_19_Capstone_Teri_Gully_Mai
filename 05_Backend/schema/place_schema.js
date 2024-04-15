@@ -17,7 +17,9 @@ const placeSchema = new mongoose.Schema({
     required: true
   },
   price: Number,
-  mustTry: String
+  mustTry: {
+    type: String
+  }
 });
 
 module.exports = mongoose.model('Place', placeSchema);

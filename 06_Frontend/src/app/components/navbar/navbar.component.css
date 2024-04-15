@@ -30,7 +30,7 @@
 .navbarLayout{
   background-image: url(../../../assets//public/bg_image.png);
   background-size: cover;
-  gap: 15rem;
+  /* gap: 15rem; */
   position: relative;
   left: 0rem;
   top: 0rem;
@@ -40,7 +40,7 @@
   height: 7rem;
   width: 100vw ;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .logo{

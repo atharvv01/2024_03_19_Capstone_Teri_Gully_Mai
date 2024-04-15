@@ -23,6 +23,10 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.component';
 import { WriteBlogComponent } from './components/city-blog/write-blog.component';
+import { BlogService } from './services/blog.service';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +56,10 @@ import { WriteBlogComponent } from './components/city-blog/write-blog.component'
     ReactiveFormsModule,
     DropdownComponent,    
   ],
-  providers: [],
+  providers: [
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

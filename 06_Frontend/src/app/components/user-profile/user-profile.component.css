@@ -20,7 +20,7 @@
     box-shadow: 0px 0px 8px rgb(0, 0, 0);
     margin-top: 1rem;
     width: 100%;
-    min-height: 50%;
+    min-height: fit-content;
     max-height: fit-content;
     /* background-color: crimson; */
 }
@@ -94,8 +94,10 @@
 }
 
 .about-user-section {
+    gap: 20px 0px;
     justify-content: space-evenly;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 60%;
     /* background-color: cornflowerblue; */
@@ -111,6 +113,7 @@
     margin-top: 10px;
     width: 40%;
     height: 100px;
+    min-width: 300px;
     /* background-color: black; */
 }
 
@@ -132,7 +135,8 @@
     height: 70%;
     /* background-color: bisque; */
 }
-.email-id{
+
+.email-id {
     font-weight: 700;
     color: #333333;
 
@@ -145,13 +149,15 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
+    min-width: 400px;
     /* background-color: darkkhaki; */
 }
 
-#about-me-tag{
+#about-me-tag {
     padding: 10px;
 }
-.user-bio{
+
+.user-bio {
     padding: 10px;
     width: 100%;
     height: 70%;
@@ -186,6 +192,7 @@
 }
 
 .blog-renders-wrapper {
+    width: inherit;
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
@@ -193,11 +200,15 @@
 }
 
 .blog-renders {
+    gap:20px 0px;
+    justify-content: space-evenly;
+    width: 100%;
+    /* background-color: aqua; */
     padding: 1rem;
     display: flex;
-    flex-direction: column;
     word-wrap: normal;
     margin: 1.1rem;
+    flex-wrap: wrap;
 }
 
 .edit-delete-buttons {

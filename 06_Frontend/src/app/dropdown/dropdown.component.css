@@ -1,8 +1,8 @@
 .dropdown-button{
-  background-color: red;
+  /* background-color: red; */
   width: 130px;
   height: 45px;
-  border: none;
+  border: 1px solid purple;
   border-radius: 10px;
 }
 
@@ -13,6 +13,10 @@
   /* display: inline-block; */
   z-index: 100;
   /* background-color: blue; */
+}
+
+.dropdown:hover{
+  cursor: pointer;
 }
 
 .profile-user {
@@ -32,7 +36,7 @@
   padding: 20px;
   box-sizing: border-box;
   position: absolute;
-  left: -30px;
+  left: -50px;
   /* Adjust this value to your preference */
   z-index: 2;
 

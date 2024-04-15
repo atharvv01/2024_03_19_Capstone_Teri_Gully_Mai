@@ -81,7 +81,7 @@ const createBlog = async (req, res) => {
 const addPlaceToBlog = async (req, res) => {
   try {
     const userData = req.decoded; // Decoded user information from the token
-    const { placeName, img, googleMapLink, description, price, ratings } = req.body;
+    const { placeName, img, googleMapLink, description, price, mustTry } = req.body;
     const blogId = req.query.blogId;
     // Ensure the user is authenticated
     if (!userData) {

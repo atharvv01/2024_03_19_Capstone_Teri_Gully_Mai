@@ -68,12 +68,17 @@ export class LoginComponent {
     })
       .subscribe({
         next: (response) => { // Success callback
+
           console.log('Response:', response);
-          localStorage.setItem('authToken', response.token); // Store auth token in local storage
-          console.log(localStorage.getItem('authToken'));
-          this.authService.logIn()
-          this.loginStateChange.emit(true); // Emit true on success
-          this.router.navigate(['/']); // Navigate to home page
+        localStorage.setItem('authToken', response.token);
+        this.loginStateChange.emit(true); // Emit true on success
+
+          // console.log('Response:', response);
+          // localStorage.setItem('authToken', response.token); // Store auth token in local storage
+          // console.log(localStorage.getItem('authToken'));
+          // this.authService.logIn()
+          // this.loginStateChange.emit(true); // Emit true on success
+          // this.router.navigate(['/']); // Navigate to home page
         },
         error: (error) => { // Error callback
           console.error('Error:', error);

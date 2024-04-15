@@ -3,22 +3,22 @@
   <div class="profile-section">
     <div class="username-section">
       <div class="profile-photo">
-        
+
       </div>
       <div class="user-details">
         <div class="username">
           <div class="name">
             <H1>
               <span>heyy, </span>
-              <span class="name-of-user">Atharva</span>
+              <span class="name-of-user">{{ userDetails.username }}</span>
             </H1>
           </div>
           <!-- <div class="edit-button"> -->
-            <button class="edit-name-button">Edit</button>
+            <!-- <button class="edit-name-button">Edit</button> -->
           <!-- </div> -->
         </div>
         <div class="points-section">
-          <p><b>200 points</b></p>
+          <!-- <p><b>200 points</b></p> -->
         </div>
         <div class="upload-photo-option">
           <button class="upload-photo-button">
@@ -34,14 +34,14 @@
         </div>
         <div class="email">
           <div class="email-id">
-            <p>athzanwar&#64;gmail.com</p>
+            <p>{{ userDetails.email }}</p>
           </div>
-          <button class="edit-name-button">Edit</button>
+          <!-- <button class="edit-name-button">Edit</button> -->
         </div>
       </div>
       <div class="about-section-wrapper">
         <div class="tag" id="about-me-tag">
-          About Atharva
+          About {{ userDetails.name }}
         </div>
         <div class="user-bio">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique vel obcaecati temporibus dicta hic? Modi facilis iste temporibus quia!</p>
@@ -52,21 +52,29 @@
   <div class="myblogs-section">
     <div class="my-blogs-text-wrapper">
       <div class="my-blog-text">
-        <p>Saved Blogs</p>
+        <p>My Blogs</p>
       </div>
     </div>
     <div class="blog-renders-wrapper">
       
       <div class="blog-renders">
-        <app-smaller-blog></app-smaller-blog>
-        <div class="edit-delete-buttons">
+        <app-smaller-blog 
+        *ngFor="let blog of blogsByAuthor"
+        [title]="blog.title"
+        [likes]="blog.likes"
+        [blogId]="blog.id"
+        [views]="blog.views"
+        [thumbnail]="blog.thumbnail">
+      </app-smaller-blog>
+
+        <!-- <div class="edit-delete-buttons">
           <button class="edit-button">
             <div class="edit">Edit</div>
           </button>
           <button class="delete-button">
             <div class="delete">Delete</div>
           </button>
-        </div>
+        </div> -->
       </div>
 
     </div>

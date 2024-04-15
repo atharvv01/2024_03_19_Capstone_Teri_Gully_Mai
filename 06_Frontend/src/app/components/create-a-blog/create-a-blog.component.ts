@@ -24,25 +24,46 @@ export class CreateABlogComponent {
   constructor(private http: HttpClient, private blogService: BlogService) {}
 
   postBlog(): void {
-    console.log(this.blogData)
-    this.blogService
-      .createBlog(this.blogData)
-      .then((response) => {
-        console.log("Blog created successfully:", response);
-        const blogId = response._id; // Assuming the blog ID is returned in the response
+    console.log("this is called");
+    
+    // Retrieve JWT token from local storage
+    const token = localStorage.getItem('authToken');
+  
+    console.log(token);
+  
+    // Define headers with JWT token
+    const headers = new HttpHeaders().set('Authorization', token ? token : '');
+  
+    // Call the first API to create a blog
+    this.http.post<any>('http://localhost:3000/blogs/create', this.blogData, { headers }).subscribe(
+      (res: any) => {
+        console.log('First API call response:', res); // Log the response from the first API call
+        // Upon successful completion of the first API call, call the second API
+        const blogId = res?._id; // Extract the blogId from the response
+        console.log("this is blog id"+blogId);
         
         if (blogId) {
-          // After blog creation, add places to the blog
-          this.addPlacesToBlog(blogId);
+          this.http.post<any>(`http://localhost:3000/blogs/${blogId}/places/add`, this.placeData, { headers }).subscribe(
+            (secondRes: any) => {
+              // Handle success of second API call
+              console.log('Second API call successful:', secondRes);
+            },
+            (secondError: any) => {
+              // Handle error of second API call
+              console.error('Error in second API call:', secondError);
+            }
+          );
         } else {
-          console.error("Error: Blog ID not found in response");
+          console.error('Error: No blogId found in the response from the first API call');
         }
-      })
-      .catch((error) => {
-        console.error("Error creating blog:", error);
-      });
+      },
+      (error: any) => {
+        // Handle error of first API call
+        console.error('Error in first API call:', error);
+      }
+    );
   }
-
+  
   updatePlaces(updatedPlaces: any[]) {
     this.placeData = updatedPlaces;
     console.log(this.placeData)

@@ -24,7 +24,9 @@
   z-index: 2;
   height: 100%;
   width: 100%;
+
   /* background-color: black; */
+  /* flex-wrap: wrap; */
 }
 
 .text-filed {
@@ -34,8 +36,11 @@
   width: 50vw;
   height: inherit;
   /* background-color: red; */
+  min-width:50vw;
+  word-wrap:normal;
 }
 .explore-text{
+  
   width: inherit;
   height: 50vh;
   /* background-color: blueviolet; */
@@ -157,4 +162,52 @@
   width: 100%;
   object-fit: contain;
 
+}
+
+
+
+
+/* Existing styles */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .text-filed, .images-field {
+    width: 100vw; /* Adjust width for smaller screens */
+    min-width: 100%; /* Ensure it fills the container */
+  }
+
+  .experience-create-and-container {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+  .desc-text, .creat-blog-button {
+    padding-left: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .explore-text {
+    height: auto; /* Make height flexible */
+    margin-top: 10%; /* Adjust top margin */
+  }
+
+  .stay-updated-with {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-create-and-container {
+    font-size: 2rem; /* Even smaller font size for very small screens */
+  }
+
+  .desc-text, .creat-blog-button {
+    padding: 0.5rem; /* Less padding on very small screens */
+  }
+
+  .stay-updated-with {
+    line-height: 25px; /* Adjust line height for better readability */
+  }
 }
