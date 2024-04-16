@@ -52,16 +52,6 @@ export class LoginComponent {
 
   // Method to handle login button click
   onloginClick() {
-    // Assuming your login button has a unique ID or class you can select
-    const loginButton = document.querySelector('.text-button1');
-    if (loginButton) {
-      loginButton.classList.add('login-button-clicked');
-      // Remove the class after the animation duration (500ms in this example)
-      setTimeout(() => {
-        loginButton.classList.remove('login-button-clicked');
-      }, 500);
-    }
-
     // Making HTTP POST request to login endpoint
     this.http.post<LoginResponse>('http://localhost:3000/users/login', {
       username: this.username,
@@ -77,13 +67,8 @@ export class LoginComponent {
             title: 'Login Successful',
             text: 'Welcome to the Teri Gully Mai',
             icon: 'success',
-            // confirmButtonText: 'OK'
           })
-          // console.log('Response:', response);
-          // localStorage.setItem('authToken', response.token); // Store auth token in local storage
-          // console.log(localStorage.getItem('authToken'));
-          // this.authService.logIn()
-          // this.loginStateChange.emit(true); // Emit true on success
+          this.loginStateChange.emit(true);
           this.router.navigate(['/']); // Navigate to home page
         },
         error: (error) => { // Error callback
