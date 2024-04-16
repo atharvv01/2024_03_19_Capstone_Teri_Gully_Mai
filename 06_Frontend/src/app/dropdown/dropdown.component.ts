@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrl: './dropdown.component.css',
+  styleUrls: ['./dropdown.component.css'],
   standalone:true,
   imports:[CommonModule]
 })
@@ -62,6 +62,8 @@ export class DropdownComponent implements OnInit {
    * Function to toggle the dropdown menu's visibility.
    */
   toggleDropdown(): void {
+    console.log("button clicked");
+    
     this.dropdownActive = !this.dropdownActive;
   }
 
@@ -71,16 +73,29 @@ export class DropdownComponent implements OnInit {
   }
 
   logout() {
-    console.log("hello");
-    this.authService.logOut();
-    this.loginStateChange.emit(false);
     Swal.fire({
-      title: 'Logout Successful',
-      text: 'Please Signin',
-      icon: 'success',
-      // confirmButtonText: 'OK'
-    })
-    this.router.navigate(['/']);
+      title: "Are you sure?",
+      text: "Do you want to logout?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#ad77f3",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+      iconColor: "#ad77f3"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.authService.logOut();
+        this.loginStateChange.emit(false);
+        Swal.fire({
+          title: "Deleted!",
+          text: "Please Signin.",
+          icon: "success",
+          iconColor: "#ad77f3"
+        });
+        this.router.navigate(['/']);
+      }
+    });
+
   }
 
 }

@@ -10,6 +10,15 @@
       City Guides
     </div>
   </div>
+
+
+  <!-- <div class="singup-login">
+    <button (click)="navigateToLogin()" class="signin">Login</button>
+    <button (click)="navigateToSignup()" class="signup">Sign Up</button>
+    <app-dropdown></app-dropdown>
+  </div> -->
+
+
   <div class="singup-login" *ngIf="!isLoggedIn; else loggedInDropdown">
     <button (click)="navigateToLogin()" class="signin">Login</button>
     <button (click)="navigateToSignup()" class="signup">Sign Up</button>
