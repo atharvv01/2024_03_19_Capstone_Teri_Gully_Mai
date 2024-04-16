@@ -52,6 +52,8 @@ export class SmallerBlogComponent implements OnInit {
   }
 
   onSave(blogId: string): void {
+    console.log("onsave called");
+    
     // Check if the blog is already saved
     if (!this.isSaved) {
       // If not saved, call the saveBlog method from the BlogService

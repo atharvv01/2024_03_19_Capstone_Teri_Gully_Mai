@@ -1,7 +1,10 @@
 <div class="blog-frame" >
     <div class="blog-img">
       <button class="save-button" (click)="onSave(blogId)">
+        <i *ngIf="isSaved; else notSavedIcon" class="fa-solid fa-bookmark" style="color: #ffffff;"></i>
+      <ng-template #notSavedIcon>
         <i class="fa-regular fa-bookmark" style="color: #000000;"></i>
+      </ng-template>
       </button>
       <img src={{thumbnail}} alt="" class="blog-thumbail" (click)="onClick()">  
     </div>

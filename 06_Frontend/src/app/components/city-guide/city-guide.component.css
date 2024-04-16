@@ -113,6 +113,7 @@ font-weight: 700;
   color: #666666;
 }
 
+
 .filter-options{
   display: flex;
   align-items: center;
@@ -137,6 +138,12 @@ font-weight: 700;
 
 .filters:hover{
   cursor: pointer;
+}
+
+.selected-filter p{
+  font-weight: 500;
+  color: #a874ec;
+  /* background-color: aqua; */
 }
 
 .blog-content{

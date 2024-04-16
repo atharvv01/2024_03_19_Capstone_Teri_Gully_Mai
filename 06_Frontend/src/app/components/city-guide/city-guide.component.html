@@ -36,10 +36,10 @@
       <div class="filter-text">
         <p>Sort By:</p>
       </div>
-      <div class="filter-text filters">
+      <div class="filter-text filters"  (click)="setFilter('popularity')" [ngClass]="{ 'selected-filter': selectedFilter === 'popularity' }">
         <p>Popularity</p>
       </div>
-      <div class="filter-text filters">
+      <div class="filter-text filters" (click)="setFilter('latest')"  [ngClass]="{ 'selected-filter': selectedFilter === 'latest' }">
         <p>Latest</p>
       </div>
     </div>
@@ -94,10 +94,10 @@
         <div class="rendered-blogs">
           <app-smaller-blog
           *ngFor="let blog of foodBlogs"
+          [blogId]="blog._id"
           [title]="blog.title" 
           [likes]="blog.likes"
           [views]="blog.views"
-          [blogId]="blog.id"
           [thumbnail]="blog.thumbnail"
           (blogClicked)="onBlogClicked(blog)"
           (blogSaved)="handleBlogSaved()"
@@ -115,10 +115,10 @@
         <div class="rendered-blogs">
           <app-smaller-blog
           *ngFor="let blog of doBlogs"
+          [blogId]="blog._id"
           [title]="blog.title" 
           [likes]="blog.likes"
           [views]="blog.views"
-          [blogId]="blog.id"
           [thumbnail]="blog.thumbnail"
           (blogClicked)="onBlogClicked(blog)"
           (blogSaved)="handleBlogSaved()"
