@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-signup',
   standalone: true,
@@ -55,6 +56,11 @@ export class SignupComponent {
         next: (response) => { // Success callback
           console.log('Response:', response);
           this.router.navigate(['/login']); // Navigate to login page
+          Swal.fire({
+            title: 'Login Successful',
+            text: 'Welcome to the Teri Gully Mai',
+            icon: 'success',
+          })
         },
         error: (error) => { // Error callback
           console.error('Error:', error);

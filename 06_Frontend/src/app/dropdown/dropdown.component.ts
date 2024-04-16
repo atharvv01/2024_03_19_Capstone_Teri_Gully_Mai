@@ -87,7 +87,7 @@ export class DropdownComponent implements OnInit {
         this.authService.logOut();
         this.loginStateChange.emit(false);
         Swal.fire({
-          title: "Deleted!",
+          title: "Logged Out",
           text: "Please Signin.",
           icon: "success",
           iconColor: "#ad77f3"

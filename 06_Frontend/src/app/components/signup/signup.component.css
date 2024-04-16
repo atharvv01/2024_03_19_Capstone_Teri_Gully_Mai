@@ -1,47 +1,45 @@
-/* .error-message{
-  color: red;
-  font-size: medium;
+.ripple-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circle {
   position: absolute;
-  right: 17px;
-} */
-
-
-
-.frame-child22 {
-  position: absolute;
-  top: -219px;
-  left: -287px;
   border-radius: 50%;
-  background-color: var(--color-indianred);
-  filter: blur(500px);
-  width: 500px;
-  height: 500px;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
 }
-.vector-icon11,
-.vector-icon12 {
-  position: absolute;
-  top: 105px;
-  left: 25px;
-  width: 309.8px;
-  height: 291.6px;
-  object-fit: contain;
-  z-index: 1;
+
+/* Adjusted opacity for each shade */
+.shade1 { opacity: 0.1; }
+.shade2 { opacity: 0.3; }
+.shade3 { opacity: 0.5; }
+.shade4 { opacity: 0.7; }
+.shade5 { opacity: 0.9; }
+.shade6 { opacity: 0.8; }
+.shade7 { opacity: 0.6; }
+.shade8 { opacity: 0.4; }
+.shade9 { opacity: 0.2; }
+
+/* Remaining styles remain the same */
+.medium { width: 400px; height: 400px; left: -200px; bottom: -200px; }
+.large { width: 600px; height: 600px; left: -300px; bottom: -300px; }
+.xlarge { width: 800px; height: 800px; left: -400px; bottom: -400px; }
+.xxlarge { width: 1000px; height: 1000px; left: -500px; bottom: -500px; }
+
+@keyframes ripple {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(0.8); }
 }
-.vector-icon12 {
-  top: 121.4px;
-  left: 209.1px;
-  width: 47.4px;
-  height: 44.6px;
-  z-index: 2;
-}
-.ellipse-parent1 {
-  height: 396.6px;
-  width: 334.8px;
-  position: relative;
-  min-width: 334.8000000000002px;
-  flex-shrink: 0;
- 
-}
+
+
+
 .headline1 {
   margin: 0;
   height: 59px;
@@ -405,23 +403,62 @@
 .input-field input {
   width: 400px; /* Adjust the width as needed */  
   height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.headline3{
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: #9747FF;
+}
+
+.description-link1{
+  margin-top: 15px;
+}
+
+.invalid-button{
+  background-color: gray;
+  opacity: 0.5;
+  cursor: not-allowed;
+  border: none;
+  }
+  
+  
+  .invalid-button:hover {
+  
+    cursor: not-allowed;
+    transform: none;
+  }
+
+.link1{
+  font-weight: 700;
+}
+
+.link1:hover{
+  cursor: pointer;
 }
 
 .signup {
   text-align: center;
-  margin-top: 10px; 
   display: flex;
-  justify-content: center;   
-  width: 100%;
-  height: 723px;
-
+  justify-content: center; 
+  align-items: center;  
+  width: 100vw;
+  height: 100vh;
+  font-family: 'roboto';
 }
 
 .welcome-back-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-align: center;
-  margin-top: 150px; 
-  width: 500px; 
+  /* margin-top: 150px;  */
+  width: fit-content; 
   justify-content: center; 
+  height: fit-content;
  
 
 }
@@ -429,10 +466,10 @@
 .login-container {
 
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 5px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* margin-top: 10px; */
 }
 
 .input-field {
