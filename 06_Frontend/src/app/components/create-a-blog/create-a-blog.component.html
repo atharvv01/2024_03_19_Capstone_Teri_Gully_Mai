@@ -86,6 +86,6 @@
   </div>
 </div>
 <div class="post-button-wrapper">
-  <button class="Post-Place" (click)="postBlog()">Post</button>
+  <button class="Post-Place" (click)="postBlog()" [disabled]="!areAllFieldsFilled()">Post</button>
 </div>
 </div>

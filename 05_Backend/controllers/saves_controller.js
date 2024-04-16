@@ -36,6 +36,7 @@ const saveBlog = async (req, res) => {
         });
         await addToSaved.save();   
         // Increment the like count for the blog
+        
         await blog.findByIdAndUpdate(blogId, { $inc: { likes: 1 } });
 
         res.status(200).json({

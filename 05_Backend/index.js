@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 const dotenv = require("dotenv")
 const cors = require("cors")
+// const {cloudinaryConfig} = require('../utils/cloudinary');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -16,6 +17,9 @@ app.use(cors())
 // Parse JSON requests
 app.use(bodyParser.json());
 
+
+// app.use(cloudinaryConfig)
+
 // Define routes
 const userRoutes = require("./routes/user_routes")
 const blogRoutes =  require("./routes/blog_routes")
@@ -23,6 +27,7 @@ const adminRoutes = require("./routes/admin_routes")
 const savesRoutes = require("./routes/saves_routes")
 const likeRoutes = require("./routes/like_routes")
 const commentRoutes = require("./routes/comment_routes")
+const { cloudinaryConfig } = require("./utils/cloudinary")
 
 
 //using routes in app 

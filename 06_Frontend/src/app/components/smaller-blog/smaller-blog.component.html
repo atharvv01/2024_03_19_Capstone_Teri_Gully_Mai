@@ -1,11 +1,11 @@
-<div class="blog-frame" (click)="onClick()">
+<div class="blog-frame" >
     <div class="blog-img">
       <button class="save-button" (click)="onSave(blogId)">
         <i class="fa-regular fa-bookmark" style="color: #000000;"></i>
       </button>
-      <img src={{thumbnail}} alt="" class="blog-thumbail">  
+      <img src={{thumbnail}} alt="" class="blog-thumbail" (click)="onClick()">  
     </div>
-    <div class="blog-details">
+    <div class="blog-details" (click)="onClick()">
       <div class="blog-title">
         <p>{{title}}</p>
       </div>

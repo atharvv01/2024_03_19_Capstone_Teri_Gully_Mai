@@ -17,7 +17,7 @@ export class CityGuideComponent implements OnInit {
   ngOnInit(): void {
     this.callMyApi(this.currentCity);
   }
-
+   
   // Function to call  API
   callMyApi(city: string): void {
     this.http
@@ -54,5 +54,10 @@ export class CityGuideComponent implements OnInit {
   onBlogClicked(blog: any): void {
     this.router.navigate(['/blog', blog._id]);
     // console.log("Clicked blog ID:", blog._id); 
+  }
+
+  handleBlogSaved(): void {
+    // Call the API again to refresh the data
+    this.callMyApi(this.currentCity);
   }
 }

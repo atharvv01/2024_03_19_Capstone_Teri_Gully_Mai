@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-places',
@@ -22,11 +23,13 @@ export class CreatePlacesComponent {
   saveThePlace() {
     // Emit event to send all places data to parent component for saving
     this.placesChanged.emit(this.places);
+    Swal.fire("Added place to blog");
   }
   
   deletePlace(index: number) {
     this.places.splice(index, 1); // Remove the place object at the specified index
     this.placeDeleted.emit(index); // Emit event with index of deleted place
+    // Swal.fire("Deleted place from blog");
   }
 
   

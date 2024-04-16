@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root",
 })
 export class SaveCollectionService {
-  private url = "http://localhost:3000/users";
+  private url = "http://localhost:3000/saves";
   private token: string | null = null;
 
   constructor(
@@ -31,6 +31,7 @@ export class SaveCollectionService {
   }
 
   saveBlog(blogId: string): Promise<any> {
+    console.log(blogId)
     return new Promise<any>((resolve, reject) => {
       this.http.post<any>(`${this.url}/save_blog?blogId=${blogId}`, {}, { headers: this.getHeaders() })
         .subscribe(

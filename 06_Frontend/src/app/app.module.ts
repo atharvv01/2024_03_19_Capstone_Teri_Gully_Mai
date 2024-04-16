@@ -25,7 +25,7 @@ import { UpgradePlanComponent } from './components/upgrade-plan/upgrade-plan.com
 import { WriteBlogComponent } from './components/city-blog/write-blog.component';
 import { BlogService } from './services/blog.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
-
+// import Swal from 'sweetalert2';
 
 @NgModule({
   declarations: [

@@ -16,6 +16,10 @@ export class UserProfileComponent implements OnInit {
   constructor(private http: HttpClient, private jwtHelper: JwtHelperService,private router: Router) { }
 
   ngOnInit(): void {
+    this.refreshData();
+  }
+
+  refreshData(): void {
     // Retrieve JWT token from local storage
     const authToken = localStorage.getItem('authToken');
   
@@ -24,17 +28,19 @@ export class UserProfileComponent implements OnInit {
       const decodedToken = this.decodeToken(authToken);
       const authorId = decodedToken ? decodedToken.userId : '';
   
-      // Call the first API to get user details
-      this.getUserDetails(authorId);
+      // Clear the arrays before fetching new data
+      this.blogsByAuthor = [];
+      this.blogDetails = [];
   
-      // Call the second API to get blogs by author
+      // Call the APIs to get user details and blogs by author
+      this.getUserDetails(authorId);
       this.getSavedBlogsByAuthor(authorId, authToken);
       
     } else {
       console.log("JWT token not found in local storage");
     }
   }
-
+  
   // Method to decode JWT token
   decodeToken(token: string): any {
     return this.jwtHelper.decodeToken(token);
@@ -53,19 +59,20 @@ export class UserProfileComponent implements OnInit {
         }
       );
   }
-
+  
   getSavedBlogsByAuthor(authorId: string, authToken: string): void {
     // Prepare the headers with the JWT token
     const headers = new HttpHeaders().set('Authorization', `Bearer ${authToken}`);
-
+  
     // Make HTTP GET request to the new API with JWT token in header
-    this.http.get<any>('http://localhost:3000/saves/saved_blogs_by_user', { headers })
+    this.http.get<any[]>('http://localhost:3000/saves/saved_blogs_by_user', { headers })
       .subscribe(
         (response: any[]) => {
-          // Store blogs by author
+          // Since we already cleared the arrays, we can directly assign
           this.blogsByAuthor = response;
           console.log(this.blogsByAuthor);
-
+  
+          // No need to clear blogDetails here since it's already cleared in refreshData
           // Iterate over the array of blogs and fetch details for each blog
           this.blogsByAuthor.forEach((blog: any) => {
             this.getBlogById(blog.blog, authToken);
@@ -102,4 +109,6 @@ export class UserProfileComponent implements OnInit {
     this.router.navigate(['/blog', blog._id]);
     // console.log("Clicked blog ID:", blog._id); 
   }
+  
+  
 }

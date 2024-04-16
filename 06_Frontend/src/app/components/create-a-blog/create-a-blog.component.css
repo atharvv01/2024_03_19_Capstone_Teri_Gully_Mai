@@ -226,7 +226,7 @@
 }
 
 .Post-Place{
-  background-color: #b98cf4;
+  background-color: #9b5ced;
   color: white;
   border-radius: 10px;
   border: none;
@@ -239,5 +239,11 @@
 .Post-Place:hover {
   cursor: pointer;
   transform: scale(1.01);
-  background-color: #9e5ff0;
+  background-color: #842ef3;
+}
+
+.Post-Place:disabled {
+  /* Additional styles for the disabled button */
+  opacity: 0.5;
+  cursor: not-allowed;
 }

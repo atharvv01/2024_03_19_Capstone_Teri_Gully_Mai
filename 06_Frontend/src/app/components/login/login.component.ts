@@ -7,6 +7,7 @@ import { Router } from '@angular/router'; // Router module for navigation
 import { Output, EventEmitter } from '@angular/core'; // Output and EventEmitter for emitting events
 import { NgModel } from '@angular/forms';
 import { AuthService } from '../../auth.service';
+import Swal from 'sweetalert2';
 
 // Define an interface that represents the structure of your API response
 interface LoginResponse {
@@ -27,11 +28,11 @@ interface LoginResponse {
 })
 export class LoginComponent {
   constructor(private router: Router, private http: HttpClient, private authService: AuthService) { } // Constructor with Router and HttpClient injection
-  
+
   // Initialize username and password variables
   username: string = '';
   password: string = '';
-  
+
   // Track if username and password inputs are focused
   usernameInputFocused: boolean = false;
   passwordInputFocused: boolean = false;
@@ -70,15 +71,20 @@ export class LoginComponent {
         next: (response) => { // Success callback
 
           console.log('Response:', response);
-        localStorage.setItem('authToken', response.token);
-        this.loginStateChange.emit(true); // Emit true on success
-
+          localStorage.setItem('authToken', response.token);
+          this.loginStateChange.emit(true); // Emit true on success
+          Swal.fire({
+            title: 'Login Successful',
+            text: 'Welcome to the Teri Gully Mai',
+            icon: 'success',
+            // confirmButtonText: 'OK'
+          })
           // console.log('Response:', response);
           // localStorage.setItem('authToken', response.token); // Store auth token in local storage
           // console.log(localStorage.getItem('authToken'));
           // this.authService.logIn()
           // this.loginStateChange.emit(true); // Emit true on success
-          // this.router.navigate(['/']); // Navigate to home page
+          this.router.navigate(['/']); // Navigate to home page
         },
         error: (error) => { // Error callback
           console.error('Error:', error);

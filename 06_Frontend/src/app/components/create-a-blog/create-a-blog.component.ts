@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { BlogService } from "../../services/blog.service";
+import Swal from 'sweetalert2';
 
 @Component({
   selector: "app-create-a-blog",
@@ -59,11 +60,29 @@ export class CreateABlogComponent {
           );
         } else {
           console.error('Error: No blogId found in the response from the first API call');
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            // footer: '<a href="#">Why do I have this issue?</a>'
+          });
         }
+        Swal.fire({
+          title: 'Successful',
+          text: 'Posted Blog Successfully',
+          icon: 'success',
+          // confirmButtonText: 'OK'
+        })
       },
       (error: any) => {
         // Handle error of first API call
         console.error('Error in first API call:', error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          // footer: '<a href="#">Why do I have this issue?</a>'
+        });
       }
     );
   }
@@ -85,6 +104,17 @@ export class CreateABlogComponent {
     
     // You can perform additional actions here, such as sending the data to your backend
     // or updating other component properties as needed.
+  }
+
+  areAllFieldsFilled(): boolean {
+    // Check if all required fields are filled
+    return !!(
+      this.blogData.title &&
+      this.blogData.description &&
+      this.blogData.city &&
+      this.blogData.thumbnail &&
+      this.placeData.length > 0
+    );
   }
 
 }

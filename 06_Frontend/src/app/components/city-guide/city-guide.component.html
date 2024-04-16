@@ -73,11 +73,14 @@
       <div class="rendered-blogs">
         <app-smaller-blog
           *ngFor="let blog of topBlogs"
+          [blogId]="blog._id"
           [title]="blog.title" 
           [likes]="blog.likes"
           [views]="blog.views"
+          [saves]="blog.saves"
           [thumbnail]="blog.thumbnail"
           (blogClicked)="onBlogClicked(blog)"
+          (blogSaved)="handleBlogSaved()"
         ></app-smaller-blog>
       </div>
     </div>
@@ -97,6 +100,7 @@
           [blogId]="blog.id"
           [thumbnail]="blog.thumbnail"
           (blogClicked)="onBlogClicked(blog)"
+          (blogSaved)="handleBlogSaved()"
         ></app-smaller-blog>
         </div>
       </div>
@@ -117,6 +121,7 @@
           [blogId]="blog.id"
           [thumbnail]="blog.thumbnail"
           (blogClicked)="onBlogClicked(blog)"
+          (blogSaved)="handleBlogSaved()"
         ></app-smaller-blog>
         </div>
       </div>

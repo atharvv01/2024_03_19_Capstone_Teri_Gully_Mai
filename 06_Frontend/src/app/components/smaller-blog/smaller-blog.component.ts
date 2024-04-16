@@ -1,6 +1,7 @@
-import { Component, Input, Output, EventEmitter, OnInit, input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { SaveCollectionService } from '../../services/save-collection.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 // Interface to describe the structure of the savedBlog objects
 interface SavedBlog {
@@ -18,38 +19,29 @@ export class SmallerBlogComponent implements OnInit {
   @Input() likes: number = 0;
   @Input() blogId: string = '';
   @Input() views: number = 0;
+  @Input() saves: number = 0;
   @Input() thumbnail: string = ''; // Input property to receive the thumbnail from the parent component
   
   isSaved: boolean = false;
 
   @Output() blogClicked: EventEmitter<string> = new EventEmitter<string>(); // Event emitter for click event
-
+  @Output() blogSaved: EventEmitter<void> = new EventEmitter<void>();
   constructor(private saveService: SaveCollectionService, private router: Router) { }
 
   ngOnInit(): void {
-
-  // console.log("thumbnail"+this.thumbnail);
-    // Check if the blog is saved by the current user when initializing the component
-    // this.checkIfSaved();
-
-    // Log the value of thumbnail
-    // console.log('Thumbnail:', this.title);
+    // Check if the blog is saved when initializing the component
+    this.checkIfSaved();
   }
 
   onClick(): void {
     console.log("Clicked");
-    
     this.blogClicked.emit(this.blogId); // Emit the blog ID when clicked
-    // console.log(this.blogClicked.emit(this.blogId));
-    
   }
-
-
 
   checkIfSaved(): void {
     // Call the method to check if the blog is saved by the current user
     this.saveService.getSavedBlogs()
-      .then((savedBlogs: SavedBlog[]) => { // Annotate the type of savedBlogs
+      .then((savedBlogs: SavedBlog[]) => {
         // Check if the current blog ID exists in the savedBlogs array
         this.isSaved = savedBlogs.some(savedBlog => savedBlog.blog === this.blogId);
       })
@@ -59,31 +51,35 @@ export class SmallerBlogComponent implements OnInit {
       });
   }
 
-  // onSave(){
-  //   this.router.navigate(['/user_profile']);
-  // }
-
   onSave(blogId: string): void {
-    // Call the saveBlog method from the BlogService
-    this.saveService.saveBlog(blogId)
-      .then(response => {
-        // Handle success
-        console.log('Blog saved successfully', response);
-        this.isSaved = true;
-      })
-      .catch(error => {
-        // Handle error
-        console.error('Failed to save blog', error);
-      });
+    // Check if the blog is already saved
+    if (!this.isSaved) {
+      // If not saved, call the saveBlog method from the BlogService
+      this.saveService.saveBlog(blogId)
+        .then(() => {
+          // Update isSaved flag
+          this.isSaved = true;
+          // Show success message
+          Swal.fire("Blog Saved");
+          this.blogSaved.emit(); // Emit event when blog is saved
+        })
+        .catch(error => {
+          // Handle error
+          console.error('Failed to save blog', error);
+        });
+    } else {
+      // If already saved, call the unsaveBlog method
+      this.unsaveBlog(blogId);
+    }
   }
 
-  onUnsave(blogId: string): void {
-    // Call the unsaveBlog method from the SaveCollectionService
+  unsaveBlog(blogId: string): void {
     this.saveService.unsaveBlog(blogId)
-      .then(response => {
-        // Handle success
-        console.log('Blog unsaved successfully', response);
-        this.isSaved = false; // Update the isSaved property
+      .then(() => {
+        // Update isSaved flag
+        this.isSaved = false;
+        Swal.fire("Blog Unsaved");
+        this.blogSaved.emit(); // Emit event when blog is unsaved
       })
       .catch(error => {
         // Handle error

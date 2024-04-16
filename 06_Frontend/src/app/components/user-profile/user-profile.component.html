@@ -57,14 +57,15 @@
     </div>
     <div class="blog-renders-wrapper">
       
-      <div class="blog-renders" *ngFor="let blog of blogDetails">
-        <app-smaller-blog 
+      <div class="blog-renders" >
+        <app-smaller-blog  *ngFor="let blog of blogDetails"
         [title]="blog.title"
         [likes]="blog.likes"
         [blogId]="blog._id"
         [views]="blog.views"
         [thumbnail]="blog.thumbnail"
-        (blogClicked)="onBlogClicked(blog)">
+        (blogClicked)="onBlogClicked(blog)"
+        (blogSaved)="refreshData()">
       </app-smaller-blog>
 
         <!-- <div class="edit-delete-buttons">

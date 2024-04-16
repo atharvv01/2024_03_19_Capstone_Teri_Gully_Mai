@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dropdown',
@@ -33,6 +34,12 @@ export class DropdownComponent {
   logout() {
     console.log("hello");
     this.authService.logOut();
+    Swal.fire({
+      title: 'Logout Successful',
+      text: 'Please Signin',
+      icon: 'success',
+      // confirmButtonText: 'OK'
+    })
     this.router.navigate(['/']);
   }
 

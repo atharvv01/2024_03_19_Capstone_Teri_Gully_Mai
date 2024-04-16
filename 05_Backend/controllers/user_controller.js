@@ -4,6 +4,9 @@ const jwt = require("jsonwebtoken")
 const config = require("../config/config")
 const nodemailer = require("nodemailer")
 const randomstring = require("randomstring");
+const dataUri = require('datauri')
+const uploader = require('../utils/cloudinary')
+
 
 // internal imports
 const SECRET_KEY = process.env.SECRET_KEY;
@@ -337,7 +340,36 @@ function sample(array, size) {
     return shuffled.slice(min);
 }
 
-
+const uploadImg = async (req, res) => {
+    console.log("hello");
+    console.log(req.file);
+    if (req.file) {
+        // Extract the base64 content from the data URI
+        const file = dataUri(req).content;
+        // Convert the base64 string to a Buffer
+        const fileBuffer = Buffer.from(file.split(',')[1], 'base64');
+        
+        // Use the buffer to upload the file
+        return uploader.upload_stream({ resource_type: 'auto' }, (error, result) => {
+            if (error) {
+                return res.status(400).json({
+                    message: 'Something went wrong while processing your request',
+                    error: error.message,
+                });
+            } else {
+                const image = result.url;
+                return res.status(200).json({
+                    message: 'Your image has been uploaded successfully to cloudinary',
+                    imageurl: image
+                });
+            }
+        }).end(fileBuffer);
+    } else {
+        res.status(400).json({
+            message: 'Something went wrong while processing your request',
+        });
+    }
+};
 
 
 module.exports = {
@@ -346,5 +378,6 @@ module.exports = {
     forget_password,
     reset_password,
     saveRandomBlogsForRandomUser,
-    getUserDetails
+    getUserDetails,
+    uploadImg
 };
