@@ -13,6 +13,18 @@ export class CreatePlacesComponent {
   @Output() placeAdded: EventEmitter<any> = new EventEmitter<any>(); // Event emitter for adding place
   @Output() placeDeleted: EventEmitter<number> = new EventEmitter<number>(); // Event emitter for deleting place
   
+  canAddPlace(): boolean {
+    // Allow adding place only if all previous places are saved
+    return this.places.length === 0 || this.places.every(place => place.saved);
+  }
+
+  canSavePlace(): boolean {
+    return this.places.some(place =>
+      place.placeName && place.googleMapLink && place.description && place.images.length > 0 && place.MustTry && place.price
+    );
+  }
+  
+  
   addNewPlace() {
     const newPlace = { placeName: '', googleMapLink: '', description: '', images: [], MustTry:'',price:'',};
     this.places.push(newPlace); // Add new place object to array

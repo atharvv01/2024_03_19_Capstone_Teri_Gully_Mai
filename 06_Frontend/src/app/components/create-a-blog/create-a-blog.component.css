@@ -1,8 +1,17 @@
 *{
   box-sizing: border-box;
 }
+.error-message {
+  color: red;
+}
+
+.error {
+  border-color: red;
+}
+
 .screen{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   height: fit-content;
@@ -25,7 +34,8 @@
 
 .main-content{
   display: flex;
-  height: 45rem;
+  /* flex-wrap: wrap; */
+  height: fit-content;
   width: 75rem;
   padding: 2rem;
   gap: 20px;
@@ -68,11 +78,11 @@
   border-radius: 10px;
   border: 1px solid gray;
   height: 45px;
-  width: 500px;
+  width: 100%;
 }
 
 #blog-desc-text{
-  /* width: 300px; */
+  width: 150%;
   height: 150px;
 }
 
@@ -99,7 +109,7 @@
   display: flex;
   gap: 7rem;
   align-items: center;
-  /* justify-content: space-evenly; */
+  justify-content:start;
 }
 
 #thumbnail-button-field{
@@ -246,4 +256,56 @@
   /* Additional styles for the disabled button */
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .main-content, .blog-details, .places-details {
+    flex-direction: column;
+    width: 100%; /* Use full width for smaller screens */
+  }
+
+  .city-category-wrapper, .thumnail-comments-wrapper {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .blog-property, .place-property {
+    width: 100%; /* Ensure properties take full width */
+  }
+
+  #blog-desc-text, .dropdown, .places-text-box {
+    width: 100%; /* Ensure input fields take full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .screen {
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem; /* Even smaller font size for very small screens */
+  }
+
+  .main-content {
+    padding: 0.5rem;
+    gap: 10px;
+  }
+
+  .property-name, .place-name {
+    font-size: large; /* Adjust font size for readability */
+  }
+
+  .text-box, .dropdown, .places-text-box {
+    padding: 0.5rem; /* Adjust padding for smaller input fields */
+  }
+
+  .Post-Place {
+    font-size: large; /* Adjust button font size for better accessibility */
+    width: 100%; /* Make the button full width */
+  }
 }

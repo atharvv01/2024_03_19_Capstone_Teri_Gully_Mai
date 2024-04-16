@@ -1,11 +1,10 @@
 <div class="places-name-add-button-wrapper">
   <div class="title-places">
-    <p>Places
-    <p>
+    <p>Places</p>
   </div>
   <div class="add-button-wrapper">
-    <button class="add-button" (click)="addNewPlace()">Add</button>
-    <button class="add-button" (click)="saveThePlace()">Save</button>
+    <button class="add-button" (click)="addNewPlace()" [disabled]="!canAddPlace()">Add</button>
+    <button class="add-button" (click)="saveThePlace()" [disabled]="!canSavePlace()">Save</button>
   </div>
 </div>
 <div class="places-info">
@@ -20,7 +19,8 @@
         <p>Name:</p>
       </div>
       <div class="property-input">
-        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.placeName" />
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.placeName" #placeNameInput [ngClass]="{'error': !place.placeName && placeNameInput.focus}" />
+        <p class="required-message" *ngIf="!place.placeName && placeNameInput.focus">Name is required</p>
       </div>
     </div>
     <div class="place-property">
@@ -28,7 +28,8 @@
         <p>Google map link:</p>
       </div>
       <div class="property-input">
-        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.googleMapLink" />
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.googleMapLink" #googleMapLinkInput [ngClass]="{'error': !place.googleMapLink && googleMapLinkInput.focus}" />
+        <p class="required-message" *ngIf="!place.googleMapLink && googleMapLinkInput.focus">Google map link is required</p>
       </div>
     </div>
     <div class="blog-property">
@@ -36,8 +37,8 @@
         <p>About Place:</p>
       </div>
       <div class="property-input">
-        <textarea class="text-box" id="blog-desc-text" placeholder="More about this place" rows="12" cols="26"
-          [(ngModel)]="place.description"></textarea>
+        <textarea class="text-box" id="blog-desc-text" placeholder="More about this place" rows="12" cols="26" [(ngModel)]="place.description" #descriptionInput [ngClass]="{'error': !place.description && descriptionInput.focus}"></textarea>
+        <p class="required-message" *ngIf="!place.description && descriptionInput.focus">About Place is required</p>
       </div>
     </div>
     <div class="thumnail-comments-wrapper">
@@ -47,8 +48,8 @@
             <p>Photo:</p>
           </div>
           <div class="property-input" id="thumbnail-button-field">
-            <div class="property-input">
-            <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.images" />
+            <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.images" #imagesInput [ngClass]="{'error': !place.images && imagesInput.focus}" />
+            <p class="required-message" *ngIf="!place.images && imagesInput.focus">Photo is required</p>
           </div>
         </div>
       </div>
@@ -58,17 +59,18 @@
         <p>Price:</p>
       </div>
       <div class="property-input">
-        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.price" />
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.price" #priceInput [ngClass]="{'error': !place.price && priceInput.focus}" />
+        <p class="required-message" *ngIf="!place.price && priceInput.focus">Price is required</p>
+      </div>
+    </div>
+    <div class="place-property">
+      <div class="place-name">
+        <p>Must Try:</p>
+      </div>
+      <div class="property-input">
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.MustTry" #mustTryInput [ngClass]="{'error': !place.MustTry && mustTryInput.focus}" />
+        <p class="required-message" *ngIf="!place.MustTry && mustTryInput.focus">Must Try is required</p>
       </div>
     </div>
   </div>
-  <div class="place-property">
-    <div class="place-name">
-      <p>Must Try:</p>
-    </div>
-    <div class="property-input">
-      <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.MustTry" />
-    </div>
-  </div>
-</div>
 </div>

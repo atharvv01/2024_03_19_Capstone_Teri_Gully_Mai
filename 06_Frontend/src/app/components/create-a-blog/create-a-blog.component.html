@@ -4,53 +4,71 @@
     <p>Create a Blog</p>
   </div>
   <div class="main-content">
+    <!-- Blog Details -->
     <div class="blog-details">
+      <!-- Title -->
       <div class="blog-property">
         <div class="property-name">
           <p>Title of the blog:</p>
         </div>
         <div class="property-input">
-          <input class="text-box" placeholder="Type here" type="text" [(ngModel)]="blogData.title" />
+          <input class="text-box" placeholder="Type here" type="text" [(ngModel)]="blogData.title" #title="ngModel" [class.error]="title.invalid && (title.dirty || title.touched)" required/>
+          <div *ngIf="title.invalid && (title.dirty || title.touched)" class="error-message">
+            Title is required.
+          </div>
         </div>
       </div>
+      <!-- Description -->
       <div class="blog-property">
         <div class="property-name">
           <p>About blog:</p>
         </div>
         <div class="property-input">
-          <textarea class="text-box" id="blog-desc-text" placeholder="What is blog about" rows="12" cols="26"
-            [(ngModel)]="blogData.description"></textarea>
+          <textarea class="text-box" id="blog-desc-text" placeholder="What is blog about" rows="12" cols="26" [(ngModel)]="blogData.description" #description="ngModel" [class.error]="description.invalid && (description.dirty || description.touched)" required></textarea>
+          <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-message">
+            Description is required.
+          </div>
         </div>
       </div>
+      <!-- City and Category -->
       <div class="city-category-wrapper">
+        <!-- City -->
         <div class="blog-property" id="city-field">
           <div class="property-name">
             <p>City:</p>
           </div>
           <div class="property-input">
-            <select class="dropdown" [(ngModel)]="blogData.city">
+            <select class="dropdown" [(ngModel)]="blogData.city" #city="ngModel" [class.error]="city.invalid && (city.dirty || city.touched)" required>
               <option value="default">Select city</option>
               <option value="Delhi">Delhi</option>
               <option value="Goa">Goa</option>
               <option value="Pune">Pune</option>
               <option value="Hyderabad">Hyderabad</option>
             </select>
+            <div *ngIf="city.invalid && (city.dirty || city.touched)" class="error-message">
+              City is required.
+            </div>
           </div>
         </div>
+        <!-- Category -->
         <div class="blog-property" id="category-field">
           <div class="property-name">
             <p>Category:</p>
           </div>
           <div class="property-input">
-            <select class="dropdown" [(ngModel)]="blogData.type">
+            <select class="dropdown" [(ngModel)]="blogData.type" #category="ngModel" [class.error]="category.invalid && (category.dirty || category.touched)" required>
               <option value="default">Select category</option>
               <option value="Explore top Tourist attractions">Top tourist attractions</option>
               <option value="Where to eat">Where to eat</option>
               <option value="Things to do">Things to do</option>
             </select>
+            <div *ngIf="category.invalid && (category.dirty || category.touched)" class="error-message">
+              Category is required.
+            </div>
           </div>
         </div>
       </div>
+      <!-- Thumbnail -->
       <div class="thumnail-comments-wrapper">
         <div class="thumbnail">
           <div class="blog-property" id="thumbnail-field">
@@ -59,33 +77,23 @@
             </div>
             <div class="property-input" id="thumbnail-button-field">
               <div class="property-input">
-              <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="blogData.thumbnail" />
+                <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="blogData.thumbnail" #thumbnail="ngModel" [class.error]="thumbnail.invalid && (thumbnail.dirty || thumbnail.touched)" required/>
+                <div *ngIf="thumbnail.invalid && (thumbnail.dirty || thumbnail.touched)" class="error-message">
+                  Thumbnail is required.
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="comments">
-          <div class="blog-property" id="category-field">
-            <div class="property-name">
-              <p>Comments:</p>
-            </div>
-            <div class="property-input">
-              <select class="dropdown" [(ngModel)]="blogData.isCommentsEnabled">
-                <option value="true">Select category</option>
-                <option value="true">Enable</option>
-                <option value="false">Disable</option>
-              </select>
-            </div>
-          </div>
-        </div> -->
+    </div>
+    <!-- Places Details -->
+    <div class="places-details">
+      <app-create-places [(places)]="placeData" (placesChanged)="updatePlaces($event)" (placeAdded)="onPlaceAdded($event)"></app-create-places>
     </div>
   </div>
-  <div class="places-details">
-    <app-create-places [(places)]="placeData" (placesChanged)="updatePlaces($event)"
-      (placeAdded)="onPlaceAdded($event)"></app-create-places>
+  <!-- Post Button -->
+  <div class="post-button-wrapper">
+    <button class="Post-Place" (click)="postBlog()" [disabled]="!areAllFieldsFilled()">Post</button>
   </div>
-</div>
-<div class="post-button-wrapper">
-  <button class="Post-Place" (click)="postBlog()" [disabled]="!areAllFieldsFilled()">Post</button>
-</div>
 </div>
