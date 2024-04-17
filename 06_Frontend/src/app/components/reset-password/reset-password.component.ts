@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-reset-password',
   templateUrl: './reset-password.component.html',
@@ -17,12 +19,22 @@ export class ResetPasswordComponent {
   token: string | null = ''; // Variable to store the token
   resetPassword()
   {
-     // Ensure the token is present
-     if (!this.token) {
+    // Ensure the token is present
+    if (!this.token) {
       console.error('Token is missing');
       return;
     }
-    const url = `http://localhost:3000/users/reset_password?token=${this.token}`;
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, reset it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const url = `http://localhost:3000/users/reset_password?token=${this.token}`;
 
     this.http.post(url, { password: this.password })
       .subscribe(
@@ -36,5 +48,12 @@ export class ResetPasswordComponent {
           console.error('Error:', error);
         }
       );
+        Swal.fire({
+          title: "DONE!",
+          text: "Your password has been resetted.",
+          icon: "success"
+        });
+      }
+    });
   }
 }

@@ -12,6 +12,7 @@ export interface Place {
   // timings: string;
   // where: string;
   mustTry: string;
+  officalLink: string;
 }
 
 @Component({

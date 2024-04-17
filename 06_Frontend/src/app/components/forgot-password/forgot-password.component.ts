@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
@@ -21,7 +23,7 @@ export class ForgotPasswordComponent {
       (response) => {
         // Handle the response from the backend
         console.log('Response:', response);
-        
+        Swal.fire("Link to rest passoword sent to you mail id");
       },
       (error) => {
         // Handle any errors that occur during the request

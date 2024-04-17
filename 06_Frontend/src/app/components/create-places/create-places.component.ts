@@ -15,7 +15,7 @@ export class CreatePlacesComponent {
   
   canAddPlace(): boolean {
     // Allow adding place only if all previous places are saved
-    return this.places.length === 0 || this.places.every(place => place.saved);
+    return true;
   }
 
   canSavePlace(): boolean {
@@ -26,10 +26,11 @@ export class CreatePlacesComponent {
   
   
   addNewPlace() {
-    const newPlace = { placeName: '', googleMapLink: '', description: '', images: [], MustTry:'',price:'',};
+    const newPlace = { placeName: '', googleMapLink: '', description: '', images: [], MustTry:'',price:'',officalLink:''};
     this.places.push(newPlace); // Add new place object to array
     this.placeAdded.emit(newPlace); // Emit event with new place data
     this.placesChanged.emit(this.places);
+    Swal.fire("Place added");
   }
 
   saveThePlace() {

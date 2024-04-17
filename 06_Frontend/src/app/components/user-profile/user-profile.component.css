@@ -25,6 +25,13 @@
     /* background-color: crimson; */
 }
 
+.pp{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8);
+}
+
 .username-section {
     display: flex;
     align-items: center;
@@ -35,9 +42,10 @@
 }
 
 .profile-photo {
+    overflow: hidden;
     height: 7rem;
     width: 8rem;
-    background-color: black;
+    background-color: rgb(235, 235, 235);
     border-radius: 50%;
 }
 

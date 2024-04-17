@@ -22,7 +22,7 @@ const blog = require("../schema/blog_schema")
 const signup = async (req, res) => {
     try {
         const userData = req.body;
-
+        userData.profile_pic = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
         // Validate user data
         const validationError = validateInputs(userData);
         if (validationError) {

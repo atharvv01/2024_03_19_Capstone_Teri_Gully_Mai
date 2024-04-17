@@ -19,6 +19,9 @@ const placeSchema = new mongoose.Schema({
   price: Number,
   mustTry: {
     type: String
+  },
+  officalLink:{
+    type: String
   }
 });
 

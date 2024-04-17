@@ -119,6 +119,7 @@ const addPlaceToBlog = async (req, res) => {
         description: place.description,
         price: place.price,
         mustTry: place.MustTry,
+        officalLink: place.officalLink
       });
 
       console.log("newplace", newPlace);

@@ -34,7 +34,7 @@
   flex-direction: column;
   /* justify-content: space-evenly; */
   width: 50vw;
-  height: inherit;
+  height: fit-content;
   /* background-color: red; */
   min-width:50vw;
   word-wrap:normal;
@@ -42,7 +42,7 @@
 .explore-text{
   
   width: inherit;
-  height: 50vh;
+  height: fit-content;
   /* background-color: blueviolet; */
   margin-top: 3%;
   padding:2rem;
@@ -55,6 +55,7 @@
   height: 100%;
   /* background-color: blanchedalmond; */
   padding: 1.5rem;
+  padding-bottom: 0rem;
 }
 
 .experience-create-and-container {
@@ -97,10 +98,11 @@
 
 .desc-text{
   width: inherit;
-  height: 14vh;
+  height: fit-content;
   /* background-color: black; */
   padding: 1rem;
   padding-left: 3.7rem;
+  padding-top: 0rem;
 }
 
 .stay-updated-with {
@@ -119,7 +121,7 @@
   display: flex;
   align-items: center;
   width: inherit;
-  height: 10vh;
+  height: fit-content;
   /* background-color: blueviolet; */
   /* padding: 1rem; */
   padding-left: 3.7rem;
@@ -129,7 +131,7 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  height: 3.3rem;
+  height: 55px;
   width: 10rem;
   background-color: #872BFF;
   display: flex;
@@ -152,7 +154,7 @@
 
 .images-field {
   width: 50vw;
-  height: inherit;
+  height: fit-content;
   /* background-color: blue; */
 
 }

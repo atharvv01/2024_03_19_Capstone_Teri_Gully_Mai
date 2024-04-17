@@ -9,14 +9,14 @@ import { NgModel } from '@angular/forms';
 import { AuthService } from '../../auth.service';
 import Swal from 'sweetalert2';
 
-// Define an interface that represents the structure of your API response
+
 interface LoginResponse {
   success: boolean;
   message: string;
   token: string;
   user: {
     username: string;
-    full_name?: string; // Assuming full_name is optional
+    full_name?: string; 
   };
 }
 
@@ -72,8 +72,21 @@ export class LoginComponent {
           this.router.navigate(['/']); // Navigate to home page
         },
         error: (error) => { // Error callback
+          // Extract the "message" property from the error object
+          const errorMessage = error.error ? error.error.message : 'An error occurred';
+        
+          // Display the error message using Swal
+          Swal.fire({
+            title: 'Login unsuccessful',
+            text: errorMessage,
+            icon: 'error',
+          });
+        
+          // Log the full error object to the console for debugging
           console.error('Error:', error);
-          this.loginStateChange.emit(false); // Emit false on error
+        
+          // Emit false to indicate that the login attempt was unsuccessful
+          this.loginStateChange.emit(false);
         }
       });
   }

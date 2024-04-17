@@ -72,5 +72,13 @@
         <p class="required-message" *ngIf="!place.MustTry && mustTryInput.focus">Must Try is required</p>
       </div>
     </div>
+    <div class="place-property">
+      <div class="place-name">
+        <p>Offical Link:</p>
+      </div>
+      <div class="property-input">
+        <input class="places-text-box" placeholder="Type here" type="text" [(ngModel)]="place.officalLink"  />
+      </div>
+    </div>
   </div>
 </div>

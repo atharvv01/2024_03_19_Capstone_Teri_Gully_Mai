@@ -86,6 +86,7 @@ export class DropdownComponent implements OnInit {
       if (result.isConfirmed) {
         this.authService.logOut();
         this.loginStateChange.emit(false);
+        
         Swal.fire({
           title: "Logged Out",
           text: "Please Signin.",

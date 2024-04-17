@@ -26,6 +26,7 @@ export class AuthService {
   }
 
   logOut() {
+    localStorage.removeItem('authToken');
     // Your logout logic here
     // After logout, set isLoggedIn to false and remove it from local storage
     localStorage.setItem('isLoggedIn','false');

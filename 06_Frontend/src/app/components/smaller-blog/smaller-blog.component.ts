@@ -66,6 +66,7 @@ export class SmallerBlogComponent implements OnInit {
           this.blogSaved.emit(); // Emit event when blog is saved
         })
         .catch(error => {
+          Swal.fire("Please login first");
           // Handle error
           console.error('Failed to save blog', error);
         });
