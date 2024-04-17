@@ -68,7 +68,7 @@ export class LoginComponent {
             text: 'Welcome to the Teri Gully Mai',
             icon: 'success',
           })
-          this.loginStateChange.emit(true);
+          this.authService.logIn();
           this.router.navigate(['/']); // Navigate to home page
         },
         error: (error) => { // Error callback
