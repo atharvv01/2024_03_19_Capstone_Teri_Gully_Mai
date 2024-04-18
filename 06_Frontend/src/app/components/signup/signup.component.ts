@@ -35,36 +35,39 @@ export class SignupComponent {
     this.router.navigate(['/login'])
   }
 
-  onSignupClick(){
-    // Assuming your login button has a unique ID or class you can select
-    const signupButton = document.querySelector('.text-button');
-    if (signupButton) {
-      signupButton.classList.add('signup-button-clicked');
-      // Remove the class after the animation duration (500ms in this example)
-      setTimeout(() => {
-        signupButton.classList.remove('signup-button-clicked');
-      }, 500);
-    }
-
-    // Making HTTP POST request to login endpoint
+  onSignupClick() {
+    // Making HTTP POST request to signup endpoint
     this.http.post('http://localhost:3000/users/signup', {
       username: this.username,
-      email:this.email,
+      email: this.email,
       password: this.password
     })
-      .subscribe({
-        next: (response) => { // Success callback
-          console.log('Response:', response);
-          this.router.navigate(['/login']); // Navigate to login page
+    .subscribe({
+      next: (response) => { // Success callback
+        console.log('Response:', response);
+        this.router.navigate(['/login']); // Navigate to login page
+        Swal.fire({
+          title: 'Signup Successful',
+          text: 'Welcome to Teri Gully Mai',
+          icon: 'success'
+        });
+      },
+      error: (error) => { // Error callback
+        console.error('Error:', error);
+        if (error.error.message === "An account already exists with the provided email.") {
           Swal.fire({
-            title: 'Login Successful',
-            text: 'Welcome to the Teri Gully Mai',
-            icon: 'success',
-          })
-        },
-        error: (error) => { // Error callback
-          console.error('Error:', error);
+            title: 'Error!',
+            text: 'An account already exists with the provided email.',
+            icon: 'error'
+          });
+        } else {
+          Swal.fire({
+            title: 'Error!',
+            text: 'Something went wrong. Please try again later.',
+            icon: 'error'
+          });
         }
-      });
+      }
+    });
   }
 }

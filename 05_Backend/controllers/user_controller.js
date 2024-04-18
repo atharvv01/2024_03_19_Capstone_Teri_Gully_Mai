@@ -89,7 +89,7 @@ const login = async (req, res) => {
                 message: "User not found",
             });
         }
-        console.log("Hello");
+        // console.log("Hello");
         // Compare the provided password with the hashed password in the database
         const isPasswordValid = await bcrypt.compare(password, user.password);
 
